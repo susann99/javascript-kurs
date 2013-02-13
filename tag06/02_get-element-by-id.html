@@ -1,0 +1,22 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Tag 06 - getElementById()</title>
+<script type="text/javascript">
+function Wechsel() {
+	//Zugriff mit document.getElementById()
+	//in die Methodenklammer kommt die Id (hier "ausgabe")
+	//die Eigenschaft innerHTML setzt einen Inhalt in das entsprchende HTML-Element
+	document.getElementById("ausgabe").innerHTML = "Überschriebener Text";
+}
+</script>
+</head>
+<body>
+<button id="btn" onClick="getQuelltext()">SOURCE</button>
+<div id="ausgabe">Hier steht der Ausgabetext</div>
+<script type="text/javascript">
+Wechsel();
+</script>
+</body>
+</html>

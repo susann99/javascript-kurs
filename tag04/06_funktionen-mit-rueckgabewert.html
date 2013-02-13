@@ -1,0 +1,28 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Tag 04 - Funktionen mit Rückgabewert</title>
+<script type="text/javascript">
+function fnQuadrat(zahl) {
+	//alert("es klappt");
+	var quadrat = zahl*zahl;
+	//document.write(quadrat);
+	return quadrat; //Der Wert hinter dem return wird an den Funktionsaufruf zurückgegeben
+	//nach return wird die Funktion verlassen
+	alert("Ich bin nicht zu sehen");
+}
+
+//Funktionsaufruf
+var frage = prompt("Gib bitte eine Zahl ein?","0");
+var ergebnis = fnQuadrat(frage);
+document.write(ergebnis+"<br>");
+</script>
+<script type="text/javascript" src="../lib/source.js"></script>
+</head>
+<body>
+<button id="btn" onClick="getQuelltext()">SOURCE</button>
+<XMP id="source"></XMP>
+
+</body>
+</html>

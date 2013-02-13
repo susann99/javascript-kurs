@@ -1,0 +1,32 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Tag 09 - Übung while-Schleife</title>
+<!--Externes JS Achtung: ggfs. Pfad anpassen!!!-->
+<script type="text/javascript" src="../eigenefunktionen.js"></script>
+
+<script type="text/javascript">
+/*
+	Der Anwender soll solange nach einer Zahl gefragt werden, bis die Summe aller eingegebenen Zahlen größer als 100 ist.
+*/
+var eingabe; //nimmt Benutzereingabe auf
+var summe = 0;
+
+//Bedingung: Summe aller Eingaben <=100
+/*while(Bedingung) {
+	//führe den prompt aus
+	//parseInt("7")
+}
+*/
+while(summe <= 100) {
+	eingabe = parseInt(prompt("Bitte Zahl eingeben","7"));
+	summe = summe + eingabe;
+	docw(summe);
+}
+</script>
+</head>
+<body>
+
+</body>
+</html>

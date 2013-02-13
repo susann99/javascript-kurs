@@ -1,0 +1,44 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Tag 10 - Bildergalerie :)</title>
+<style type="text/css">
+* {margin:0; padding:0; font:14px Verdana,Arial,sans-serif; }
+#gross img {border-radius:20px; border:thin solid black; }
+#klein img {cursor:pointer; }
+#gross {position:relative;margin:20px auto; width:600px; height:400px; }
+#info {position:absolute; padding:10px; z-index:1000; bottom:5px; right:5px; color:red; background-color:#eee; width:auto; height:auto; text-align:right; opacity:0.8;}
+#klein {margin:0 auto; width:600px; height:60px; text-align:center;  background-color:#ddd;}
+
+</style>
+<!--Externes JS Achtung: ggfs. Pfad anpassen!!!-->
+
+<script type="text/javascript">
+function getGross(pfad, bild) {
+	var gross = document.getElementById("gross");
+	gross.innerHTML = "<img src='../bilder/landschaft/gross/"+pfad+".jpg' alt='"+bild.alt+"' onLoad='getInfo(this);'><div id='info'>Hallo</div>";
+}
+
+function getInfo(bild) {
+	var info = document.getElementById("info");
+	info.innerHTML = "Breite: "+bild.width+"<br>Höhe: "+bild.height+"<br>"+bild.alt;	
+}
+</script>
+</head>
+<body>
+	<div id="gross">
+		<div id="info">Hallo</div>
+	</div>
+	
+	<div id="klein">
+		<img onClick="getGross(1,this);" onLoad="getGross(1,this);" src="../bilder/landschaft/gross/1.jpg" alt="Wald 1" width="90" height="60">
+		<img onClick="getGross(2,this);" src="../bilder/landschaft/gross/2.jpg" alt="Bergpanorame 2" width="90" height="60">
+		<img onClick="getGross(3,this);" src="../bilder/landschaft/gross/3.jpg" alt="Landschaft 3" width="90" height="60">
+		<img onClick="getGross(4,this);" src="../bilder/landschaft/gross/4.jpg" alt="Strand unter Palmen 4" width="90" height="60">
+		<img onClick="getGross(5,this);" src="../bilder/landschaft/gross/5.jpg" alt="Berge 5" width="90" height="60">
+		<img onClick="getGross(6,this);" src="../bilder/landschaft/gross/6.jpg" alt="Pfad 6" width="90" height="60">
+	</div>
+	
+</body>
+</html>

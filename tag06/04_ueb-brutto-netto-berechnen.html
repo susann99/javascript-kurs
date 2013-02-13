@@ -1,0 +1,48 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Tag 06 - Übung Brutto / Netto berechnen</title>
+<style type="text/css">
+* {margin:0; padding:0; font:14px Verdana,Arial,sans-serif; }
+#wrapper {position:absolute; width:400px; height:300px; text-align:center; left:50%; top:50%; margin-left:-200px; margin-top:-150px; background-color:#ccc; color:red; border-radius:50px; }
+#ueberschrift {margin-top:30px; }
+h1 {font-weight:bold; margin:50px 0; }
+button {background-color:white; color:black; border:1px dotted black; }
+</style>
+<!--Externes JS Achtung: ggfs. Pfad anpassen!!!-->
+<script type="text/javascript" src="../eigenefunktionen.js"></script>
+
+<script type="text/javascript">
+function fnUmrechnen(wert) {
+	//Überprüfen, ob wert 1 oder 2 ist
+	if(wert == 1) {
+		var netto = prompt("Bitte den Nettobetrag eingeben","0");
+		
+		var brutto = netto * 1.19;
+		document.getElementById("ausgabe").innerHTML = "<h1>Der Bruttobetrag ist: "+brutto+"</h1>";
+	}
+	if(wert == 2) {
+		var brutto = prompt("Bitte den Bruttobetrag eingeben","0");
+		var netto = brutto / 1.19;
+		document.getElementById("ausgabe").innerHTML = "<h1>Der Nettobetrag ist: "+netto+"</h1>";
+	}
+}
+</script>
+</head>
+<body>
+<!--
+Ein Benutzer kann über ein prompt eine Zahl eingeben. Dies ist entweder ein Brutto- oder ein Nettowert.
+Auf der Seite befinden sich zwei Buttons: Brutto berechnen, Netto berechnen.
+In HTML gibt es einen <div>-Bereich mit id="ausgabe". In diesem soll der berechnete Wert angezeigt werden.
+Tipp: Erst mit einem Button probieren
+-->
+<div id="wrapper">
+	<div id="ueberschrift">Willkommen beim Brutto-Netto-Rechner</div>
+	
+	<div id="ausgabe"><h1>Bitte drücken Sie auf einen der beiden Buttons</h1></div>
+	<button id="btn" onClick="fnUmrechnen(1);">Brutto berechnen</button>
+	<button id="bt2" onClick="fnUmrechnen(2);">Netto berechnen</button>
+</div>
+</body>
+</html>

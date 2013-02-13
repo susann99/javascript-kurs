@@ -1,0 +1,34 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Tag 03 - Übung document.write()</title>
+<script type="text/javascript">
+/*
+Cato<br>"Wissen ist Macht" soll über document.write ausgegeben werden
+*/
+document.write('<p>'+'Cato'+'<br>'+'"Wissen ist Macht"'+'</p>'); //Möglichkeit 1
+document.write('<p>Cato<br>"Wissen ist Macht"</p>'); //Möglichkeit 2
+document.write("<p>Cato<br>\"Wissen ist Macht\"</p>"); //Möglichkeit 3
+/*
+Autor und Spruch sollen in Variablen gelegt werden. Die Ausgabe erfolgt über document.write()
+*/
+var autor = "Cato";
+var spruch = "Wissen ist Macht";
+document.write("<p>"+autor+"<br>"+'"'+spruch+'"'+"</p>");
+/*
+Erfasst den Spruch und den Autor über prompt(), und lasst das Ganze über alert() wieder ausgeben
+*/
+spruch = prompt("Spruch:");
+autor = prompt("Autor:");
+alert(spruch+"\n"+autor); //alert akzeptiert keine HTML-Formatierung
+document.write("<p>"+autor+"<br>"+'"'+spruch+'"'+"</p>");
+</script>
+<script type="text/javascript" src="../lib/source.js"></script>
+</head>
+<body>
+<button id="btn" onClick="getQuelltext()">SOURCE</button>
+<XMP id="source"></XMP>
+
+</body>
+</html>

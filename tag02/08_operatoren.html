@@ -1,0 +1,227 @@
+﻿<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Tag 02 - Operatoren</title>
+<style type="text/css">
+* {
+    font: 14px Verdana,Arial,sans-serif;
+    margin: auto;
+}
+h1 {
+	font: 20px Verdana,Arial,sans-serif;
+}
+th {
+	background-color:#E0E0E0;
+}
+table {
+	margin-bottom:60px;
+	width: 60%;
+}
+</style>
+<script type = "text/javascript">
+var a =1;
+</script>
+</head>
+<body>
+<h1 align="center">Operatoren</h1>
+<br><br>
+<table border="1">
+<caption>Arithmetischen Operatoren</caption>
+<tr>
+ <th>Name</th>
+ <th>Operator</th>
+ <th>Syntax</th>
+ <th>Beispiel</th>
+ <th>Wert</th>
+</tr>
+<tr>
+ <td>Addition</td>
+ <td>+</td>
+ <td>Summand1+Summand2</td>
+ <td>20 + 3</td>
+ <td>23</td>
+</tr>
+<tr>
+ <td>Subtraktion</td>
+ <td>-</td>
+ <td>Minuend1-Minuend2</td>
+ <td>20 - 3</td>
+ <td>17</td>
+</tr>
+<tr>
+ <td>Multiplikation</td>
+ <td>*</td>
+ <td>Faktor1*Faktor2</td>
+ <td>20 * 3</td>
+ <td>60</td>
+</tr>
+<tr>
+ <td>Division</td>
+ <td>/</td>
+ <td>Divident/Devisor</td>
+ <td>20/3</td>
+ <td>6.6666667</td>
+</tr>
+<tr>
+ <td>Modulo</td>
+ <td>%</td>
+ <td>Divident/Devisor</td>
+ <td>20%3</td>
+ <td>2</td>
+</tr>
+<tr>
+ <td>Inkrement</td>
+ <td>++</td>
+ <td>Variable++</td>
+ <td>x=10; x++;</td>
+ <td>11</td>
+</tr>
+<tr>
+ <td>Dekrement</td>
+ <td>--</td>
+ <td>Variable--</td>
+ <td>x=10; x--;</td>
+ <td>9</td>
+</tr>
+</table>
+<table border="1">
+<caption>Vergleichs Operatoren</caption>
+<tr>
+ <th>Name</th>
+ <th>Operator</th>
+ <th>Syntax</th>
+ <th>Beispiel</th>
+ <th>Wert</th>
+</tr>
+<tr>
+ <td>Gleichheit</td>
+ <td>==</td>
+ <td>a==b</td>
+ <td>2+4 == 6 ?</td>
+ <td>true</td>
+</tr>
+<tr>
+ <td>ungleich</td>
+ <td>!=</td>
+ <td>a!=b</td>
+ <td>2+4 == 6 ?</td>
+ <td>false</td>
+</tr>
+<tr>
+ <td>groesser</td>
+ <td>> bzw. >=</td>
+ <td>a>b bzw. a>=b</td>
+ <td>2+4 > 6 ? bzw. 2+4 >= 6 ?</td>
+ <td>false, true</td>
+</tr>
+<tr>
+ <td>kleiner</td>
+ <td>< bzw. <=</td>
+ <td> a < b bzw. a<=b </td>
+ <td>2+4 < 6 ? bzw. 2+4 <= 6 ?</td>
+ <td>false, true</td>
+</tr>
+<tr>
+ <td>Strikte Gleichheit</td>
+ <td>===</td>
+ <td> a === b </td>
+ <td>6==="6"</td>
+ <td>false</td>
+</tr>
+</table>
+<table border="1">
+<caption>Verknüpfungs Operatoren</caption>
+<tr>
+ <th>Name</th>
+ <th>Operator</th>
+ <th>Syntax</th>
+ <th>Beispiel</th>
+ <th>Wert</th>
+</tr>
+<tr>
+ <td>Stringverküpfung</td>
+ <td>+</td>
+ <td>"string1"+"string2"</td>
+ <td>"hallo"+5</td>
+ <td>"hallo5"</td>
+</tr>
+</table>
+<table border="1">
+<caption>Logische Operatoren</caption>
+<tr>
+ <th>Name</th>
+ <th>Operator</th>
+ <th>Syntax</th>
+ <th>Beispiel</th>
+ <th>Wert</th>
+</tr>
+<tr>
+ <td>UND</td>
+ <td>&&</td>
+ <td>a && b</td>
+ <td>true && false</td>
+ <td>false</td>
+</tr>
+<tr>
+ <td>ODER</td>
+ <td>||</td>
+ <td>a || b</td>
+ <td>true || false</td>
+ <td>true</td>
+</tr>
+<tr>
+ <td>NICHT</td>
+ <td>!</td>
+ <td>!a</td>
+ <td>var a=1; !a</td>
+ <td>false</td>
+</tr>
+</table>
+<table border="1">
+<caption>Zuweisungs Operatoren</caption>
+<tr>
+ <th>Name</th>
+ <th>Operator</th>
+ <th>Syntax</th>
+ <th>Beispiel</th>
+ <th>Wert</th>
+</tr>
+<tr>
+ <td>Zuweisung</td>
+ <td>=</td>
+ <td>var a = "wert"</td>
+ <td>var a = 5</td>
+ <td>a = 5</td>
+</tr>
+<tr>
+ <td>Addieren Zuweisung</td>
+ <td>+=</td>
+ <td>var a += "wert"</td>
+ <td>var a = 5; a+=3</td>
+ <td>a = 8</td>
+</tr>
+<tr>
+ <td>Subtraieren Zuweisung</td>
+ <td>-=</td>
+ <td>var a -= "wert"</td>
+ <td>var a = 5; a-=3</td>
+ <td>a = 2</td>
+</tr>
+<tr>
+ <td>Multiplizieren Zuweisung</td>
+ <td>*=</td>
+ <td>var a *= "wert"</td>
+ <td>var a = 5; a*=3</td>
+ <td>a = 15</td>
+</tr>
+<tr>
+ <td>Dividieren Zuweisung</td>
+ <td>*=</td>
+ <td>var a /= "wert"</td>
+ <td>var a = 5; a/=3</td>
+ <td>a = 1.66667</td>
+</tr>
+</table>
+</body>
+</html>

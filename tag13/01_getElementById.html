@@ -1,0 +1,55 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Tag 13 - getElementById</title>
+<style type="text/css">
+* {margin:0; padding:0; font:14px Verdana,Arial,sans-serif; }
+a {color:grey; }
+#wrapper {width:400px; height:auto; margin:20px auto; }
+#artikel1,#artikel2,#artikel3 {display:none; margin:10px 0; padding:10px; background-color:#eee; }
+</style>
+<!--Externes JS Achtung: ggfs. Pfad anpassen!!!-->
+
+<script type="text/javascript">
+//Die Funktion bekommet eine Zahl über den Funktionsaufruf mitgegeben, welche für die jeweilige ID steht, die manipuliert werden soll
+//Umständlich, weil jede Id in CSS abgelegt werden muss
+function fnEinblenden(id) {
+	var div = document.getElementById("artikel"+id);
+	div.style.display = "block";
+}
+
+function fnAusblenden(id) {
+	var div = document.getElementById("artikel"+id);
+	div.style.display = "none";
+}
+</script>
+</head>
+<body>
+<div id="wrapper">
+	<h1>News</h1>
+	<h2>JavaScript-Kurs gestartet <a href="javascript:fnEinblenden(1);">[mehr...]</a></h2>
+	<div id="artikel1">
+		<p>"Alles prima!" meldet der Kurs zurück :) <a href="javascript:fnAusblenden(1);">[ausblenden...]</a></p>
+	</div>
+
+	<h2>Garantierte Kursstarts <a href="javascript:fnEinblenden(2);">[mehr...]</a></h2>
+	<div id="artikel2">
+		<p>"Die nachstehenden Kurse finden garantiert statt:</p>
+		<ul>
+			<li>Adobe Dreamweaver</li>
+			<li>TYPO3</li>
+			<li>PHP</li>
+			<li>JQuery</li>
+		</ul>
+		<a href="javascript:fnAusblenden(2);">[ausblenden...]</a>
+	</div>
+
+	<h2>Erfolgsquote bei 120 Prozent <a href="javascript:fnEinblenden(3);">[mehr...]</a></h2>
+	<div id="artikel3">
+		<p>Die neuesten Zahlen belegen das kaum Glaubhafte. 120 Prozent bedeuten Platz EINS aller Institute. Ein "Sehr gut" für unser Institut. <a href="javascript:fnAusblenden(3);">[ausblenden]</a></p>
+	</div>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,43 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Muster</title>
+<!--Externes JS Achtung: ggfs. Pfad anpassen!!!-->
+<script type="text/javascript" src="../eigenefunktionen.js"></script>
+
+<script type="text/javascript">
+/*
+	Ein Anwender kann Zutaten für eine Pizza eingeben. Dazu wird er nach einer Zutat gefragt ("Bitte geben Sie eine Zutat ein!"). 
+Erlaubt sind nur folgende Zutaten:
+	- Salami
+	- Aubergine
+	- Knoblauch
+	- Spinat
+	
+	Diese Frage wird solange gestellt, bis der Anwender "ok" eingibt.
+	Das Menü soll per document.write() ausgegeben werden
+*/
+var zutat ="";
+var pizza = "";
+while(zutat != "ok") {
+	zutat = prompt("Bitte eine Zutat eingeben. Ansonsten ok eingeben");
+	if(zutat != "ok") {
+		if(zutat == "Salami" || zutat == "Aubergine" || zutat == "Knoblauch" || zutat == "Spinat") {
+			pizza += zutat+" ";
+		}
+		else if(zutat == null) {
+			break;
+		}
+		else {
+			alert("Zutat leider nicht vorhanden");
+		}
+	}
+}
+docw("Sie haben folgende Zutaten für Ihre Pizza bestellt: "+pizza);
+</script>
+</head>
+<body>
+
+</body>
+</html>

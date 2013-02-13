@@ -1,0 +1,32 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Tag 03 - Reihenfolge von Funktionen</title>
+<script type="text/javascript">
+//Funktionsdefinitionen
+function Aufruf1() {
+	document.write("Aufruf Funktion 1<br>");
+}
+function Aufruf2() {
+	document.write("Aufruf Funktion 2<br>");
+}
+function Aufruf3() {
+	document.write("Aufruf Funktion 3<br>");
+}
+
+//Funktionsaufrufe
+//Bei Funktionsaufrufen ist die Reihenfolge der Aufrufe wichtig, nicht die Reihenfolge der Funktionsdefinition
+Aufruf3();
+Aufruf1();
+Aufruf2();
+
+</script>
+<script type="text/javascript" src="../lib/source.js"></script>
+</head>
+<body>
+<button id="btn" onClick="getQuelltext()">SOURCE</button>
+<XMP id="source"></XMP>
+
+</body>
+</html>

@@ -1,0 +1,47 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Tag 09 - Übung Schleifen</title>
+<!--Externes JS Achtung: ggfs. Pfad anpassen!!!-->
+<script type="text/javascript" src="../eigenefunktionen.js"></script>
+
+<script type="text/javascript">
+var zahl = 0;
+/*do {
+	zahl++;
+	docw(zahl);
+}
+while(zahl <50);
+
+Es sollen Zahlen ausgegeben werden
+- alle Zahlen von 1 bis 50 untereinander
+- Zahlen, die durch 10 teilbar sind-> fett darstellen
+- Zahlen, die durch 5 teilbar sind-> rot darstellen
+
+*/
+
+
+
+for (zahl=1;zahl<=50;zahl++) {
+	
+	if(zahl % 10 == 0) {
+		docw("<b><span style='color:red;'>"+zahl+"</span></b>");
+	}
+	
+	else if(zahl % 5 == 0) {
+		docw("<span style='color:red;'>"+zahl+"</span>");
+	}
+	else {
+		docw(zahl);
+	}
+}
+
+//zahl % 10 == 0
+
+</script>
+</head>
+<body>
+
+</body>
+</html>

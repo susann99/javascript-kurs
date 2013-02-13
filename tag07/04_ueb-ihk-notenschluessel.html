@@ -1,0 +1,59 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Tag 07 - Übung IHK Notenschlüssel</title>
+<style type="text/css">
+* {margin:0; padding:0; font:14px Verdana,Arial,sans-serif; }
+#anzeige {margin:20px auto; background-color: grey; padding:10px; width:250px; }
+#btn {display:block; margin:20px auto; width:150px; background-color:#eee; }
+</style>
+<!--Externes JS Achtung: ggfs. Pfad anpassen!!!-->
+<script type="text/javascript" src="../lib/schoenefunction.js"></script>
+
+<script type="text/javascript">
+var teilnehmer = 0;
+var bestanden = 0;
+var sehrgut = 0;
+var gut = 0;
+var befriedigend = 0;
+var ausreichend = 0;
+function fnNote() {
+	//alert("klappt");
+	var eingabe = prompt("Bitte Note in Prozent eingeben","100");
+	teilnehmer++; // teilnehmer = teilnehmer +1;
+	//Wenn der Wert der Eingabe größer gleich 92 ist, hat man eine Eins
+	if(eingabe >= 92) {
+		sehrgut++;
+	}
+	//Wenn der Wert der Eingabe größer gleich 82 und kleiner 92, hat man eine Zwei
+	if(eingabe >= 82 && eingabe < 92) {
+		gut++;
+	}
+	//Wenn der Wert der Eingabe größer gleich 67 und kleiner 82, hat man eine Drei
+	if(eingabe >= 67 && eingabe < 82) {
+		befriedigend++;
+	}
+	//Wenn der Wert der Eingabe größer gleich 50 und kleiner 67, hat man eine Vier
+	if(eingabe >= 50 && eingabe < 67) {
+		ausreichend++;
+	}
+	libiH("Teilnehmer insgesamt: "+teilnehmer+"<br>Davon eine Eins: "+sehrgut+"<br>eine Zwei: "+gut+"<br>eine Drei: "+befriedigend+"<br>eine Vier: "+ausreichend,"anzeige");
+}
+
+
+</script>
+<script type="text/javascript" src="../lib/source.js"></script>
+</head>
+<body>
+<button id="btn" onClick="getQuelltext()">SOURCE</button>
+<XMP id="source"></XMP>
+<!--
+Es gibt einen Button "Note eintragen", auf Klick öffnet sich ein prompt zur Noteneingabe.
+Die Ausgabe soll per document.getElementById() erfolgen. Ausgegeben werden sollen die Anzahl der Eingaben sowie die Menge an "Bestanden" (Eine genaue Trennung in Sehr gut / gut / befriedigend etc. ist auch möglich).
+Tipp: Die Menge an "Bestanden" kommt in eine Variable.
+-->
+<div id="anzeige">Sie haben noch nichts eingegeben!</div>
+<button id="btn" onClick="fnNote();">Note eintragen!</button>
+</body>
+</html>

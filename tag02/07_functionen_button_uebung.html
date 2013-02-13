@@ -1,0 +1,33 @@
+﻿<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>javascript start</title>
+<script type="text/javascript" src="../lib/source.js"></script>
+<script type="text/javascript">
+//Wiederverwendung von Code
+//Function definieren function bezeichner(){}
+function getBMI() {
+	var gewicht;
+	var groesse;
+	var bmi;
+	gewicht = prompt("Wieviel wiegst Du in kg:", 100);
+	groesse = prompt("Wie gross bist Du in cm:", 200);
+	groesse = groesse/100;
+	bmi = gewicht/(groesse*groesse);
+	alert("Dein BMI: "+bmi.toFixed(1));
+}
+document.write("<h1>Funktionen</h1>");
+</script>
+</head>
+<body>
+<button id="btn" onClick="getQuelltext()">SOURCE</button>
+<XMP id="source"></XMP>
+<p>
+	<input type="button" onClick="getBMI();" value="BMI berechnen">
+</p>
+<p>
+	<a href="javascript:getBMI();">klick</a>
+</p>
+</body>
+</html>

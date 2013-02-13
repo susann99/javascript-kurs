@@ -1,0 +1,69 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>CC</title>
+<link href="css/styles.css" rel="stylesheet" type="text/css">
+<script type="text/javascript">
+function getEin(id) {
+	var div = document.getElementsByClassName("artikel").item(id);
+	div.style.display = "block";
+}
+function getAus(id) {
+	var div = document.getElementsByClassName("artikel").item(id);
+	div.style.display = "none";
+}
+</script>
+</head>
+
+<body>
+<div id="wrapper">
+<header id="banner">
+<img src="bilder/bildleft.png" alt="Banner CC">
+
+</header>
+<nav id="navi">
+	<a class="aktuell" href="#">Home</a>
+    <a href="#">Über uns</a>
+    <a href="#">Seminarüberblick</a>
+    <a href="#">Referenzen</a>
+    <a href="#">Anfahrt</a>
+    <a href="#">Kontakt</a>
+</nav>
+<section id="inhalt">
+<h1>Herzllich willkommen</h1>
+</section>
+<aside id="sidebar">
+<h1>News</h1>
+<h2>JavaScript-Kurs gestartet <a href="javascript:getEin(0);">[mehr...]</a></h2>
+<artikle id="artikel1" class="artikel">
+ JavaScript ist eine Sehr wichtige Technologie im Internet:
+ <ul>
+	<li>Dymamische Webseiten</li>
+	<li>Formularvalidierun</li>
+	<li>GEO-Daten, Ajax</li>
+	<li>Grafik 3D</li>
+ </ul>
+ <a href="javascript:getAus(0);">[ausblenden]</a>
+</artikle>
+<h2>JavaScript-Actionscript <a href="javascript:getEin(1);">[mehr...]</a></h2>
+<artikle id="artikel1" class="artikel">
+ Auch im Animationsbereich lößt JavaScript immer Actionscript ab:
+ <ul>
+	<li>Dymamische Webseiten</li>
+	<li>Formularvalidierun</li>
+	<li>GEO-Daten, Ajax</li>
+	<li>Grafik 3D</li>
+		<li>Dymamische Webseiten</li>
+	<li>Formularvalidierun</li>
+	<li>GEO-Daten, Ajax</li>
+	<li>Grafik 3D</li>
+ </ul> <a href="javascript:getAus(1);">[ausblenden]</a>
+</artikle>
+</aside>
+<footer id="footer">
+<p>Copyright 2013 by Comcave-College</p>
+</footer>
+</div>
+</body>
+</html>

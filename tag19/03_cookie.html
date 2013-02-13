@@ -1,0 +1,43 @@
+﻿<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN"
+    "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>Cookies in Javscript</title>
+<meta http-equiv="Content-Type" content="application/xhtml+xml; charset=iso-8859-1" />
+
+<script type="text/javascript">
+<!--//--><![CDATA[><!--
+  function check_cookie(){
+  if(document.cookie!="") alert("Es existiert folgender Cookie:\n"+document.cookie)
+  else alert("Kein Cookie gesetzt");
+  }
+  
+  function write_cookie()
+ {
+  var jetzt = new Date();
+  var halbwertszeit = 1000*60*60*24*365*1000; //Tausend Jahre
+  var verfall = new Date(jetzt.getTime() + halbwertszeit);
+  window.document.cookie = "blatext=aaa; expires=" + verfall.toGMTString() + ";";
+  check_cookie();
+ }
+ function delete_cookie()
+ {
+  var jetzt = new Date();
+  var halbwertszeit = -1; //minus 1 millisekunden
+  var verfall = new Date(jetzt.getTime() - halbwertszeit);
+  window.document.cookie = "blatext=aaa; expires=" + verfall.toGMTString() + ";";
+  //alert('deleted');
+  check_cookie();
+ }
+//--><!]]>
+</script>
+</head>
+<body> 
+<p>
+<a href="#" onclick="write_cookie(); return false;">Cookie setzen</a><br />
+<a href="#" onclick="delete_cookie(); return false;">Cookie löschen</a><br />
+<a href="#" onclick="check_cookie(); return false;">Cookie prüfen</a><br />
+</p>
+</body>
+</html>

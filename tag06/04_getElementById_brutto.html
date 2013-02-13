@@ -1,0 +1,42 @@
+﻿<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Tag 06 - getElementById</title>
+<style type="text/css">
+* {
+	font-family:Arial;
+}
+#wrapper {
+	margin-top:20%;
+	margin-left:30%;
+	
+}
+</style>
+<script type="text/javascript" src="../lib/source.js"></script>
+</head>
+<body>
+<button id="btn" onClick="getQuelltext()">SOURCE</button>
+<XMP id="source"></XMP>
+<div id="wrapper">
+	<div id="ausgabe">Bitte Brutto oder Nettowert berechnen!</div>
+	<br><br>
+	<button id="brutto" onClick="getBrutto();">Brutto</button>
+	<button id="netto" onClick="getNetto();">Netto</button>
+	<button id="neu" onClick="location.reload();">Neue Berrechnung</button>
+</div>
+<script type="text/javascript">
+var geld = prompt("Zahl:",100);
+document.getElementById("ausgabe").innerHTML="Bitte Brutto oder Netto von "+geld+" Euro berechnen";
+function getBrutto() {
+		brutto = geld*1.19;
+		document.getElementById("ausgabe").innerHTML=brutto+" Euro ist der Bruttowert von "+geld+" Euro";
+}	
+function getNetto() {
+		netto = Math.ceil(geld/1.19);
+		document.getElementById("ausgabe").innerHTML=netto+" Euro ist der Nettowert von "+geld+" Euro";
+}
+</script>
+</body>
+
+</html>

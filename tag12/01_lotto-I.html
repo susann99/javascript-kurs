@@ -1,0 +1,94 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Tag 12 - Lotto</title>
+<!--Externes JS Achtung: ggfs. Pfad anpassen!!!-->
+<script type="text/javascript" src="../lib/schoenefunction.js"></script>
+<script type="text/javascript">
+//Alle Kugeln anzeigen
+for(var i=1;i<=49;i++) {
+	if(i<10) {
+	document.write("<img src='../bilder/lotto/70_0"+i+".png'>");
+	}
+	if(i>=10) {
+	document.write("<img src='../bilder/lotto/70_"+i+".png'>");
+	}
+}
+document.write("<hr>");
+//Kugeln anzeigen, bis eine einstellige Kugel kommt
+var kugel=49;
+while(kugel >=10) {
+	kugel = getZufall(1,49);
+	if(kugel >= 10) {
+		document.write("<img src='../bilder/lotto/70_"+kugel+".png'>");
+	}
+}
+
+document.write("<hr>");
+//6 Kugeln ziehen
+for(var i=1;i<=6;i++) {
+	kugel = getZufall(1,49);
+	if(kugel < 10) {
+		document.write("<img src='../bilder/lotto/70_0"+kugel+".png'>");
+	}
+	if(kugel >=10) {
+		document.write("<img src='../bilder/lotto/70_"+kugel+".png'>");
+	}
+
+}
+
+document.write("<hr>");
+// 6 festgelegte Kugeln in Array legen und ausgeben
+var ziehung = new Array(6,12,18,23,33,49);
+for(var i=0;i<=5;i++) {
+	if(ziehung[i] < 10) {
+		document.write("<img src='../bilder/lotto/70_0"+ziehung[i]+".png'>");
+	}
+	if(ziehung[i] >=10) {
+		document.write("<img src='../bilder/lotto/70_"+ziehung[i]+".png'>");
+	}
+}
+
+document.write("<hr>");
+//6 zufällige Kugeln in Array legen
+var ziehung = new Array();
+for(var i=0;i<=5;i++) {
+	kugel = getZufall(1,49);
+	ziehung.push(kugel);
+	if(ziehung[i] < 10) {
+		document.write("<img src='../bilder/lotto/70_0"+ziehung[i]+".png'>");
+	}
+	if(ziehung[i] >=10) {
+		document.write("<img src='../bilder/lotto/70_"+ziehung[i]+".png'>");
+	}
+}
+
+document.write("<hr>");
+//6 zufällige Zahlen in Array legen und sortiert ausgeben
+//6 zufällige Kugeln in Array legen
+var ziehung = new Array();
+for(var i=0;i<=5;i++) {
+	kugel = getZufall(1,49);
+	
+	if(kugel < 10) {
+		//führende 0 für sortierte Ausgabe bei einstelligen Zahlen
+		ziehung.push("0"+kugel);
+	}
+	if(kugel >=10) {
+		ziehung.push(kugel);
+	}
+}
+//alert(ziehung);
+ziehung.sort(); //alphabetische Sortierung (ohne führende 0): 12,39,4,43,8,99
+//alert(ziehung);
+//Ausgabe über for-Schleife
+for(var i=0;i<=ziehung.length;i++) {
+	document.write("<img src='../bilder/lotto/70_"+ziehung[i]+".png'>");
+}
+</script>
+</head>
+<body>
+
+</body>
+</html>

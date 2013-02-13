@@ -1,0 +1,46 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Tag 16 - Plausibilitätsprüfung</title>
+<!--Externes JS Achtung: ggfs. Pfad anpassen!!!-->
+<script type="text/javascript" src="../eigenefunktionen.js"></script>
+<!--
+Ein Benutzer kann in ein Eingabefeld eine Zahl eingeben. Bei korrekter Eingabe wird die Quadratzahl ausgegeben. Bei falscher Eingabe wird der Benutzer darauf hingewiesen, dass er/sie keine Zahl eingegeben hat.
+-->
+<script type="text/javascript">
+function fnBerechne() {
+	var zahl	= document.getElementsByTagName("input")[0].value; //nimmt Benuztereingabe auf
+	var ausgabe = document.getElementById("ergebnis"); //Ausgabe der Quadratzahl
+	var fehler	= document.getElementById("fehler"); // Fehlermeldung, wenn keine Zahl
+	
+	fehler.innerHTML = "";
+	fehler.style.color="black";
+	fehler.style.backgroundColor="yellow";
+	fehler.style.padding = "0";
+	if(isNaN(zahl) || zahl =="") {
+		fehler.innerHTML = "Bitte eine Zahl eingeben!";
+		fehler.style.color = "red";
+		fehler.style.backgroundColor = "yellow";
+		fehler.style.padding = "5px";
+		ausgabe.innerHTML = "";
+		return; //Funktion wird verlassen
+	}
+	
+	var erg = zahl*zahl;
+	ausgabe.innerHTML = "Die Quadratzahl lautet: "+erg;
+	
+		
+}
+</script>
+</head>
+<body>
+<p>Multiplikation</p>
+<form>
+	Bitte erste Zahl eingeben: 	<input onChange="fnBerechne();" type="text">
+								<input onClick="fnBerechne();" type="button" value="Produkt errechnen">
+</form>
+<p id="fehler"></p>
+<p id="ergebnis"></p>
+</body>
+</html>

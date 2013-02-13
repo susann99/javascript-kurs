@@ -1,0 +1,26 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Tag 16 - getElementsByClassName()</title>
+<!--Externes JS Achtung: ggfs. Pfad anpassen!!!-->
+<script type="text/javascript" src="../eigenefunktionen.js"></script>
+
+<script type="text/javascript">
+function fnAustausch(index) {
+	var text = document.getElementsByClassName("absatz"); //In der Variablen text liegt eine HTML-Collection; auf die einzelnen Klassen kann wie bei einem Array über einen Schlüssel beginnend ab 0 zugegriffen werden
+	text[index].innerHTML = "Absatz"+(index+1)+" ist ausgetauscht";
+}
+</script>
+</head>
+<body>
+<div id="box">
+<p class="absatz">Dies ist Absatz 1</p>
+<p class="absatz">Dies ist Absatz 2</p>
+<p class="absatz">Dies ist Absatz 3</p>
+</div>
+<button onClick="fnAustausch(0);">Absatz1 austauschen</button>
+<button onClick="fnAustausch(1);">Absatz2 austauschen</button>
+<button onClick="fnAustausch(2);">Absatz3 austauschen</button>
+</body>
+</html>

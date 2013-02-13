@@ -1,0 +1,32 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Tag 11 - Übung Array</title>
+<!--Externes JS Achtung: ggfs. Pfad anpassen!!!-->
+<script type="text/javascript" src="../lib/schoenefunction.js"></script>
+
+<script type="text/javascript">
+var liste = new Array();
+var eingabe = "";
+while(eingabe != "ende") {
+	eingabe = prompt("Bitte Lebensmittel eingeben");
+	
+	if(eingabe == null) {
+		break;
+	}
+	if(eingabe != "ende") {
+		liste.push(eingabe);
+	}
+}
+var ausgabe = liste.join(", ");
+getText("Sie haben folgende Einkaufsliste eingegeben: "+ausgabe);
+</script>
+</head>
+<body>
+<!--
+Eine Einkaufsliste soll geschrieben werden.
+Über ein prompt wird der Anwender nach Lebensmitteln gefragt, die in einem Array gespeichert werden sollen. Gibt der Benutzer "ende" ein, wird die Liste ausgegeben
+-->
+</body>
+</html>

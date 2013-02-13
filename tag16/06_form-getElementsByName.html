@@ -1,0 +1,27 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Tag 16 - Formular</title>
+<!--Externes JS Achtung: ggfs. Pfad anpassen!!!-->
+<script type="text/javascript" src="../eigenefunktionen.js"></script>
+
+<script type="text/javascript">
+function fnUebertragen() {
+	var eingabe = document.getElementsByName("eingabe");
+	var eingabewert = eingabe[0].value; //Zugriff über den Schlüssel 0 -> erstes Auftreten des Attr. 'eingabe'
+	alert(eingabewert);
+	var ausgabe = document.getElementsByName("ausgabe");
+	ausgabe[0].value = eingabewert;
+}
+</script>
+</head>
+<body>
+<form>
+	<input name="eingabe" type="text" value="Hallo Hamburg">
+	<input type="button" value ="Übertragen" onClick="fnUebertragen();">
+	<input name="ausgabe" value="" type="text">
+</form>
+
+</body>
+</html>

@@ -1,0 +1,37 @@
+﻿<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Tag 03 - Funktionen Parameter</title>
+<script type="text/javascript">
+function getPlus(zahl1=0, zahl2=0){//Parameter werden nicht deklariert
+	var erg = zahl1 + zahl2;
+	return erg;
+}
+function getMinus(zahl1, zahl2){//Parameter werden nicht deklariert
+	var erg = zahl1 - zahl2;
+	return erg;
+}
+function getMal(zahl1, zahl2){//Parameter werden nicht deklariert
+	var erg = zahl1 * zahl2;
+	return erg;
+}
+function getTeilen(zahl1, zahl2){//Parameter werden nicht deklariert
+	var erg = zahl1 / zahl2;
+	return erg;
+}
+document.write("6+7 =");
+document.write(getPlus(6,7));
+document.write("<br> 6-7 =");
+document.write(getMinus(6,7));
+document.write("<br>6*7 = ");
+document.write(getMal(6,7));
+document.write("<br>6/7 = ");
+document.write(getTeilen(6,7));
+document.write("<br>0+0 = ");
+document.write(getPlus());
+</script>
+</head>
+<body>
+</body>
+</html>

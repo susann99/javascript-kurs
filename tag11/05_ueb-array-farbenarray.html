@@ -1,0 +1,27 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Tag 11 - Übung Array</title>
+<!--Externes JS Achtung: ggfs. Pfad anpassen!!!-->
+<script src="../lib/schoenefunction.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+var farbe = new Array("red","green","blue","pink","purple","yellow","lime");
+getText("<span style='color:"+farbe[0]+";'>Hier steht der ...</span>");
+
+for (var i=0;i<farbe.length;i++) {
+	getText("<span style='color:"+farbe[i]+";'>Hier steht der Mustertext</span>");
+}
+</script>
+</head>
+<body>
+<!--
+Übung Farbenarray:
+Ein Array soll erstellt werden mit folgenden Werten:
+red, green, blue, pink, purple, yellow, lime
+In einer Schleife sollen alle Werte eines Arrays als Farbe für einen Text ausgegeben werden
+docw("<span style='color:red'>Hier steht der Text</span>")
+-->
+</body>
+</html>

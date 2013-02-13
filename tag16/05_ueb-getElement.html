@@ -1,0 +1,50 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Javascriptkurs ComCave</title>
+<link href="css/styles.css" rel="stylesheet" type="text/css">
+<!-- Ansprechen von Elements...
+Wie werden folgende Elemente angesprochen:
+- Die ID "wrapper"
+	-> documnet.getElementById("wrapper")
+- Der Link zur Seite Kontakt
+	-> documnet.getElementsByTag("a")[5]
+- dritte Überschrift zweiter Ordnung
+	-> documnet.getElementsByTag("h2")[2]
+Der letzte Artikel (artikle)
+	-> documnet.getElementsByClassName("article")[2]
+- Die erste Klasse "aktuell"
+	-> documnet.getElementsByClassName("article")[0]
+-->
+<script type="text/javascript">
+
+</script>
+</head>
+
+<body>
+<div id="wrapper">
+<header id="banner">
+<img src="bilder/bildleft.png" alt="Banner CC">
+</header>
+<nav id="navi">
+	<a class="aktuell" href="#">Home</a>
+    <a href="#">Projektbeschreibung</a>
+    <a href="#">Inhalt</a>
+    <a href="#">Index</a>
+    <a href="#">Extras</a>
+    <a href="#">Kontakt</a>
+</nav>
+<section id="inhalt">
+<h1>Javascriptkurs</h1>
+</section>
+<aside id="sidebar">
+<h1 onClick="getTagInhalt(01)">Inhalt</h1>
+
+</aside>
+<footer id="footer">
+<p>Copyright 2013 by Comcave-College</p>
+</footer>
+</div>
+</body>
+</html>

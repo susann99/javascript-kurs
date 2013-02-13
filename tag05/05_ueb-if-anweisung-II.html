@@ -1,0 +1,65 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Tag 05 - Übung if-Anweisung</title>
+<!--Externes JS Achtung: ggfs. Pfad anpassen!!!-->
+<script type="text/javascript" src="../eigenefunktionen.js"></script>
+
+<script type="text/javascript">
+var kg = prompt("Wieviel wiegt ihr Gepäckstück (in kg)?","0");
+//Überprüfung auf Klasse S
+if(kg <= 20) {
+	docw("Ihr Gepäckstück wiegt "+kg+" kg und gehört in Klasse S");
+}
+//Überprüfung auf Klasse M
+else if(kg <=40) {
+	docw("Ihr Gepäckstück wiegt "+kg+" kg und gehört in Klasse M");
+}
+//Überprüfung auf Klasse L
+else if(kg <=60) {
+	docw("Ihr Gepäckstück wiegt "+kg+" kg und gehört in Klasse L");
+}
+//Überprüfung auf Klasse XL
+else {
+	docw("Ihr Gepäckstück wiegt "+kg+" kg und gehört in Klasse XL");
+}
+
+//#####################Alternative: Logische Operatoren###################
+
+//Überprüfung auf Klasse S
+if(kg <= 20) {
+	docw("Ihr Gepäckstück wiegt "+kg+" kg und gehört in Klasse S");
+}
+//Überprüfung auf Klasse M
+if(kg > 20 && kg <= 40) {
+	docw("Ihr Gepäckstück wiegt "+kg+" kg und gehört in Klasse M");
+}
+//Überprüfung auf Klasse L
+if(kg > 40 && kg <= 60) {
+	docw("Ihr Gepäckstück wiegt "+kg+" kg und gehört in Klasse L");
+}
+//Überprüfung auf Klasse XL
+if(kg > 60) {
+	docw("Ihr Gepäckstück wiegt "+kg+" kg und gehört in Klasse XL");
+}
+
+
+</script>
+<script type="text/javascript" src="../lib/source.js"></script>
+</head>
+<body>
+<button id="btn" onClick="getQuelltext()">SOURCE</button>
+<XMP id="source"></XMP>
+<!--
+Ein Anwender kann eingeben, wie schwer ein Gepäckstück ist (in kg).
+Je nach Gewicht erfolgt die Klassifizierung.
+Klasse S: <= 20kg
+Klasse M: > 20kg und <= 40kg
+Klasse L: > 40kg und <= 60kg
+Klasse XL: > 60 kg 
+
+Die Ausgabe soll lauten: Ihr Gepäckstück wiegt 20kg und gehört in die Klasse S
+-->
+</body>
+</html>

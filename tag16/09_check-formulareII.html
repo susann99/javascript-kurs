@@ -1,0 +1,50 @@
+﻿<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Tag 16 - Check Formulare getElemtsByName()</title>
+<style type="text/css">
+</style>
+<!--
+Ein Benutzer kann in ein Eingabefeld eine Zahl eingeben. Bei korrekter Eingabe wirde die Quadratzahl ausgegeben.
+Bei falscher Eingabe wird der Benutzer darauf hingewiesen, das is keine Zahl
+-->
+<script type="text/javascript">
+var i=0;
+function getRechnen(){
+	var eingabe = document.getElementsByTagName("input");
+	var ergebnis = document.getElementById("ergebnis");
+	var fehler = document.getElementById("fehler");
+	var a = eingabe[0].value;
+	fehler.style.color = "";
+	fehler.style.backgroundColor ="";
+	fehler.innerHTML = navigator.userAgent;
+	if(isNaN(a)){
+		alert("Bitte eine Zahl eingeben");
+		fehler.innerHTML = "FEHLER";
+		fehler.style.color = "red";
+		fehler.style.backgroundColor ="yellow";
+		ergebnis.innerHTML = a;
+		return;
+	} 
+	var b = a*a;
+	ergebnis.innerHTML = b;
+	var liste = document.forms[0].Auswahl;
+	liste.options[i] = new Option(b, "");
+	i++;
+}
+</script>
+</head>
+<body>
+<h1>Zahl zum Quadrat</h1>
+<form>
+ <p>Zahl 1 eingeben: <input type = "text"></p>
+ <select name="Auswahl" size="8">
+	<option>Ein Eintrag</option>
+</select>
+ <input type = "button" value="Quadratzahl berrechnen" onClick="getRechnen();">
+</form>
+<p id="ergebnis">Ergebniss</p>
+<p id="fehler">Keine Fehler</p>
+</body>
+</html>

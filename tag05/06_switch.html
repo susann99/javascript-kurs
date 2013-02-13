@@ -1,0 +1,71 @@
+﻿<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Tag05 - Kontrollstrukturen - switch</title>
+<style type="text/css">
+* {
+	font-family:Arial;
+}
+span { 
+	font-size:30px;
+	font-weight:900;
+	padding:40px;
+}
+.zentriert {
+	margin-top:20%;
+}
+h1 {
+	padding:20px;
+	color:grey;
+	background-color:#D8D8D8;
+	width:400px;
+}
+h2 {
+	padding:20px;
+	color:darkblue;
+	background-color:darkred;
+	width:320px;
+}
+</style>
+<script type="text/javascript" src="../lib/source.js"></script>
+</head>
+<body>
+<button id="btn" onClick="getQuelltext()">SOURCE</button>
+<XMP id="source"></XMP>
+<center>
+<div class="zentriert" onClick="location.reload();">
+<script type="text/javascript">
+
+function getText(t,a,l) {
+	if(a=="h1" || a=="h2" || a=="h3"){
+		document.write("<"+a+">"+t+"</"+a+">");
+	} else if (l!="") {
+		document.write('<a href="http://'+l+'" target=_blank>'+t+'</a>');
+	} else if (a=="img") {
+		document.write('<img src="'+t+'">');
+	} else {
+		document.write("<p>"+t+"</p>");
+	}
+}
+
+var name = prompt("Gib einen Namen ein:");
+switch(name){
+	case "Birger":
+		getText("Hallo Birger");
+		break;
+	case "Susann":
+		getText("Hallo Susann");
+		break;
+	case "Nicole":
+		getText("Hallo Nicole");
+		break;
+	default:
+		getText("Hallo Alle","h1");
+		break;
+}
+</script>
+</div>
+</center>
+</body>
+</html>

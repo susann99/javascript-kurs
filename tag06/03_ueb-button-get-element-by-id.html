@@ -1,0 +1,38 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Tag 06 - Übung Button getElementById()</title>
+<style type="text/css">
+* {margin:0; padding:0; font:14px Verdana,Arial,sans-serif; }
+#wrapper {position:absolute; width:400px; height:300px; text-align:center; left:50%; top:50%; margin-left:-200px; margin-top:-150px; background-color:#ccc; color:red; border-radius:50px; }
+#ueberschrift {margin-top:30px; }
+h1 {font-weight:bold; margin:50px 0; }
+button {background-color:white; color:black; border:1px dotted black; }
+</style>
+<!--Externes JS Achtung: ggfs. Pfad anpassen!!!-->
+<script type="text/javascript" src="../eigenefunktionen.js"></script>
+
+<script type="text/javascript">
+function fnTrans() {
+	//alert("klappt");
+	document.getElementById("ausgabe").innerHTML = "<h1>Übersetzung: Hello World</h1>";
+}
+</script>
+</head>
+<body>
+<!--
+Klickt der Benutzer auf einen Button "In English", wird der Text "Hallo Welt" in Englisch angezeigt
+Schritt 1: Definieren einer Funktion //Überlegen, ob Parameter übergeben werden sollen
+Schritt 2: Aufruf der Funktion über onClick im button
+Schritt 3: Testen mit alert() in der Funktion
+Schritt 4: Die Methode getElementById() verwenden. Die Id, in die geschrieben werden soll, heißt "ausgabe", über innerHTML wird der bestehende Text ersetzt.
+-->
+<div id="wrapper">
+	<div id="ueberschrift">Willkommen in Thomas Übersetzungswelt</div>
+	
+	<div id="ausgabe"><h1>Ihr Eingabetext: Hallo Welt</h1></div>
+	<button id="btn" onClick="fnTrans()">In English</button>
+</div>
+</body>
+</html>

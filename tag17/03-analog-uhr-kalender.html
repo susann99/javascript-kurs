@@ -1,0 +1,107 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Tag 17 - Analoge Uhr mit Datum</title>
+<style type="text/css">
+* {margin:0; padding:0; font:14px Verdana,sans-serif}
+#box {position:relative;width:330px;height:300px;margin:20px auto;background-color:#A70000;}
+#uhr {position:absolute;z-index:1;left:56px;top:46px}
+#st {position:absolute;z-index:2;left:158px;top:86px;}
+#mi {position:absolute;z-index:3;left:159px;top:69px;}
+#se {position:absolute;z-index:4;left:160px;top:45px;}
+#digiuhr {position:absolute;z-index:10;left:120px;top:280px;color:#FFF}
+#datum {position:absolute;z-index:11;left:23px;top:2px;color:#FFF;}
+p{margin:20px auto;text-align:center}
+
+</style>
+<script type="text/javascript">
+//aktuelles Datum erzeugen
+var interval;
+var i = 0;
+function getInterval(p){
+	clearInterval(interval);
+	interval = null;
+	getUhr();
+	if(p!="stop"){
+		interval = setInterval("getUhr()",1000);
+	} 
+}
+function getUhr() {
+	var digiuhr = document.getElementById("digiuhr");
+	var zsek = document.getElementById("se");
+	var zmin = document.getElementById("mi");
+	var zstd = document.getElementById("st");
+	var jetzt = new Date();
+	
+	//Uhrzeit in Variablen legen
+	var h = jetzt.getHours();
+	var m = jetzt.getMinutes();
+	var s= jetzt.getSeconds();
+	//Uhrzeit ausgeben
+	
+	//Digital
+	if(h<10)h = "0"+h;
+	if(m<10)m = "0"+m;
+	if(s<10)s = "0"+s;
+	var uhrzeit = h+":"+m+":"+s;
+	digiuhr.innerHTML = uhrzeit;
+	
+	//Analog
+	zsek.style.transformOrigin = "bottom";
+	zsek.style.transform = "rotate("+(s*6)+"deg)";
+	zsek.style.msTransform = "rotate("+(s*6)+"deg)";
+	zsek.style.msTransformOrigin = "bottom";
+	
+	zmin.style.transformOrigin = "bottom";
+	zmin.style.transform = "rotate("+(m*6)+"deg)";
+	zmin.style.msTransform = "rotate("+(m*6)+"deg)";
+	zmin.style.msTransformOrigin = "bottom";
+	
+	zstd.style.transformOrigin = "bottom";
+	zstd.style.transform = "rotate("+(h*30+m*0.5)+"deg)";
+	zstd.style.msTransform = "rotate("+(h*30+m*0.5)+"deg)";
+	zstd.style.msTransformOrigin = "bottom";
+	/*
+		myself.style.webkitTransform = "";
+		myself.style.MozTransform = "";
+		myself.style.msTransform = "";
+		myself.style.OTransform = "";
+		myself.style.transform = "";
+	*/
+}
+
+var arrTage = Array("Sonntag","Montag","Dienstag","Mittwoch","Donnerstag","Freitag","Samstag");
+var arrMonate = new Array("Januar", "Februar", "M&auml;rz", "April", "Mai", "Juni",
+                      "Juli", "August", "September", "Oktober", "November", "Dezember");
+function getDatum(){
+	var heute = new Date();
+	var datum = document.getElementById("datum");
+	var tag  	= heute.getDate();
+	var wtag 	= heute.getDay();
+	var monat 	= heute.getMonth();
+	var jahr	= heute.getFullYear();
+	if(tag<10)tag = "0"+tag;
+	var heuteist 	= "Heute ist "+arrTage[wtag]+", der "+tag+". "+arrMonate[monat]+" "+jahr;
+	datum.innerHTML = heuteist;
+}
+</script>
+</head>
+<body>
+<div id="box">
+	<div id="datum">01.01.2000</div>
+	<img id="uhr" src="uhr.png">
+	<img id="st" src="stundenzeiger.png">
+	<img id="mi" src="minutenzeiger.png">
+	<img id="se" src="sekundenzeiger.png">
+	<div id="digiuhr">00:00:00</div>
+</div>
+<p>
+	<button onClick="getInterval('stop')">stopp</button>
+	<button onClick="getInterval('start')">start</button>
+</p>
+<script>
+	getDatum();getInterval('start');
+</script>
+</body>
+</html>

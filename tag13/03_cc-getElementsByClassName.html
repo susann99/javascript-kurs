@@ -1,0 +1,68 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>CC</title>
+<link href="css/styles.css" rel="stylesheet" type="text/css">
+<script type="text/javascript">
+function fnAnzeigen(id) {
+	var anzeige = document.getElementsByClassName("artikel").item(id);
+	anzeige.style.display = "block";
+}
+
+function fnAusblenden(id) {
+	var anzeige = document.getElementsByClassName("artikel").item(id);
+	anzeige.style.display = "none";
+}
+</script>
+</head>
+
+<body>
+<div id="wrapper">
+<header id="banner">
+<img src="bilder/bildleft.png" alt="Banner CC">
+
+</header>
+<nav id="navi">
+	<a class="aktuell" href="#">Home</a>
+    <a href="#">Über uns</a>
+    <a href="#">Seminarüberblick</a>
+    <a href="#">Referenzen</a>
+    <a href="#">Anfahrt</a>
+    <a href="#">Kontakt</a>
+</nav>
+<section id="inhalt">
+<h1>Herzllich willkommen</h1>
+</section>
+<aside id="sidebar">
+<h1>News</h1>
+<h2>JavaScript Kurs gestartet <a href="javascript:fnAnzeigen(0);">[mehr...]</a></h2>
+<article class="artikel">
+	<p>Die Teilnehmer des aktuellen Kurses zeigten sich sehr angetan von der leichten Erlernbarkeit der Sprache.</p>
+	<p>"Wir sind an einem Punkt, wo uns die Welt offen steht", so die einhellige Meinung des Kurses.<a href="javascript:fnAusblenden(0);">[ausblenden...]</a></p>
+</article>
+
+<h2>Garantierte Kursstarts <a href="javascript:fnAnzeigen(1);">[mehr...]</a></h2>
+	<article class="artikel">
+		<p>"Die nachstehenden Kurse finden garantiert statt:</p>
+		<ul>
+			<li>Adobe Dreamweaver</li>
+			<li>TYPO3</li>
+			<li>PHP</li>
+			<li>JQuery</li>
+		</ul>
+		<a href="javascript:fnAusblenden(1);">[ausblenden...]</a>
+	</article>
+
+	<h2>Erfolgsquote bei 120 Prozent <a href="javascript:fnAnzeigen(2);">[mehr...]</a></h2>
+	<article class="artikel">
+		<p>Die neuesten Zahlen belegen das kaum Glaubhafte. 120 Prozent bedeuten Platz EINS aller Institute. Ein "Sehr gut" für unser Institut. <a href="javascript:fnAusblenden(2);">[ausblenden]</a></p>
+	</article>
+
+</aside>
+<footer id="footer">
+<p>Copyright 2013 by Comcave-College</p>
+</footer>
+</div>
+</body>
+</html>

@@ -1,0 +1,36 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Tag 01 - Mathematische Funktionen</title>
+<script type="text/javascript" src="../lib/source.js"></script>
+<style type="text/css">
+* {margin:5; padding:5; font:14px Verdana, Arial, sans-serif; }
+</style>
+
+<script type="text/javascript">
+var a = 20;
+var b = 5;
+var is = "= ";
+</script>
+</head>
+<body>
+<button id="btn" onClick="getQuelltext()">SOURCE</button>
+<XMP id="source"></XMP>
+<h1>Rechnen</h1>
+<script type="text/javascript">
+	ergebnis = a+b;
+	document.write("a+b"+is+ergebnis+"<br>");
+	ergebnis = a-b;
+	document.write("a-b"+is+ergebnis+"<br>");
+	ergebnis = a*b;
+	document.write("a*b"+is+ergebnis+"<br>");
+	ergebnis = a/b;
+	document.write("a/b"+is+ergebnis+"<br>");
+	b=3;
+	ergebnis = a%b;
+	document.write("a%b"+is+ergebnis+"<br>");
+</script>
+<a href="javascript:alert('das ist ein link');">test</a>
+</body>
+</html>

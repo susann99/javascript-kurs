@@ -1,0 +1,127 @@
+<!doctype html>
+<html>
+<head>
+<title>Tag07 kleines Projekt</title>
+<style type="text/css"> 
+* {margin:0;padding:0;font:14px Verdana,Arial,san-serif;}
+h1 {
+	font:30px bold Verdana,Arial,san-serif;
+	word-spacing:2px;
+	letter-spacing:2px;
+	color: darkred;
+	text-shadow: 2px 2px yellow;
+	position:relative;
+	top:40px;
+}
+#header {margin:auto;width:800px;height:120px;text-align:center;background-color:#c8c8c8;}
+#content {margin:auto;margin-top:0px;width:800px;height:500px;text-align:center;background-color:#f8f8f8;}
+#footer {margin:auto;width:800px;height:80px;text-align:center;background-color:darkred;color:yellow;}
+#header, #content, #footer
+{
+-moz-box-shadow: 4px 4px 4px #888888; /* Old Firefox */
+box-shadow: 4px 4px 4px #888888;
+}
+#wuerfel {
+	margin:auto;padding:10px;width:300px;height:260px;text-align:center;background-color:darkred;color:yellow;
+	border-radius:5px;
+	-moz-border-radius:5px; /* Old Firefox */
+	-moz-box-shadow: 2px 2px 2px darkred; /* Old Firefox */
+	box-shadow: 2px 2px 2px darkred;
+}
+#btn0 {
+	margin-top:10px;
+}
+#wbtn1 {
+		margin-right:10px;
+}
+#wbtn1, #wbtn2 {
+	background-color:#c8c8c8;
+	padding:2px;
+	padding-top:4px;
+	padding-right:3px;
+	border-radius:10px;
+	-moz-border-radius:10px; /* Old Firefox */
+}
+#ergn {
+	font:20px Verdana,Arial,san-serif bold;
+	margin:auto;padding:10px;width:130px;height:40px;text-align:center;
+	
+}
+#anzeige {
+	margin:auto;margin-top:10px;padding:4px;padding-top:10px;width:210px;height:80px;text-align:left;background-color:#A60000;
+	border-radius:5px;
+	-moz-border-radius:5px; /* Old Firefox */
+	-moz-box-shadow: 2px 2px 2px darkred; /* Old Firefox */
+	box-shadow: 2px 2px 2px darkred;
+}
+#sound {
+	position:absolute;
+	left:40%;
+	bottom:10px;
+	z-index:99; 
+	width:20px;height:10px;
+}
+</style>
+<script src="../lib/schoenefunction.js" type="text/javascript"></script>
+<script type="text/javascript">
+var v=0;
+var p=0;
+var pasch=0;
+var strasse=0;
+function getWuerfeln(){
+	var wuerfel1 = getWuerfel();
+	var wuerfel2 = getWuerfel();
+	var augen = wuerfel1+wuerfel2;
+	var ppasch;
+	v++;
+	ppasch = getPunkte(wuerfel1,wuerfel2);
+	p = p+(augen+ppasch);
+	if(ppasch==10){
+		pasch++;
+	}
+	if(ppasch==20)strasse++;
+	libiH("<img src=\"../bilder/wuerfel"+wuerfel1+".jpg\">","wbtn1");
+	libiH("<img src=\"../bilder/wuerfel"+wuerfel2+".jpg\">","wbtn2");
+	libiH("Augen: "+augen,"ergn");
+	libiH("Versuche: "+v+"<br>Punkte gesamt: "+p+"<br>Anzahl Pasch: "+pasch+"<br>Anzahl Strasse: "+strasse,"anzeige");	
+}
+function getPunkte(w1,w2){
+	if(w1==w2)return 10;//Pasch
+	if((w1-w2)==1 || (w2-w1)==1)return 20; //strasse	
+	return 0;
+}
+function getWuerfel(){
+	var zahl = Math.ceil(Math.random()*10);
+	if(zahl>6)zahl=zahl-6;
+	return zahl;
+}
+</script>
+
+</head>
+<body>
+<div id="header">
+<h1>Pasch mit 2 Würfeln</h1>
+</div>
+<div id="content">
+<br><br>
+<div id="wuerfel">
+	<p id="ergn">Augen: 0</p>
+	<button id="wbtn1">
+		<img src="../bilder/wuerfel1.jpg">
+	</button>
+	<button id="wbtn2">
+		<img src="../bilder/wuerfel2.jpg">
+	</button>
+	<div id="anzeige">	Versuche gesamt: 0<br>
+						Anzahl Pasch: 0<br>
+						Anzahl Strasse: 0<br>
+						Punkte gesamt: 0
+	</div>
+</div>
+<button id="btn0" onClick="getWuerfeln()">würfeln</button>
+</div>
+<div id="footer">
+(c) susann rieder 2013
+</div>
+</body>
+</html>

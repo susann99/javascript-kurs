@@ -1,0 +1,51 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>CC</title>
+<script type="text/javascript">
+function getEinblenden() {
+alert("test");
+	var div = document.getElementById("artikel1");
+	div.style.display = "block";
+}
+function getEinblenden() {
+	var div = document.getElementById("artikel1");
+	div.style.display = "none";
+}
+</script>
+</head>
+
+<body>
+<div id="wrapper">
+<header id="banner">
+<img src="bilder/bildleft.png" alt="Banner CC">
+
+</header>
+<nav id="navi">
+	<a class="aktuell" href="#">Home</a>
+    <a href="#">Über uns</a>
+    <a href="#">Seminarüberblick</a>
+    <a href="#">Referenzen</a>
+    <a href="#">Anfahrt</a>
+    <a href="#">Kontakt</a>
+</nav>
+<section id="inhalt">
+<h1>Herzllich willkommen</h1>
+</section>
+<aside id="sidebar">
+<h1>News</h1>
+<h2>JavaScript-Kurs gestartet <a href="#" onClick="getEinblenden();">[mehr...]</a></h2>
+<div id="artikel1">
+ JavaScript ist eine Sehr wichtige Technologie <a href="javascript:getEinblenden();">[ausblenden]</a>
+</div>
+<div id="artikel2">
+ Auch im Animationsbereich lößt JavaScript immer Actionscript ab <a href="javascript:getEinblenden();">[mehr...]</a>
+</div>
+</aside>
+<footer id="footer">
+<p>Copyright 2013 by Comcave-College</p>
+</footer>
+</div>
+</body>
+</html>

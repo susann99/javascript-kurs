@@ -1,0 +1,56 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Tag 10 - Arrays I</title>
+<!--Externes JS Achtung: ggfs. Pfad anpassen!!!-->
+<script type="text/javascript" src="../eigenefunktionen.js"></script>
+
+<script type="text/javascript">
+/*var liste2 = "Butter";
+liste2 += "Milch";
+liste2 += "Brot";
+docw(liste2);*/
+
+//ein neues Array erstellen und mit 3 Werten versehen
+//Die Erreichbarkeit der Werte wird über einen Schlüssel gewährleistet
+					//	[0] ,  [1]   ,  [2]
+var liste = new Array("Brot","Butter","Milch");
+docw(liste);
+
+//den ersten Eintrag des Arrays ausgeben
+docw("Der erste Eintrag: "+liste[0]);
+//den letzten Eintrag des Arrays ausgeben
+docw("Der letzte Eintrag: "+liste[2]);
+
+//Eine weitere Möglichkeit, ein Array zu füllen
+var sprachen = new Array();
+sprachen[0] = "Deutsch";
+sprachen[1] = "Englisch";
+docw("Bekannte Sprachen: "+sprachen);
+sprachen[2] = "Spanisch";
+sprachen[3] = "Italienisch";
+docw("Bekannte Sprachen: "+sprachen);
+sprachen[10] = "Russisch"; //mit höherem Wert erweitern
+docw("Bekannte Sprachen: "+sprachen);
+docw(sprachen[5]); //nicht vorhanden ->undefined
+sprachen[3] = "Chinesisch";
+docw("Bekannte Sprachen: "+sprachen);
+
+//Anzahl der Einträge bestimmen
+//Eigenschaft length gibt die Anzahl der im Array enthaltenen Werte zurück
+docw("Die Einkaufsliste besteht aus: "+liste.length+" Einträgen");
+docw("Die Sprachliste besteht aus: "+sprachen.length+" Einträgen");
+
+//Ausgabe mit einer for-Schleife
+for(var i=0; i< liste.length;i++) {
+	docw("Index: "+i+", Wert: "+liste[i]); 	//Index: 0 Wert: Brot
+											//Index: 1 Wert: Butter
+											//Index: 2 Wert: Milch
+}
+</script>
+</head>
+<body>
+
+</body>
+</html>

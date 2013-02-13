@@ -1,0 +1,28 @@
+﻿<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Tag 03 - Reihenfolge von Funktionen</title>
+<script type="text/javascript">
+var text = "Aufruf Function";
+function Aufruf1(text){
+	document.write(text+"1 <br>");
+}
+function Aufruf2(text){
+	document.write(text+"2 <br>");
+}
+function Aufruf3(text){
+	document.write(text+"3 <br>");
+}
+// Reihenfolge ist egal
+Aufruf3(text);
+Aufruf1(text);
+Aufruf2(text);
+</script>
+<script type="text/javascript" src="../lib/source.js"></script>
+</head>
+<body>
+<button id="btn" onClick="getQuelltext()">SOURCE</button>
+<XMP id="source"></XMP>
+</body>
+</html>

@@ -1,0 +1,73 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Tag 13 - Taschenrechner</title>
+<style type="text/css">
+* {margin:0; padding:0; font:14px Verdana,sans-serif; }
+input {margin:20px 0; width:205px; text-align:right; }
+button {margin:5px; width:40px; }
+#wrapper {margin:20px auto; text-align:center; width:300px; height:260px; border-radius:20px;  background-color:#eee; }
+
+</style>
+<!--Externes JS Achtung: ggfs. Pfad anpassen!!!-->
+<script type="text/javascript" src="../eigenefunktionen.js"></script>
+
+<script type="text/javascript">
+function fnEinfuegen(wert) {
+	var display = document.getElementById("display");
+	if(display.value == 0) {
+		display.value = "";
+	}
+	display.value += wert;
+}
+
+function fnBerechne() {
+	var display = document.getElementById("display");
+	display.value = eval(display.value); //eval zeigt das Ergebnis an, nicht die Operation, über 'display.value' besteht Zugriff auf das Eingabefeld
+}
+
+function fnDel() {
+	var display = document.getElementById("display");
+	display.value = 0;
+}
+</script>
+</head>
+<body>
+<div id="wrapper">
+	<p>
+		<input id="display" value="" type="text">
+	</p>
+	<p>
+		<button onClick="fnEinfuegen(7);" id="sieben">7</button>
+		<button onClick="fnEinfuegen(8);" id="acht">8</button>
+		<button onClick="fnEinfuegen(9);" id="neun">9</button>
+		<button onClick="fnEinfuegen('+');" id="plus">+</button>
+	</p>
+	<p>
+		<button onClick="fnEinfuegen(4);" id="vier">4</button>
+		<button onClick="fnEinfuegen(5);" id="fuenf">5</button>
+		<button onClick="fnEinfuegen(6);" id="sechs">6</button>
+		<button onClick="fnEinfuegen('-');" id="minus">-</button>
+	</p>
+	<p>
+		<button onClick="fnEinfuegen(1);" id="eins">1</button>
+		<button onClick="fnEinfuegen(2);" id="zwei">2</button>
+		<button onClick="fnEinfuegen(3);" id="drei">3</button>
+		<button onClick="fnEinfuegen('*');" id="mal">*</button>
+	</p>
+	<p>
+		<button onClick="fnEinfuegen(0);" id="zero">0</button>
+		<button style="visibility:hidden;">&nbsp;</button>
+		<button onClick="fnEinfuegen('.');" id="punkt">.</button>
+		<button onClick="fnEinfuegen('/');" id="geteilt">/</button>
+	</p>
+	<p>
+		<button onClick="fnDel();" id="ce">CE</button>
+		<button style="visibility:hidden;">&nbsp;</button>
+		<button onClick="fnBerechne();" id="gleich" style="width:95px;">=</button>
+		
+	</p>
+</div>
+</body>
+</html>

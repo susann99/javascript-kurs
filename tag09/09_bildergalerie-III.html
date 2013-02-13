@@ -1,0 +1,43 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Tag 09 - Bildergalerie :)</title>
+<style type="text/css">
+* {margin:0; padding:0; font:14px Verdana,Arial,sans-serif; }
+#gross img {border-radius:20px; border:thin solid black; }
+#klein img {cursor:pointer; }
+#gross {margin:20px auto; width:600px; height:400px; }
+#klein {margin:0 auto; width:600px; height:60px; text-align:center;  background-color:#ddd; }
+#info {position:fixed; padding:10px; z-index:1000; bottom:5px; right:5px; color:red; background-color:#eee; width:auto; height:auto; text-align:right; }
+</style>
+<!--Externes JS Achtung: ggfs. Pfad anpassen!!!-->
+<script type="text/javascript" src="../js/eigenefunktion.js"></script>
+
+<script type="text/javascript">
+function fnGross(pfad) {
+	
+	document.getElementById("gross").innerHTML = "<img src='landschaft/gross/"+pfad+".jpg' alt='Bild 1'>";
+}
+
+function fnInfo(bild) {
+	document.getElementById("info").innerHTML = "Breite: "+bild.width+"<br>Höhe: "+bild.height+"<br>Pfad: "+bild.src;
+	
+}
+</script>
+</head>
+<body>
+	<div id="gross"></div>
+	<div id="info"></div>
+	
+	<div id="klein">
+		<img onClick="fnGross(1);fnInfo(this);"src="landschaft/klein/1.jpg" alt="Bild 1">
+		<img onClick="fnGross(2);fnInfo(this);"src="landschaft/klein/2.jpg" alt="Bild 2">
+		<img onClick="fnGross(3);fnInfo(this);"src="landschaft/klein/3.jpg" alt="Bild 3">
+		<img onClick="fnGross(4);fnInfo(this);"src="landschaft/klein/4.jpg" alt="Bild 4">
+		<img onClick="fnGross(5);fnInfo(this);"src="landschaft/klein/5.jpg" alt="Bild 5">
+		<img onClick="fnGross(6); fnInfo(this);"src="landschaft/klein/6.jpg" alt="Bild 6">
+	</div>
+	
+</body>
+</html>

@@ -1,0 +1,32 @@
+﻿<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Tag 01 noscript</title>
+<script type="text/javascript" src="../lib/source.js"></script>
+<style type="text/css">
+	ul {background-color:#f8f8f8; border:5px; padding-top:5px;padding-bottom:5px;}
+</style>
+<script type="text/javascript">
+	document.write("<ul>");
+	document.write("<li>JavaScript wird über &lt;script type=\"text/javascript\"&gt; eingebunden</li>");
+	document.write("<li>Die Anweisung stehen zwischen den &lt;script&gt;-Tag </li>");
+	document.write("<li>Die einfache Ausgabe im &lt;body&gt; wird über document.write(\"Hallo\"); erzeugt</li>");
+	document.write("<li>HTML-Tags können integriert werden (<XMP><h1></h1></XMP>)</li>");
+	document.write("<li>HTML-Tags können integriert werden (&lt;h1&gt;&lt;/h1&gt;)</li>");
+	document.write("<li>Der Punkt verknüpft Objekte miteinander</li>");
+	document.write("<li>Abstände zwischen der Punktnotation konnen frei gesetzt werden</li>");
+	document.write("<li>Für Zeichenketten(Text) können einfache Anführungszeichen und doppelte benutzt werden, mittels Steuerzeichen \ (Backslash) können Sonderzeichen wie \", \', \\ verwendet werden</li>");
+	document.write("</ul>");
+</script>
+<noscript>
+<ul>
+  noscriptbereich
+</ul>
+</noscript>
+</head>
+<body>
+<button id="btn" onClick="getQuelltext()">SOURCE</button>
+<XMP id="source"></XMP>
+</body>
+</html>

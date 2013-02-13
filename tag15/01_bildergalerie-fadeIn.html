@@ -1,0 +1,65 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Tag 15 - Bildergalerie :)</title>
+<style type="text/css">
+* {margin:0; padding:0; font:14px Verdana,Arial,sans-serif; }
+#gross img {border-radius:20px; border:thin solid black; }
+#klein img {cursor:pointer; }
+#gross {position:relative; margin:20px auto; width:600px; height:400px; }
+#klein {margin:0 auto; width:600px; height:60px; text-align:center;  background-color:#ddd; }
+#info {position:absolute; top:5px; right:5px; padding:10px; color:red; background-color:#eee; width:auto; height:auto; text-align:right; opacity:0.5;  }
+</style>
+<!--Externes JS Achtung: ggfs. Pfad anpassen!!!-->
+<script type="text/javascript" src="../eigenefunktionen.js"></script>
+
+<script type="text/javascript">
+var interval;
+var opacity = 0;
+function fnGross(pfad) {
+	
+	var bild = document.getElementById("gross");
+	bild.innerHTML = "<img onMouseOver='fnInfo(this);' onMouseOut='fnInfoAus();' src='landschaft/gross/"+pfad+".jpg' alt='Bild'><div id='info'></div>";
+	bild.style.opacity = opacity;
+	opacity += 0.05;
+	if(opacity > 1) {
+		opacity = 0;
+		clearInterval(interval);
+		interval = null;
+	}
+}
+
+function fnInfo(bild) {
+	document.getElementById("info").innerHTML = "Breite: "+bild.width+"<br>Höhe: "+bild.height+"<br>Pfad: "+bild.src;
+	
+}
+
+function fnInfoAus() {
+	document.getElementById("info").innerHTML = "";
+}
+
+function fnInterval(bild) {
+	if(interval == null) {
+		interval = setInterval("fnGross('"+bild+"')",50) //Übergabe des Parameters bild als Zeichenkette
+	}
+}
+</script>
+</head>
+<body>
+	<div id="gross">
+		<div id="info"></div>
+	</div>
+	
+	
+	<div id="klein">
+		<img onClick="fnInterval(1);"src="landschaft/gross/1.jpg" alt="Bild 1" width="90" height="60">
+		<img onClick="fnInterval(2);"src="landschaft/gross/2.jpg" alt="Bild 2" width="90" height="60">
+		<img onClick="fnInterval(3);"src="landschaft/gross/3.jpg" alt="Bild 3" width="90" height="60">
+		<img onClick="fnInterval(4);"src="landschaft/gross/4.jpg" alt="Bild 4" width="90" height="60">
+		<img onClick="fnInterval(5);"src="landschaft/gross/5.jpg" alt="Bild 5" width="90" height="60">
+		<img onClick="fnInterval(6);"src="landschaft/gross/6.jpg" alt="Bild 6" width="90" height="60">
+	</div>
+	
+</body>
+</html>

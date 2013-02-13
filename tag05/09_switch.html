@@ -1,0 +1,29 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Tag 05 - switch</title>
+<!--Externes JS Achtung: ggfs. Pfad anpassen!!!-->
+<script type="text/javascript" src="../eigenefunktionen.js"></script>
+
+<script type="text/javascript">
+var name=prompt("Wie heißt du?","");
+switch(name) {
+	case "Birger": 	docw("Hallo Birger"); break;
+	case "Daisy":	docw("Hallo Daisy"); break;
+	case "Hartmut":	docw("Hallo Hartmut"); break;
+	case "Klaus":	docw("Hallo Klaus"); break;
+	default:		docw("Kennen wir uns?","h3"); break;
+}
+/*
+Eine switch vergleicht den Inhalt einer Variable (name) mit vorgesehenen Fällen (case). Entspricht der Inhalt der Variablen einem Fall, wird alles ab dem nachstehenden Doppelpunkt ausgeführt, d.h. auch alle nachfolgenden Fälle. Durch ein break; kann eine switch abgebrochen werden. Der default ist der Vorgabewert. Dieser wird genommen, wenn die Fälle nicht zutreffen.
+*/
+</script>
+<script type="text/javascript" src="../lib/source.js"></script>
+</head>
+<body>
+<button id="btn" onClick="getQuelltext()">SOURCE</button>
+<XMP id="source"></XMP>
+
+</body>
+</html>

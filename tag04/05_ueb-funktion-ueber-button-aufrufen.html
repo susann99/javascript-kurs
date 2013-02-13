@@ -1,0 +1,30 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Tag 04 - Übung Bildaufruf</title>
+<!--
+Auf Klick auf einen der vier Buttons wird das entsprechende Bild im Unterordner bilder angezeigt.
+Eine (1) Funktion soll im <head>-Bereich definiert werden und über den Button als Methode onClick="" aufgerufen werden.
+Die Ausgabe erfolgt in der Funktion über document.write();
+Der Firefox wird bei document.write() den Ladevorgang nicht beenden. Diesen Umstand nehmen wir an dieser Stelle einfach hin!
+-->
+<script type="text/javascript">
+function fnBildAufruf(pfad) {
+	//alert("Es klappt");
+	//var pfad = 3; //Soll über Klick des entsprechenden Buttons übergeben werden
+	document.write("<p><img src='bilder/bild"+pfad+".jpg'></p>");
+} 
+</script>
+
+</head>
+<body>
+<p>Welches Bild möchten Sie sehen?</p>
+<p>
+	<button onClick="fnBildAufruf(1)">Bild 1</button>
+	<button onClick="fnBildAufruf(2)">Bild 2</button>
+	<button onClick="fnBildAufruf(3)">Bild 3</button>
+	<button onClick="fnBildAufruf(4)">Bild 4</button>
+</p>
+</body>
+</html>

@@ -1,0 +1,35 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Tag 17 - Datum</title>
+<style type="text/css">
+* {margin:0; padding:0; font:14px Verdana,Arial,sans-serif; }
+#box {width:400px; height:100px; margin:20px auto; text-align:center; line-height:100px; background-color:#eee; }
+</style>
+<!--Externes JS Achtung: ggfs. Pfad anpassen!!!-->
+<script type="text/javascript" src="../eigenefunktionen.js"></script>
+<!-- Das aktuelle Datum soll wie folgt augegeben werden: "Heute ist Donnerstag, der 7. Februar 2013"-->
+<script type="text/javascript">
+function fnDatum() {
+	var heute 	= new Date();
+	var wtag 	= new Array("Sonntag","Montag","Dienstag","Mittwoch","Donnerstag","Freitag","Samstag");
+	var monat 	= new Array("Januar","Februar","März","April","Mai","Juni","Juli","August","September","Oktober","November","Dezember");
+
+	var aktjahr = heute.getFullYear();
+	var aktmonat= heute.getMonth();
+	var akttag	= heute.getDate();
+	var aktwtag = heute.getDay();
+
+	var datum = "Heute ist "+wtag[aktwtag]+", der "+akttag+". "+monat[aktmonat]+" "+aktjahr;
+
+	var box = document.getElementById("box");
+	box.innerHTML = datum;
+}
+
+</script>
+</head>
+<body onLoad="fnDatum()">
+<div id="box">Hier steht das aktuelle Datum</div>
+</body>
+</html>

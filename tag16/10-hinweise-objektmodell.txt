@@ -1,0 +1,5 @@
+Abbildungen Begleitbuch Javascript 1.8 Grundlagen:
+Seite 90: 	8.1 Hierachie der JavaScript-Objekte
+Seite 114:	9.1 Grundlagen zum document-Objekt
+
+Web: http://de.selfhtml.org/javascript/objekte/index.htm <-Objektreferenz

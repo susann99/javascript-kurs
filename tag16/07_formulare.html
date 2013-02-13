@@ -1,0 +1,44 @@
+﻿<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Tag 16 - Formulare getElemtsByName()</title>
+<style type="text/css">
+</style>
+<!-- Ansprechen von Elements...
+Wie werden folgende Elemente angesprochen:
+- Die ID "wrapper"
+	-> documnet.getElementById("wrapper")
+- Der Link zur Seite Kontakt
+	-> documnet.getElementsByTagName("a")[5]
+- dritte Überschrift zweiter Ordnung
+	-> documnet.getElementsByTag("h2")[2]
+Der letzte Artikel (artikle)
+	-> documnet.getElementsByClassName("article")[2]
+- Die erste Klasse "aktuell"
+	-> documnet.getElementsByClassName("article")[0]
+-->
+<script type="text/javascript">
+function getWechsel(){
+	var eingabe = document.getElementsByTagName("input");
+	var h1 = document.getElementsByTagName("h1");
+	var p = document.getElementsByTagName("p");
+	h1[0].innerHTML = eingabe[0].value;
+	p[0].innerHTML = eingabe[1].value;
+	p[1].textContent = "<b>"+eingabe[2].value+"</b>";
+}
+</script>
+</head>
+<body>
+<h1>Hier soll die Überschrift stehen</h1>
+<p>Absatz 1</p>
+<p>Absatz 2</p>
+<form>
+ <p>Überschrift: <input type = "text"></p>
+ <p>Absatz 1:.... <input type = "text"></p>
+ <p>Absatz 2:.... <input type = "text"></p>
+ <input type = "button" value="übertragen" onClick="getWechsel();">
+</form>
+
+</body>
+</html>

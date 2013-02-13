@@ -1,0 +1,23 @@
+﻿<html>
+<head>
+<title>Lottozahlen</title>
+<script src="../lib/schoenefunction.js" type="text/javascript"></script>
+</head>
+<body>
+<h1>Lottozahlen</h1>
+<script type="text/javascript">
+var lotto = [];
+while (lotto.length < 6) {
+   var zahl = getZufall(1, 49);
+   for (var i=0; i < lotto.length; i++) {
+      if (lotto[i] == zahl) {
+         continue;
+      }
+   }
+   lotto.push(zahl);
+}
+
+document.write("<img src='../bilder/whilebilder/70_"+n+".jpg'>");
+</script>
+</body>
+</html>

@@ -1,0 +1,98 @@
+﻿<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Tag06 Bilder</title>
+<script type="text/javascript" src="../lib/source.js"></script>
+<script type="text/javascript">
+//Configbereich
+//hier Pfad und die Bildtexte definieren
+//-----------------------------------------------
+var pfad="../bilder/bild";
+var postfix=".jpg";
+var arrBildText = new Array();
+arrBildText[0] = "Bild 1: Christians Castle";
+arrBildText[1] = "Bild 2: Löwe";
+arrBildText[2] = "Bild 3: iPhone";
+arrBildText[3] = "Bild 4: Kaladeidoskop";
+//-----------------------------------------------
+//ab hier Finger weg
+
+function getBild(b) {
+	//Bild wechseln
+	
+	bild =pfad+(b+1)+postfix;
+	document.getElementById("bild").src=bild;
+	document.getElementById("bild").alt=arrBildText[b];
+	document.getElementById("bild").title=arrBildText[b];
+	document.getElementById("BildTitel").innerHTML=arrBildText[b];
+	
+	//Vorschaubildchen definieren
+	getVorschauBildchen();
+	/*
+	bild1 = pfad+"1"+p;
+	bild2 = pfad+"2"+p;
+	bild3 = pfad+"3"+p;
+	bild4 = pfad+"4"+p;
+	document.getElementById("thumb1").src=bild1;
+	document.getElementById("tb1").innerHTML=BildText[1];
+	document.getElementById("thumb2").src=bild2;
+	document.getElementById("tb2").innerHTML=BildText[2];
+	document.getElementById("thumb3").src=bild3;
+	document.getElementById("tb3").innerHTML=BildText[3];
+	document.getElementById("thumb4").src=bild4;
+	document.getElementById("tb4").innerHTML=BildText[4];
+	*/
+}
+function getVorschauBildchen(){
+		for (var i=0; i<=arrBildText.length; i++){
+			bild = pfad+(i+1)+postfix;
+			document.getElementById("thumb"+i).src=bild;
+			document.getElementById("thumb"+i).alt=arrBildText[i];
+			document.getElementById("thumb"+i).title=arrBildText[i];
+			document.getElementById("tb"+i).innerHTML=arrBildText[i];
+		}
+}
+</script>
+<style> 
+#bild
+{
+width:200px;
+height:160px;
+background:blue;
+transition:width 2s, height 2s;
+-moz-transition:width 2s, height 2s, -moz-transform 2s; /* Firefox 4 */
+-webkit-transition:width 2s, height 2s, -webkit-transform 2s; /* Safari and Chrome */
+-o-transition:width 2s, height 2s, -o-transform 2s; /* Opera */
+transform:rotate(360deg);
+-moz-transform:rotate(360deg); /* Firefox 4 */
+-webkit-transform:rotate(360deg); /* Safari and Chrome */
+-o-transform:rotate(360deg); /* Opera */
+}
+
+</style>
+</head>
+<body onLoad="getBild(0,'Bild 1: Christians Castle');">
+<button onClick="getQuelltext()">SOURCE</button>
+<XMP id="source"></XMP>
+<div style="width:300px;">
+
+	<img src="bilder/bild1.jpg" alt="bild1" title="bild1" id="bild" style="width:400px;height:280px;">
+	<p align="center" id="BildTitel">Bild 1: Christians Castle</p>
+
+</div>
+<!-- Vorschaubildchen -->
+<button type="button" onClick="getBild(0);" value="Bild1">
+	<img src="bilder/bild1.jpg" width="106" height="80" id="thumb0"><br><small id="tb0" >Bild 1</small>
+</button>
+<button type="button" onClick="getBild(1);" value="Bild2">
+	<img src="bilder/bild1.jpg" width="106" height="80" id="thumb1"><br><small id="tb1">Bild 2</small>
+</button>
+<button type="button" onClick="getBild(2);" value="Bild3">
+	<img src="bilder/bild1.jpg" width="106" height="80" id="thumb2"><br><small id="tb2">Bild 3</small>
+</button>
+<button type="button" onClick="getBild(3);" value="Bild4">
+	<img src="bilder/bild1.jpg" width="106" height="80" id="thumb3"><br><small id="tb3">Bild 4</small>
+</button>
+</body>
+</html>

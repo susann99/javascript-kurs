@@ -1,0 +1,43 @@
+﻿<!doctype html>
+<html>
+<head>
+
+<meta charset="utf-8">
+<title>Tag 09 - do-Schleife </title>
+<script type="text/javascript" src="../js/eigenefunktion.js"></script>
+<script type="text/javascript">
+
+/* 
+Syntax:
+do(Bedingung==true)
+{
+//Anweisungen
+}
+while(Bedingung)
+
+Bei do-while-Schleife wird erst am Ende des Schleifendurchlaufs geprüft, ob ein weiterer Schleifendurchlauf stattfinden soll, dass heisst sie wird immer mindestens einmal durchlaufen.
+*/
+
+
+var eingabe = false;
+//hier ist es egal, welchen Wert die Variable eingabe zu Beginn hat, die Anweisungen werden auf jeden Fall 1x durchlaufen
+do
+{
+eingabe = confirm("ich bin nervig");
+//confirm gibt beim Drücken auf "Abbrechen" false zurück
+}
+while(eingabe !=false);
+
+
+
+</script>
+</head>
+<body>
+
+
+</body>
+</html>
+
+
+
+

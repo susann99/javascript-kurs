@@ -1,0 +1,29 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Tag 03 - Grafiken mit Javascript</title>
+<script type="text/javascript">
+//Funktionsdefinition
+function BildAufrufen() {
+	var pfad = "bild1.jpg"; //Später soll der Pfad nur einen Wert zwischen 1-4 aufnehmen
+	pfad = 1; //Später soll der Benutzer einen Wert zwischen 1-4 festlegen
+	pfad = prompt("Bitte geben Sie eine Zahl zwischen 1-4 ein!","1");
+	var altText = "Bild";
+	var titleText = "Beschreibung Bild"; 
+	document.write("<p><img src='../bilder/bild"+pfad+".jpg' alt='"+altText+"' title='"+titleText+"'></p>");
+}
+
+//Funktionsaufruf
+BildAufrufen();
+
+</script>
+<script type="text/javascript" src="../lib/source.js"></script>
+</head>
+<body>
+<button id="btn" onClick="getQuelltext()">SOURCE</button>
+<XMP id="source"></XMP>
+<p>
+</p>
+</body>
+</html>

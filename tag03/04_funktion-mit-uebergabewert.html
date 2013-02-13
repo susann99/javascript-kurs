@@ -1,0 +1,43 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Tag 03 - Funktion mit Übergabewert</title>
+<script type="text/javascript">
+//Funktionsdefinitionen
+//Variablen in den runden Klammern der Funktionsdefinition werden nicht deklariert (var zahl;)
+//Die einzelnen Variablen in den runden Klammern werden durch Komma getrennt (Argumente bzw. Parameter)
+//die Argumente / Parameter können Vorgabewerte besitzen, die beim Aufruf überschrieben werden
+function Plus(zahl1=0,zahl2=0) { 
+	var erg = zahl1 + zahl2;
+	document.write(erg+"<br>");
+}
+
+function Minus(zahl1,zahl2) {
+	var erg = zahl1 - zahl2;
+	document.write(erg+"<br>");
+}
+
+function Mal(zahl1,zahl2) {
+	var erg = zahl1 * zahl2;
+	document.write(erg+"<br>");
+}
+
+function Geteilt(zahl1,zahl2) {
+	var erg = zahl1 / zahl2;
+	document.write(erg+"<br>");
+}
+//Funktionsaufrufe
+Plus(4,9);
+Minus(8,4);
+Mal(3,3);
+Geteilt(15,3);
+</script>
+<script type="text/javascript" src="../lib/source.js"></script>
+</head>
+<body>
+<button id="btn" onClick="getQuelltext()">SOURCE</button>
+<XMP id="source"></XMP>
+
+</body>
+</html>
