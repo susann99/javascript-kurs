@@ -1,0 +1,125 @@
+﻿<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Tag 20 Reguläre Ausdrücke</title>
+<script type="text/javascript">
+var bildObj = {
+						"thumbspfad":"bilder_klein/",
+						"pfad":"bilder_gross/",
+						"bilder":
+						[
+							{
+								"name":"Widder",
+								"datei":"widder.gif",
+								"farbe":"#bc0023",
+								"datum":"21. März bis 20. April",
+								"text":"Stress hatten Sie wohl genug in letzter Zeit. Nutzen Sie den freien Tag zum Abschalten. Gönnen Sie sich also viel Seelenbalsam."
+							},
+							{
+								"name":"Stier",
+								"datei":"stier.gif",
+								"farbe":"#f00c82",
+								"datum":"21. Mai bis 21. Juni",
+								"text":"Der Mond verspricht einen harmonischen Tag. Genießen Sie ihn im Kreise Ihrer Lieben. Singles sollten aber ausgehen."
+							},
+							{
+								"name":"Zwillinge",
+								"datei":"zwillinge.gif",
+								"farbe":"#bd0028",
+								"datum":"21. Mai bis 21. Juni",
+								"text":"Nur keinen Pessimismus! Lassen Sie sich von Venus zu tiefen Gefühlen verleiten und schreiben Sie die Liebe größer. Es lohnt sich."
+							},
+							{
+								"name":"Krebs",
+								"datei":"krebs.gif",
+								"farbe":"#a5d510",
+								"datum":"22. Juni bis 22. Juli",
+								"text":"Häusliches und Familiäres ist heute gut bestrahlt. Außerdem bietet sich mal wieder ein Besuch im Fitnessstudio oder Schwimmbad an."
+							}
+							,	
+							{
+								"name":"Löwe",
+								"datei":"loewe.gif",
+								"farbe":"#ffcc00",
+								"datum":"23. Juli bis 23. August",
+								"text":"Heute werden Ihre Gefühle sehr stark angesprochen. Stehen Sie ehrlich dazu, und reservieren Sie den Abend für den Partner."
+							},
+							{
+								"name":"Jungfrau",
+								"datei":"jungfrau.gif",
+								"farbe":"#ffcc00",
+								"datum":"23. Juli bis 23. August",
+								"text":"Heute werden Ihre Gefühle sehr stark angesprochen. Stehen Sie ehrlich dazu, und reservieren Sie den Abend für den Partner."
+							}
+							,
+							{
+								"name":"Waage",
+								"datei":"waage.gif",
+								"farbe":"#ce3594",
+								"datum":"24. September bis 23. Oktober",
+								"text":"Langweilen Sie sich nicht zu Hause. Ihre gesellige Ader pulsiert heute sehr kräftig. Abwechslung hebt außerdem Ihre Stimmung."
+							},
+							{
+								"name":"Skorpion",
+								"datei":"skorpion.gif",
+								"farbe":"#be002a",
+								"datum":"24. Oktober bis 22. November",
+								"text":"Seien Sie doch nicht so spießig! Wenn Sie Lust haben, mal etwas Verrücktes zu machen, sollten Sie sich heute keinen Zwang antun."
+							}
+								,	
+							{
+								"name":"Schütze",
+								"datei":"schuetze.gif",
+								"farbe":"#691578",
+								"datum":"23. November bis 21. Dezember",
+								"text":"Der Mond drückt leider kräftig auf die Stimmung. Steuern Sie dagegen! Unternehmen Sie etwas mit dem Partner. Das baut Sie auf"
+							},
+							{
+								"name":"Steinbock",
+								"datei":"steinbock.gif",
+								"farbe":"#070076",
+								"datum":"22. Dezember bis 20. Januar",
+								"text":"Dieser Tag bietet Ihnen jede Menge Abwechslung und Kurzweil. Eine Einladung sollten Sie ganz spontan annehmen. Es wird sehr nett."
+							},
+							{
+								"name":"Wassermann",
+								"datei":"wassermann.gif",
+								"farbe":"#ff4b00",
+								"datum":"21. Januar bis 19. Februar",
+								"text":"Sie möchten Ihre Ruhe; Ihre Lieben wollen etwas unternehmen. Lassen Sie sich ruhig darauf ein. Es wird netter als Sie denken."
+							}
+							,
+							{
+								"name":"Fische",
+								"datei":"fische.gif",
+								"farbe":"#a5d510",
+								"datum":"20. Februar bis 20. März",
+								"text":"Gegen ein kleines Stimmungstief sollten Sie unbedingt ankämpfen. Sie dürfen sich auch gern von lieben Freunden aufmuntern lassen."
+							}
+						]
+			};
+function getThumbs(){
+	var thumbs = document.getElementById("thumbs");
+	var gross = document.getElementById("gross");
+	var info = document.getElementById("info");
+	var arrBilder = new Array();
+	arrBilder = bildObj.bilder;
+	var string="";
+	for (var elem in arrBilder){
+		string += "<img src='../bilder_klein/waage.gif'>";
+	}
+	thumbs.innerHTML =  string;
+}
+</script>
+</head>
+<body>
+<h1>Horoskope</h1>
+<div id="thumbs"><img src='bilder_klein/waage.gif'></div>
+<div id="gross">Bildgross-Widder</div>
+<div id="info">Text</div>
+<script>
+getThumbs();
+</script>
+</body>
+</html>

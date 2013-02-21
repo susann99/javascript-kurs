@@ -1,0 +1,179 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Tag 20 - Formualare</title>
+<style type="text/css">
+/*Kalibrierung*/
+* {margin:0; padding:0; font:14px Verdana,sans-serif; }
+
+/*Allgemeine Styles*/
+input {}
+label {padding:20px; }
+div {margin:10px; }
+h1 {font-size:18px; font-weight:bold; margin-bottom:20px; }
+h2 {font-size:16px; font-weight:bold; margin-bottom:10px; margin-top:30px; }
+
+/*Klassen und Ids*/
+.fehler {display:none; color:red; }
+#wrapper {width:600px; margin:20px auto; background-color:#eee; padding:20px;  }
+
+</style>
+<!--Externes JS Achtung: ggfs. Pfad anpassen!!!-->
+<script type="text/javascript" src="../eigenefunktionen.js"></script>
+
+<script type="text/javascript">
+var status = 0; //0 heißt alles prima, 1=Pflichtfeld nicht gefüllt
+
+function fnUeberpruefe() {
+	status = 0;
+//Überprüfung Name
+//Formularname = Support
+//Name des Eingabefelds für Name = Name
+	var fehler = document.getElementsByClassName("fehler")[0];
+	if(!document.Support.Name.value.match(/\w[a-z]+/gi)) {
+		fehler.innerHTML = "Bitte geben Sie Ihren Namen ein!";
+		fehler.style.display = "block"; status=1;
+	}
+	else {
+		fehler.style.display = "none";
+	}
+	
+	//Überprüfung auf E-mail
+	fehler = document.getElementsByClassName("fehler")[1];
+	if(!document.Support.Email.value.match(/\w[a-z0-9\.\-]+@\w[a-z0-9\.\-]+\.\w[a-z]+/gi)) { 
+		fehler.innerHTML = "Bitte geben Sie eine E-Mail-Adresse ein!";
+		fehler.style.display = "block"; status=1;
+	}
+	else {
+		fehler.style.display = "none";
+	}
+	
+	//Überprüfung auf Optionsschalter
+	fehler = document.getElementsByClassName("fehler")[2];
+	if(!document.Support.Kategorie[0].checked && !document.Support.Kategorie[1].checked && !document.Support.Kategorie[2].checked) { //checked gibt true zurück, wenn markiert
+		fehler.innerHTML = "Bitte wählen Sie eine Kategorie!";
+		fehler.style.display  = "block"; status=1;
+	}
+	else {
+		fehler.style.display = "none";
+	}
+	
+	//Überprüfung auf Textfeld Beschreibung
+	fehler = document.getElementsByClassName("fehler")[3];
+	if(document.Support.Beschreibung.value == "") {
+		fehler.innerHTML = "Bitte beschreiben Sie Ihr Problem!";
+		fehler.style.display= "block"; status=1;
+	}
+	else {
+		fehler.style.display = "none";
+	}
+	alert(status);
+	if(status==1) {
+		return false;
+	}
+}
+</script>
+</head>
+<body>
+	<div id="wrapper">
+		<form action="formular-danke.html" method="get" name="Support">
+			<div>
+				<h1>Supportformular</h1>
+			</div>
+			
+			<div>
+				<h2>Name und E-Mail</h2>
+			</div>
+			<!--Name-->
+			<div>
+				<label>Name:
+					<input type="text" name="Name">
+				</label>
+				<div class="fehler">Fehlermeldung</div>
+			</div>
+		
+			<!--Email-->
+			<div>
+				<label>EMail:
+					<input type="email" name="Email">
+				</label>
+				<div class="fehler">Fehlermeldung</div>
+			</div>
+			
+			<!--Kategorie-->
+			<div>
+				<h2>Bitte wählen Sie eine Kategorie!</h2>
+			</div>
+			<!--Option 1:-->
+			<div>
+				<label>
+					<input type="radio" name="Kategorie" value="Allgemeines">Allgemeine Fragen (Kontrollstrukturen, Funktionen)
+				</label>
+			</div>
+			<!--Option 2:-->
+			<div>
+				<label>
+					<input type="radio" name="Kategorie" value="Spezielles">Spezielles (OOP, DOM)
+				</label>
+			</div>
+			<!--Option 3:-->
+			<div>
+				<label>
+					<input type="radio" name="Kategorie" value="Sonstiges">Sonstiges (Fragen zu JSON, PHP)
+				</label>
+				<div class="fehler">Fehlermeldung</div>
+			</div>
+			
+			
+			<!--Beschreibung des Problems-->
+			<div>
+				<h2>Bitte beschreiben Sie Ihr Problem!</h2>
+			</div>
+			<div>
+				<label>
+					<textarea rows="5" cols="50" name="Beschreibung"></textarea>
+				</label>
+				<div class="fehler">Fehlermeldung</div>
+			</div>
+			
+			<!--Schaltflächen-->
+			<div>
+				<label>
+				<!--onClick="return fnUeberpruefe();" bei Rückgabe von false aus der Funktion wird die Aktion unter <form action="..."> nicht ausgeführt -->
+					<input type="submit" onClick="return fnUeberpruefe();" value="Nachricht absenden!">
+				</label>
+				<label>
+					<input type="reset" value="Zurücksetzen">
+				</label>
+			</div>
+		</form>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	</div>
+
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	</body>
+</html>

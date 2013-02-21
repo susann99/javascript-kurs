@@ -1,0 +1,84 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Tag 20 - reguläre Ausdrücke</title>
+<!--Externes JS Achtung: ggfs. Pfad anpassen!!!-->
+<script type="text/javascript" src="../eigenefunktionen.js"></script>
+
+<script type="text/javascript">
+/*
+Ein regulärer Ausdruck (regular expression) besteht aus drei Teilen: dem Pattern(Suchmuster), den Flags(Kriterien für Suchmuster) und den Delimitern(Begrenzer)
+.match(/Pattern/Flag);
+.match(/ /g);
+Flags:
+/g = global (Suche wird nach Treffer fortgesetzt)
+/i = Groß- und Kleinschreibung werden ignoriert
+*/
+
+var text = "Am 12. Februar 2013 kostet der blaue Klaus statt 700 Euro nur 668 Euro!";
+var suche;
+//Suche nach Zahlen
+suche = text.match(/\d/g); //1,2,7,0,0,6,6,8
+docw(suche);
+
+//Suche nach zwei Zahlen hintereinander
+suche = text.match(/\d\d/g); //12,70,66
+docw(suche);
+
+//Suche nach den Preisen in Euro
+suche = text.match(/\d\d\d Euro/g);
+docw(suche);
+
+//Suche nach den Preisen in Euro
+suche = text.match(/\d\d\d \w\w\w\w/g);
+docw(suche);
+
+/*
+Es wird nur das zurückgegeben, wonach gesucht wird! Wird nach zwei Ziffern gesucht, werden auch nur zwei zurückgegeben, auch wenn die Zahl 3-stellig ist
+
+Leerzeichen sind Teil des Suchmusters und können nicht optisch eingesetzt werden, um einen regulären Ausdruck lesbarer zu machen
+*/
+
+
+/*Mengenoperatoren
+
+? Zeichen davor ist optional (kein- oder einmal)
++ Zeichen davor muss einmal oder mehrmals vorkommen
+* Zeichen davor kann vorkommen, auch mehrfach (kein-, ein- oder mehrmals)
+{n} genau n-Mal, {n,m} mindestens n-Mal, höchstens m-Mal
+*/
+
+//Suche nach Tag des Monats + anschließendem Punkt
+suche = text.match(/\d?\d\./g);
+docw(suche);
+
+suche = text.match(/\d+ Euro/g);
+docw(suche);
+
+//Suche nach Datum
+suche = text.match(/\s\d+\.\s\w+\s\d+\s/g);
+docw("Heute ist der: "+suche);
+
+//Suche nach Datum
+suche = text.match(/\s\d{1,2}\.\s\w{3,}\s\d{4}\s/g);
+docw("Heute ist der: "+suche);
+/*
+\s = Leerzeichen
+\d{1,2} = mindestens 1 Zahl, höchstens 2 Zahlen
+\. = . (Punkt)
+\s = Leerzeichen
+\w{3,} = mindestens 3 Zeichen (Buchstaben, Zahlen oder Unterstrich)
+\s = Leerzeichen
+\d{4} = 4-stellige Zahlen
+\s = Leerzeichen 
+
+*/
+
+
+</script>
+</head>
+<body>
+
+</body>
+</html>

@@ -1,0 +1,68 @@
+﻿<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Tag 20 Reguläre Ausdrücke</title>
+<script type="text/javascript">
+/*
+Ein regulärer Ausdruck (regular expression) besteht aus drei Teilen: dem Pattern(Suchmuster), 
+den Flags (Kriterien für Suchmuster) und den Delimitern(Begrenzer).match(/Pattern/Flag)
+Flags:
+/g = global (Suche wird nach dem Treffer fortgesetzt)
+/i = Groß- und Kleinschreiben
+\d = Platzhalter für Zahlen
+\w = Buchstaben
+? zeichen davor ist optional (kein oder einmal)
++ Zeichen davor muß einmal oder mehrmals vorkommen
+*/
+var text = "Ab 200 Prozent Profit ist jedes Verbrechen recht. Am 27.03.2007, 192.168.1.100 01 Karl Marx 05-06.1897, karl-marx@gmx.de karl-märx@gmx.de marx";
+var suche;
+suche = text.match(/\d/g);// alle Zahlen
+document.write(suche);
+
+suche = text.match(/\d\d/g);// zwei Ziffern hintereinander
+document.write("<br>"+suche);
+
+suche = text.match(/\d\d\ /g);// zwei Ziffern hintereinander mit Leerzeichen
+document.write("<br>"+suche);
+
+suche = text.match(/\d\d\d\ Prozent /g);// 200 Prozent
+document.write("<br>"+suche);
+
+suche = text.match(/\d\d\d \w\w\w/g);// 200 Prozent
+document.write("<br>"+suche);
+
+suche = text.match(/\d?\d./g);
+document.write("<br>"+suche);
+
+suche = text.match(/\d?\d\./g);// 06. Prozent
+document.write("<br>"+suche)
+
+suche = text.match(/\d+/g);// 
+document.write("<br>"+suche);
+
+suche = text.match(/\d+ Prozent/g);// 06. Prozent
+document.write("<br>"+suche);
+
+suche = text.match(/\d+ Grüze/g);// 06. Prozent
+document.write("<br>"+suche);
+
+suche = text.match(/\s\d+\.\s\w+\s\d+\s/g);// 06. Prozent
+document.write("<br>"+suche);
+
+suche = text.match(/\s\d{1,2}\.\d{1,2}\.\d{1,4}/g);// 06. Prozent
+document.write("<br>"+suche);
+
+suche = text.match(/\d+\.\d+\.\d+\.\d+/g);// 06. Prozent
+document.write("<br>"+suche);
+
+suche = text.match(/\w+@\w+\.\w{1,2}/g);// 06. Prozent
+document.write("<br>"+suche);
+
+suche = text.match(/\w[a-z0-9\.\-]+@\w[a-z0-9\.\-]+\.\w[a-z]+/g);// 06. Prozent
+document.write("<br>"+suche);
+</script>
+</head>
+<body>
+</body>
+</html>

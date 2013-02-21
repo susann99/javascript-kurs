@@ -1,0 +1,37 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Tag 20 - Übung Cookies</title>
+<!--Externes JS Achtung: ggfs. Pfad anpassen!!!-->
+<script type="text/javascript" src="../eigenefunktionen.js"></script>
+
+<script type="text/javascript">
+var eingabe = prompt("Bitte geben Sie Ihren Namen ein!");
+var cookies = document.cookie;
+//Cookie mit Haltbarkeit von 14 Tagen ab Erzeugung
+var datum = new Date();
+//Monatstag
+var tag = datum.getDate();
+tag += 14;
+//Tag ändern
+datum.setDate(tag); 
+//GMT-Zeit
+datum = datum.toGMTString(); //Cookiename="Inhalt des Cookies"; Ablaufdatum="gesetztes Datum)
+document.cookie = "Benutzer="+eingabe+"; expires="+datum;
+
+
+
+
+
+
+
+
+
+
+</script>
+</head>
+<body>
+
+</body>
+</html>
