@@ -1,0 +1,64 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Tag 13 - Variablen kopieren</title>
+<!--Externes JS Achtung: ggfs. Pfad anpassen!!!-->
+<script type="text/javascript" src="../lib/schoenefunction.js"></script>
+
+<script type="text/javascript">
+//String-Variable initialisieren
+var name = "Erika Mustermann";
+
+//Kopie erstellen
+var name_kopie = name;
+
+//Ausgabe
+getText("Original: "+name);
+getText("Kopie: "+name_kopie);
+
+//Original ändern
+name = "Max Musterman";
+
+//Ausgabe
+getText("Original: "+name);
+getText("Kopie: "+name_kopie);
+
+//Bei einfachen Datentypen (String, Number, Boolean) wird beim Kopieren der Variablenwert kopiert
+getText("<hr>");
+
+//Array erstellen
+var namen = new Array("Erika Mustermann","Max Mustermann");
+
+//Kopie erstellen
+var namen_kopie = namen;
+
+//Ausgabe
+for(var i=0;i<namen.length;i++) {
+	getText("Original: "+namen[i]);
+}
+for(var i=0;i<namen_kopie.length;i++) {
+	getText("Kopie: "+namen_kopie[i]);
+}
+
+//Original ändern
+namen.reverse();
+namen[2] = "Tina Mustermann";
+
+docw("<hr>");
+//Ausgabe
+for(var i=0;i<namen.length;i++) {
+	docw("Original: "+namen[i]);
+}
+for(var i=0;i<namen_kopie.length;i++) {
+	docw("Kopie: "+namen_kopie[i]);
+}
+
+//Bei Arrays bzw. Objekten wird eine Referenz(Alias) auf das Original erstellt.
+
+</script>
+</head>
+<body>
+
+</body>
+</html>

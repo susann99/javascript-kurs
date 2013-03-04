@@ -1,0 +1,34 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Tag 15 - eigenes Objekt</title>
+<!--Externes JS Achtung: ggfs. Pfad anpassen!!!-->
+<script type="text/javascript" src="../eigenefunktionen.js"></script>
+
+<script type="text/javascript">
+//Ein neues leeres Objekt erstellen
+var person = new Object();
+
+//Eigenschaft erstellen (Vorname, Nachname)
+person.vorname = "Max";
+person.nachname = "Mustermann";
+
+docw("Mein Name ist "+person.vorname+ " "+person.nachname);
+
+//Ein weiteres Objekt
+var farbe = new Object();
+farbe.name = "red";
+farbe.hex = "#f00";
+farbe.rgb = "255,0,0";
+
+docw("Die Farbe Rot nativ: "+farbe.name+", als Hex-Wert: "+farbe.hex+" und als RGB-Wert: "+farbe.rgb);
+
+//Array
+var personen = new Array("Max Mustermann");
+</script>
+</head>
+<body>
+
+</body>
+</html>

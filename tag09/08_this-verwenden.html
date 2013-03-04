@@ -1,0 +1,25 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Tag 09 - this()</title>
+<!--Externes JS Achtung: ggfs. Pfad anpassen!!!-->
+<script type="text/javascript" src="../js/eigenefunktion.js"></script>
+
+<script type="text/javascript">
+function getInfo(bild) {
+	alert(bild);
+	alert(bild.src);
+	alert("Bildbreite: "+bild.width+"\nBildhöhe: "+bild.height);
+}
+</script>
+<script type="text/javascript" src="../lib/source.js"></script>
+</head>
+<body>
+<button id="btn" onClick="getQuelltext()">SOURCE</button>
+<XMP id="source"></XMP>
+	<img src="../bilder/landschaft/gross/1.jpg" onClick="getInfo(this);" alt="Bild">
+	<hr>
+	<img src="../bilder/landschaft/klein/1.jpg" onClick="getInfo(this);" alt="Bild">
+</body>
+</html>

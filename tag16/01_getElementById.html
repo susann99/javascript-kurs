@@ -1,0 +1,20 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Tag 16 - getElementById()</title>
+<!--Externes JS Achtung: ggfs. Pfad anpassen!!!-->
+<script type="text/javascript" src="../eigenefunktionen.js"></script>
+
+<script type="text/javascript">
+function fnAustausch() {
+	var text = document.getElementById("box").innerHTML = "Na gut, dann eben oben links";
+}
+</script>
+</head>
+<body>
+<div id="box">Ich will zentriert werden
+	
+</div><button onClick="fnAustausch();">Text austauschen</button>
+</body>
+</html>

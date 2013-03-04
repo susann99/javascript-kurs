@@ -1,0 +1,35 @@
+﻿<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Tag03 Bilder</title>
+<script type="text/javascript">
+function getBild(bild) {
+	var pfad="../bilder/";
+	bild =pfad+bild;
+	bild1 = pfad+"bild1.jpg";
+	bild2 = pfad+"bild2.jpg";
+	bild3 = pfad+"bild3.jpg";
+	document.getElementById("bild").src=bild;
+	document.getElementById("thumb1").src=bild1;
+	document.getElementById("thumb2").src=bild2;
+	document.getElementById("thumb3").src=bild3;
+}
+//document.write("<img src=\""+getBild('../bilder/bild2.jpg')+"\" alt=\"bild1\" title=\"bild1\">");
+</script>
+</head>
+<body onLoad="getBild('bild1.jpg');">
+<p>
+	<img src="../bilder/bild1.jpg" alt="bild1" title="bild1" id="bild">
+</p>
+<button type="button" onClick="getBild('bild3.jpg');" value="Bild3">
+<img src="../bilder/bild1.jpg" width="106" height="109" id="thumb3">
+</button>
+<button type="button" onClick="getBild('bild1.jpg');" value="Bild1">
+<img src="../bilder/bild1.jpg" width="106" height="109" id="thumb1">
+</button>
+<button type="button" onClick="getBild('bild2.jpg');" value="Bild2">
+<img src="../bilder/bild1.jpg" width="106" height="109" id="thumb2">
+</button>
+</body>
+</html>

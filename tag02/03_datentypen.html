@@ -1,0 +1,50 @@
+﻿<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Tag 02 - Datentypen</title>
+<script type="text/javascript" src="../lib/source.js"></script>
+<script type = "text/javascript">
+var datentyp;
+//einfache Datentypen
+//Number
+var n = 42;
+datentyp = typeof(n);
+document.write("datentyp n: "+datentyp+" wert: "+n);
+var g = 12.34;
+datentyp = typeof(g);
+document.write("<br>datentyp g: "+datentyp+" wert: "+g);
+var mn = -5;
+datentyp = typeof(mn);
+document.write("<br>datentyp mn: "+datentyp+" wert: "+mn);
+
+//String
+var s = "Tag 02 Javascript";
+datentyp = typeof(s);
+document.write("<br>datentyp s: "+datentyp+" wert: "+s);
+
+//Boolean true, false
+var b = true;
+datentyp = typeof(b);
+document.write("<br>datentyp b: "+datentyp+" wert: "+b);
+
+//komplexe Datentypen
+//Objekt
+var d = new Date();//datum
+datentyp = typeof(d);
+document.write("<br>datentyp d: "+datentyp+" wert: "+d);
+
+//Array
+var arr = new Array('Monatg','Dienstag','Mittwoch','Donnerstag','Freitag','Samstag','Sonntag');
+datentyp = typeof(arr);
+
+var arr = arr.join(","); 
+document.write("<br>"+arr+datentyp);
+</script>
+</head>
+<body>
+<button id="btn" onClick="getQuelltext()">SOURCE</button>
+<XMP id="source"></XMP>
+<h1>Datentypen</h1>
+</body>
+</html>

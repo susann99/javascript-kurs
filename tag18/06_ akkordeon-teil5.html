@@ -1,0 +1,99 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Tag 15 - Akkordeon</title>
+<style type="text/css">
+* {margin:0; padding:0; font:14px Verdana,Arial,sans-serif; }
+a {color:grey; }
+#wrapper {width:400px; height:auto; margin:20px auto; }
+.artikel {height:0;  overflow:hidden; margin:10px 0; background-color:#eee; }
+</style>
+<!--Externes JS Achtung: ggfs. Pfad anpassen!!!-->
+<script type="text/javascript" src="../eigenefunktionen.js"></script>
+
+<script type="text/javascript">
+var interval;
+var height = 0;
+var opacity = 0;
+function fnInterval(id) {
+	if(interval == null) {
+		interval = setInterval("fnEinblenden('"+id+"')",100); //('"+variable+"')
+	}
+}
+
+function fnInterval2(id) {
+	interval = setInterval("fnAusblenden('"+id+"')",200);
+}
+function fnEinblenden(id) {
+	
+	var div = arr[id];
+	//div.style.display = "block";
+	
+	div.style.height = height+"px";
+	height += 3;
+	div.style.padding = "10px";
+	div.style.opacity = opacity;
+	opacity += 0.05;
+	if(opacity > 1) {
+		height = 0;
+		opacity = 0;
+		div.style.height = "auto";
+		clearInterval(interval);
+		interval = null;
+	}
+}
+
+function fnAusblenden(id) {
+	var div = arr[id];
+	div.style.padding = "0";
+	div.style.opacity -= 0.05;
+	
+	height = div.offsetHeight;
+	
+	height -=3;
+	div.style.height = height+"px";
+	if(div.style.opacity < 0) {
+		height = 0;
+		div.style.height = 0; 
+	
+		div.style.padding = 0;
+		clearInterval(interval);
+		interval = null;
+	}
+}
+</script>
+</head>
+<body>
+<div id="wrapper">
+	<h1>News</h1>
+	<h2>JavaScript-Kurs gestartet <a href="javascript:fnInterval(0);">[mehr...]</a></h2>
+	<div class="artikel">
+		<p>"Alles prima!" meldet der Kurs zurück :) <a href="javascript:fnInterval2(0);">[ausblenden...]</a></p>
+	</div>
+
+	<h2>Garantierte Kursstarts <a href="javascript:fnInterval(1);">[mehr...]</a></h2>
+	<div class="artikel">
+		<p>"Die nachstehenden Kurse finden garantiert statt:</p>
+		<ul>
+			<li>Adobe Dreamweaver</li>
+			<li>TYPO3</li>
+			<li>PHP</li>
+			<li>JQuery</li>
+		</ul>
+		<a href="javascript:fnInterval2(1);">[ausblenden...]</a>
+	</div>
+
+	<h2>Erfolgsquote bei 120 Prozent <a href="javascript:fnInterval(2);">[mehr...]</a></h2>
+	<div class="artikel">
+		<p>Die neuesten Zahlen belegen das kaum Glaubhafte. 120 Prozent bedeuten Platz EINS aller Institute. Ein "Sehr gut" für unser Institut. <a href="javascript:fnInterval2(2);">[ausblenden]</a></p>
+	</div>
+</div>
+<script type="text/javascript">
+var arr = new Array();
+for(var i=0;i<document.getElementsByClassName("artikel").length;i++) {
+	arr[i] = document.getElementsByClassName("artikel").item(i);
+}
+</script>
+</body>
+</html>

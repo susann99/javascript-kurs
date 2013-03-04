@@ -1,0 +1,51 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Tag 11 - Arrays</title>
+<!--Externes JS Achtung: ggfs. Pfad anpassen!!!-->
+<script type="text/javascript" src="../eigenefunktionen.js"></script>
+
+<script type="text/javascript">
+			//Schlüssel  [0]		[1]			[2]
+var tage = new Array("Mittwoch","Donnerstag","Freitag");
+docw(tage);
+tage[3] = tage[2];
+tage[2] = tage[1];
+tage[1] = tage[0];
+tage[0] = "Dienstag";
+docw(tage);
+//An den Anfang eines Arrays Werte hinzufügen
+tage.unshift("Sonntag","Montag");
+docw(tage); //	[0]		[1]		[2]		[3]			[4]		[5]
+			//Sonntag,Montag,Dienstag,Mittwoch,Donnerstag,Freitag
+
+//An das Ende eines Arrays Werte hinzufügen
+tage.push("Samstag","Sonntag","Montag");
+docw(tage);
+//	[0]		[1]		[2]		[3]			[4]		[5]		[6]		[7]		[8]	//Sonntag,Montag,Dienstag,Mittwoch,Donnerstag,Freitag,Samstag,Sonntag,Montag
+
+//Am Anfang eines Arrays einen Wert entfernen
+tage.shift();
+
+//Am Ende eines Array einen Wert entfernen
+tage.pop();
+
+docw(tage);
+//	[0]		[1]		[2]			[3]		[4]		[5]		[6]		//Montag,Dienstag,Mittwoch,Donnerstag,Freitag,Samstag,Sonntag
+
+var vornamen = new Array("Hans","Clara","Gabi","Eva","Christian");
+//Eintrag Gabi entfernen
+//Parameter für splice(Startindex, Anzahl der zu löschenden Elemente)
+vornamen.splice(2,1);
+docw(vornamen);
+//Eintrag Emil nach Clara hinzufügen
+//Paramter für splice(Startindex, Anzahl der zu löschenden Elemente, Neues Element1, neues Element2...)
+vornamen.splice(2,0,"Emil");
+docw(vornamen);
+</script>
+</head>
+<body>
+
+</body>
+</html>

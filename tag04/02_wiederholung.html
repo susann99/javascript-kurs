@@ -1,0 +1,23 @@
+﻿<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Tag 4 Morgens um halb neun - Wiederholung Teil 2</title>
+<script type="text/javascript">
+function getBrutto(n){
+		b= n*1.19;
+		return b.toFixed(2);
+	}
+var netto=prompt("Bitte Bruttowert angeben: ",100);
+var brutto=getBrutto(netto);
+</script>
+</head>
+<body>
+<p>
+<script type="text/javascript">
+//Der Bruttowert von 25 ist 29.75 Sie zahlen 4.75 Euro Mwst
+document.write("Der Bruttowert von "+netto+" ist "+brutto+".<br> Sie zahlen "+(brutto-netto)+" Euro Mwst.!");
+</script>
+</p>
+</body>
+</html>

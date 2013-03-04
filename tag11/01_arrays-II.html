@@ -1,0 +1,56 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Tag 11 - Arrays</title>
+<!--Externes JS Achtung: ggfs. Pfad anpassen!!!-->
+<script type="text/javascript" src="../eigenefunktionen.js"></script>
+
+<script type="text/javascript">
+//Normale Schreibweise um ein Array zu erstellen
+var vornamen = new Array();
+vornamen[0] = "Christian";
+vornamen[1] = "Stefan";
+vornamen[2] = "Sabine";
+
+var nachnamen = new Array();
+nachnamen[0] = "Meyer";
+nachnamen[1] = "Müller";
+nachnamen[2] = "Schmidt";
+
+for(var i=0;i<vornamen.length;i++) {
+	docw(vornamen[i]+" "+nachnamen[i]);
+}
+
+//Kurzschreibweise, um ein Array zu erstellen
+var anrede = [];
+anrede[0] = "Herr";
+anrede[1] = "Dr.";
+anrede[2] = "Frau";
+
+for(var i=0;i<vornamen.length;i++) {
+	docw(anrede[i]+" "+vornamen[i]+" "+nachnamen[i]);
+}
+
+//Normale Schreibweise, um ein Array zu erstellen und zu füllen
+var laender = new Array("Deutschland","Niederlande","Polen");
+laender[3] = "Spanien";
+
+//Kurzschreibweise, um ein Array zu erstellen und zu füllen
+var staedte = ["Berlin","Amsterdam","Warschau"];
+//staedte += ["Madrid"]; Hinter Warschau wird Madrid angehängt als 1 Wert
+staedte[3] = "Madrid";
+docw(staedte);
+
+
+for(var i=0;i<laender.length;i++) {
+	docw("Land: "+laender[i]+" Hauptstadt: "+staedte[i]);
+}
+
+
+</script>
+</head>
+<body>
+
+</body>
+</html>

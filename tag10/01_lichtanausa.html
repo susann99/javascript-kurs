@@ -1,0 +1,35 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Tag 10 - Licht</title>
+<style type="text/css">
+#lichtbild {width:354px; height:500px;}
+</style>
+<!--Externes JS Achtung: ggfs. Pfad anpassen!!!-->	
+<script type="text/javascript" src="../lib/source.js"></script>
+</head>
+<body>
+<button id="btn" onClick="getQuelltext()">SOURCE</button>
+<XMP id="source"></XMP>
+<h1>Licht an und aus</h1>
+<div id="lichtbild">
+	<img src="../bilder/licht/licht_aus.jpg" id="bild">
+</div>
+<button onClick="getLicht(1);">Licht an</button>
+<button onClick="getLicht(0);">Licht aus</button>	
+<script type="text/javascript">
+var bild = document.getElementById("bild");
+var lichtbild = document.getElementById("lichtbild");
+function getLicht(schalter){
+	if(schalter==1) {
+		bild.src="../bilder/licht/licht_an.jpg";
+		window.setTimeout("bild.src='../bilder/licht/licht_aus.jpg'",2000);
+	} else {
+		bild.src="../bilder/licht/licht_aus.jpg";
+		bild.alt=bild.title="Licht an";
+	}
+}
+</script>
+</body>
+</html>

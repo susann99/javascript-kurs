@@ -1,0 +1,19 @@
+Einführung:
+http://de.selfhtml.org/javascript/intro.htm
+http://www.netzmafia.de/skripten/javascript/
+http://www.html-world.de/program/js_1.php
+http://molily.de/js/
+
+
+Beispiele:
+http://www.jswelt.de
+http://geoastro.de/javascript/JavaScript/JSBeispiele/start.htm
+http://www.html-world.de/program/js_e_ov.php
+http://www.web-toolbox.net/webtoolbox/sitemap.htm
+http://www.mywebaid.de/index.shtml
+http://www.drweb.de (allgemein)
+
+Literatur:
+http://www.highscore.de/javascript/
+http://www.rhirte.de/javascript/home.htm
+http://openbook.galileocomputing.de/javascript_ajax/

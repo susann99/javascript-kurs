@@ -1,0 +1,36 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Tag 16 - Formular</title>
+<!--Externes JS Achtung: ggfs. Pfad anpassen!!!-->
+<script type="text/javascript" src="../eigenefunktionen.js"></script>
+
+<script type="text/javascript">
+function fnAendern() {
+	var input1 	= document.getElementsByTagName("input")[0].value;
+	var input2 	= document.getElementsByTagName("input")[1].value;
+	var input3 	= document.getElementsByTagName("input")[2].value;
+	
+	var h1		= document.getElementsByTagName("h1")	[0];
+	var p1		= document.getElementsByTagName("p")	[0];
+	var p2		= document.getElementsByTagName("p")	[1];
+	
+	h1.innerHTML= input1;
+	p1.innerHTML= input2;
+	p2.innerHTML= input3;
+}
+</script>
+</head>
+<body>
+<h1>Hier soll die Überschrift stehen</h1>
+<p>Hier soll der erste Absatz stehen</p>
+<p>Hier soll der zweite Absatz stehen</p>
+<form>
+	Überschrift:	<input type="text">
+	Absatz1:		<input type="text">
+	Absatz2:		<input type="text">
+	<input type="button" onClick="fnAendern();" value="Text ändern">
+</form>
+</body>
+</html>

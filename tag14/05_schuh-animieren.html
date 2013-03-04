@@ -1,0 +1,52 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Tag 14 - setInterval()</title>
+<style type="text/css">
+* {margin:0; padding:0; font:14px Verdana,Arial,sans-serif; }
+#box {margin:20px auto; width:400px;}
+p{margin:20px auto; width:400px;}
+</style>
+<script>
+var interval;
+var knopf = 1;
+function getInterval(p){
+	if(p=="stop"){
+		clearInterval(interval);
+		interval = null;
+		knopf=1;
+	} else if (knopf>1) {
+		clearInterval(interval);
+		interval = null;
+		knopf=1;
+	} else {
+		interval = setInterval("getAnimation('"+p+"')",100);knopf++;
+	}
+}
+var i = 1;
+var j = 19;
+function getAnimation(p) {
+	var bild = document.getElementById("schuh");
+	if(p=="links"){
+		if (j<1)j=19;
+		j--;
+		bild.src = "../bilder/schuh/schuh_"+j+".jpg";
+	} else {
+		i++;
+		if (i>18)i=1;
+		bild.src = "../bilder/schuh/schuh_"+i+".jpg";
+	}
+}
+</script>
+</head>
+
+<body>
+<div id="box"><img src="../bilder/schuh/schuh_0.jpg" id="schuh"></div>
+<p>
+	<button onClick="getInterval('links')">links</button>
+	<button onClick="getInterval('stop')">stopen</button>
+	<button onClick="getInterval('rechts')">rechts</button>
+</p>
+</body>
+</html>

@@ -1,0 +1,22 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Tag 17 - window.open()</title>
+<style type="text/css">
+#box {margin:20px auto; width:300px; height:100px; text-align:center; line-height:100px; background-color:#eee; }
+a {color:#f60; }
+</style>
+<!--Externes JS Achtung: ggfs. Pfad anpassen!!!-->
+<script type="text/javascript" src="../eigenefunktionen.js"></script>
+
+<script type="text/javascript">
+function fnPopup() {//Datei, Name des Popups, Eigenschaften
+	window.open("05_popup.html","Bild","width=600, height=400, left=300, top=200, menubar=no, resizable=no, scrollbars=no, status=yes, location=no, toolbar=no"); //Je nach Browser kann ein Wert auch keine Auswirkung haben
+}
+</script>
+</head>
+<body>
+<div id="box"><a href="javascript:fnPopup();">Neues Fenster öffnen</a></div>
+</body>
+</html>

@@ -1,0 +1,50 @@
+﻿<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Tag 12 - Javascript Elementzugriff</title>
+<script src="../lib/schoenefunction.js" type="text/javascript"></script>
+<style type="text/css">
+</style>
+<!--Externes JS Achtung: ggfs. Pfad anpassen!!!-->	
+<script type="text/javascript">
+function getUeberschrift(p){
+	var h1 = document.getElementById("ueberschrift");
+	h1.innerHTML = "JavaScript - Zugriff auf HTML-Element";
+	h1.title = "Ueberschrift";
+	h1.style.color = "darkblue";
+}
+function getAbsatz(p){
+	var h1 = document.getElementById(p);
+	h1.style.backgroundColor = "#f8f8f8";
+	h1.style.color = "red";
+	h1.style.fontFamily = "Verdana";
+	h1.style.border = "solid blue 1px";
+}
+function getSchrift(p){
+	var h1 = document.getElementById(p);
+	h1.style.backgroundColor = "";
+	h1.title = "Ueberschrift";
+	h1.style.fontFamily = "courier";
+	h1.style.border = "solid red 0px";
+}
+</script>
+</head>
+<body>
+<h1 id="ueberschrift">Javascript Elementzugriff</h1>
+<p id="inhalt">Blaaaa bla blabla bla blaaabla bla bla blabla bla blaaabla bla bla blabla bla blaaabla 
+bla bla blabla bla blaaabla bla bla blabla bla blaaabla bla bla blabla bla blaaabla bla</p>
+<p>
+<img src="../bilder/landschaft/gross/1.jpg" width="300" height="200">
+<img src="../bilder/landschaft/gross/2.jpg" width="300" height="200">
+</p>
+<p>
+<button onClick="getUeberschrift('links')">Überschrift nach Links</button>
+<button onClick="getUeberschrift('rechts')">Überschrift nach Rechts</button>
+</p>
+<p>
+<button onClick="getAbsatz('inhalt')">Absatz in Rot mit Hellgrau</button>
+<button onClick="getSchrift('inhalt')">Schriftart 'Times New Roman'</button>
+</p>
+</body>
+</html>

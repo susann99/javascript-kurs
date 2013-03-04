@@ -1,0 +1,30 @@
+﻿<html>
+<head>
+<title>Lottozahlen</title>
+<script type="text/javascript">
+function zufall_intervall(a, b) {
+   var z = Math.random();
+   z *= (b-a+1);
+   z += a;
+   return (Math.floor(z));
+}
+</script>
+</head>
+<body>
+<h1>Lottozahlen</h1>
+<script type="text/javascript">
+var lotto = [];
+while (lotto.length < 6) {
+   var zahl = zufall_intervall(1, 49);
+   for (var i=0; i < lotto.length; i++) {
+      if (lotto[i] == zahl) {
+         continue;
+      }
+   }
+   lotto[lotto.length] = zahl;
+}
+
+document.write(lotto.toString());
+</script>
+</body>
+</html>

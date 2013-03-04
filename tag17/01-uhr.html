@@ -1,0 +1,47 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Tag 17 - aus Pferd mach Uhr</title>
+<style type="text/css">
+* {margin:0; padding:0; font:14px Verdana,sans-serif}
+#uhr {margin:20px auto;}
+</style>
+<script type="text/javascript">
+//aktuelles Datum erzeugen
+var interval;
+var i = 0;
+function getInterval(p){
+	clearInterval(interval);
+	interval = null;
+	getUhr();
+	if(p!="stop"){
+		interval = setInterval("getUhr()",1000);
+	} 
+}
+function getUhr() {
+	var bild = document.getElementById("uhr");
+	var jetzt = new Date();
+	//Uhrzeit in Variablen legen
+	var stunden = jetzt.getHours();
+	var minuten = jetzt.getMinutes();
+	var sekunden= jetzt.getSeconds();
+	if(stunden<10)stunden = "0"+stunden;
+	if(minuten<10)minuten = "0"+minuten;
+	if(sekunden<10)sekunden = "0"+sekunden;
+	//Uhrzeit ausgeben
+	var uhrzeit = stunden+":"+minuten+":"+sekunden;
+	bild.innerHTML = uhrzeit;
+}
+</script>
+</head>
+<body>
+<div id="uhr">
+	00:00:00
+</div>
+<p>
+	<button onClick="getInterval('start')">start</button>
+	<button onClick="getInterval('stop')">stopp</button>
+</p>
+</body>
+</html>

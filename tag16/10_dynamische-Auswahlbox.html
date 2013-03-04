@@ -1,0 +1,53 @@
+﻿<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Tag 16 - Check Formulare getElemtsByName()</title>
+<style type="text/css">
+</style>
+<!--
+Ein Benutzer kann in ein Eingabefeld eine Zahl eingeben. Bei korrekter Eingabe wirde die Quadratzahl ausgegeben.
+Bei falscher Eingabe wird der Benutzer darauf hingewiesen, das is keine Zahl
+-->
+<script type="text/javascript">
+var i=0;
+function getMenuepunkt(){
+	var eingabe = document.getElementsByTagName("input");
+	var ergebnis = document.getElementById("ergebnis");
+	var fehler = document.getElementById("fehler");
+	var a = eingabe[0].value;
+	fehler.style.color = "";
+	fehler.style.backgroundColor ="";
+	if(!isNaN(a)){
+		alert("Bitte eine Zeichenkette eingeben");
+		fehler.innerHTML = "FEHLER";
+		fehler.style.color = "red";
+		fehler.style.backgroundColor ="yellow";
+		return;
+	} 
+	ergebnis.innerHTML = a;
+	var liste = document.forms[0].Auswahl;
+	liste.options[i] = new Option(a, "");
+	i++;
+}
+function getUhrzeit(){
+var zeit = document.getElementById("uhr");
+datum = new Date();
+zeit.innerHTML = datum.getHours()+":"+datum.getMinutes();
+}
+</script>
+</head>
+<body>
+<h1>Dynamisches Menu</h1>
+<form>
+ <p>Menüpunkt eingeben: <input type = "text"></p>
+ <select name="Auswahl" size="8">
+	<option>Ein Eintrag</option>
+</select>
+ <input type = "button" value="absenden" onClick="getMenuepunkt();getUhrzeit();">
+</form>
+<p id="ergebnis">Ergebniss</p>
+<p id="fehler">Keine Fehler</p>
+<div id="uhr"></div>
+</body>
+</html>

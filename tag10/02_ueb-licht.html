@@ -1,0 +1,53 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Tag 10 - Übung Lichtschalter</title>
+<!--Externes JS Achtung: ggfs. Pfad anpassen!!!-->
+<style type="text/css">
+	button {cursor:pointer; padding:5px; color:white; background-color:grey; border:thin dotted black; }
+</style>
+
+<script type="text/javascript">
+function fnLicht(status) {
+		//id 'bild' in einer Variablen speichern
+		//Die Variable hat die Informationen um welches HTML-Element es sich handelt
+		//<img> gibt zurück: Object HTMLImageElement
+		//<div> gibt zurück: Object HTMLDivElement
+		var bild = document.getElementById("bild");
+		//alert(bild);
+		if(status == 1)	{
+			bild.src = '../bilder/licht/licht_an.jpg';
+			bild.title = "Licht ist an";
+			bild.alt = "Licht ist an!";
+			//bild.width = "40";
+			//bild.height = "40";
+		}
+		if(status == 0) {
+			bild.src = '../bilder/licht/licht_aus.jpg';
+			bild.title = "Licht ist aus";
+			bild.alt = "Licht ist aus!";
+		}
+}
+
+</script>
+<script type="text/javascript" src="../lib/source.js"></script>
+</head>
+<body>
+<button id="btn" onClick="getQuelltext()">SOURCE</button>
+<XMP id="source"></XMP>
+<div>
+	<img id="bild" src="../bilder/licht/licht_aus.jpg">
+</div>
+<div id="buttons">
+	<button onClick="fnLicht(1)">Licht an!</button>
+	<button onClick="fnLicht(0)">Licht aus!</button>
+</div>
+<!--
+Zu sehen ist das Bild "Licht_aus" aus dem Unterordner "licht".
+Des Weiteren zwei Buttons mit Namen "Licht an!" sowie "Licht aus!".
+Ein Klick auf den jeweiligen Button zeigt das entsprechende Bild an.
+Die Ausgabe erfolgt mittels document.getElementById()  
+-->
+</body>
+</html>

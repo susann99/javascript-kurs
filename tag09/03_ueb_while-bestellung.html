@@ -1,0 +1,43 @@
+﻿<!doctype html>
+<html>
+<head>
+
+<meta charset="utf-8">
+<title>Tag 09 - do-Schleife </title>
+<script type="text/javascript" src="../lib/schoenefunction.js"></script>
+<script type="text/javascript">
+
+/*
+Der Anwender kann Bestellungen für ein Mittagsmenü eingeben. Dazu wird er nach einer Speise gefragt ("Bitte geben Sie eine Speise ein!"). Diese Frage soll so lange gestellt werden bis der ANwender fertig eingibt.
+Das Menü soll per alert() oder document.write()ausgegeben werden.
+*/
+
+var eingabe="";
+var menue="";
+
+while (eingabe != "fertig")
+{
+eingabe=prompt("Bitte geben Sie eine Speise ein!","");
+if (eingabe == null) // Bei drücken der Abbrechen-Taste
+{
+eingabe="fertig";
+}
+else if (eingabe != "fertig")
+{menue=menue + "<br>" + eingabe ; getText(menue);}
+}
+getText("Ihre Bestellung lautet:" + menue);
+
+</script>
+<script type="text/javascript" src="../lib/source.js"></script>
+</head>
+<body>
+<button id="btn" onClick="getQuelltext()">SOURCE</button>
+<XMP id="source"></XMP>
+
+
+</body>
+</html>
+
+
+
+

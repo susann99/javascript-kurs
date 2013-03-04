@@ -1,0 +1,29 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Tag 03 - eigene Funktionen</title>
+<script type="text/javascript">
+//Funktionsdefinition
+function Hallo()  //Funktionskopf mit Funktionsnamen und runden Klammern
+{
+	//Funktionskörper mit Funktionsanweisungen
+	alert("Tag 03 von JavaScript");
+	document.write("Tag 03 von JavaScript<br>");
+}
+
+//Funktionsaufruf
+Hallo(); //Bei Funktionsnamen wird zwischen Groß- und Kleinschreibung unterschieden
+Hallo();
+
+var Hallo = "Hallo zusammen";
+Hallo(); //eine Variable mit gleichem Namen wie eine Funktion sorgt dafür, dass die Funktionsdefinition nicht mehr erkannt wird
+</script>
+<script type="text/javascript" src="../lib/source.js"></script>
+</head>
+<body>
+<button id="btn" onClick="getQuelltext()">SOURCE</button>
+<XMP id="source"></XMP>
+
+</body>
+</html>

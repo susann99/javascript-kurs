@@ -1,0 +1,37 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Tag 05 - Übung if-Anweisung</title>
+<!--Externes JS Achtung: ggfs. Pfad anpassen!!!-->
+<script type="text/javascript" src="../eigenefunktionen.js"></script>
+	
+<script type="text/javascript">
+var farbe = prompt("Bitte geben Sie eine Farbe ein!","");
+if(farbe == "grün") {
+	docw("<span style='color:green'>Dieser Satz wird in grün angezeigt</span>");
+}
+	else if(farbe == "rot" ) {
+		docw("<span style='color:red'>Dieser Satz wird in rot angezeigt</span>");
+	}
+		else if(farbe == "blau") {
+			docw("<span style='color:blue'>Dieser Satz wird in blau angezeigt</span>");
+		}
+			else {
+				docw("<span style='color:grey'>Dieser Satz wird in grau angezeigt</span>");
+			}
+</script>
+<!--
+Ein Anwender wird zur Eingabe einer Schriftfarbe aufgefordert (Gültige Werte sind rot, grün, blau).
+Wird eine dieser Farben eingegeben, wird die Ausgabe eines Satzes in der entsprechenden Schriftfarbe gesetzt. Beispielsatz: Dieser Satz wird in ... angezeigt.
+Wird eine andere als diese drei Farben eingegeben, soll die Schriftfarbe grau werden
+<span style="color:grey;">Dieser Satz wird in grau angezeigt</span>
+-->
+<script type="text/javascript" src="../lib/source.js"></script>
+</head>
+<body>
+<button id="btn" onClick="getQuelltext()">SOURCE</button>
+<XMP id="source"></XMP>
+
+</body>
+</html>

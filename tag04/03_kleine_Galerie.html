@@ -1,0 +1,19 @@
+﻿<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Tag04 Bilder</title>
+</head>
+<body>
+<script type="text/javascript">
+function getBild(b) {
+	var pfad="../bilder/bild";
+	var p=".jpg";
+	//Bild wechseln
+	bi =pfad+b+p;
+	document.write("<img src=\""+bi+"\" alt=\""+bi+"\" title=\""+bi+"\">");
+}
+getBild(prompt("Bildnr. eingeben:",1));
+</script>
+</body>
+</html>

@@ -1,0 +1,37 @@
+﻿<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Tag 06 - Variable erhöhen Arithmetischen Operatoren</title>
+<style type="text/css">
+* {
+	font-family:Arial;
+}
+#wrapper {
+	margin-top:20%;
+	margin-left:30%;
+	
+}
+#ausgabe {
+	background-color: yellow; padding:10px; width:160px;
+}
+</style>
+<script type="text/javascript">
+var n=1;
+function getKlicks() {
+		document.getElementById("ausgabe").innerHTML="Anzahl der Klicks:<br>"+n;
+		n++;
+}	
+</script>
+<script type="text/javascript" src="../lib/source.js"></script>
+</head>
+<body>
+<button id="btn" onClick="getQuelltext()">SOURCE</button>
+<XMP id="source"></XMP>
+<div id="wrapper">
+	<button onClick="getKlicks();">Klick mich</button>
+	<div id="ausgabe">Anzahl Klicks!</div>
+</div>
+</body>
+
+</html>

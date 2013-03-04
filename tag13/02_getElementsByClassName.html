@@ -1,0 +1,63 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Tag 13 - getElementsByClassName</title>
+<style type="text/css">
+* {margin:0; padding:0; font:14px Verdana,Arial,sans-serif; }
+a {color:grey; }
+#wrapper {width:400px; height:auto; margin:20px auto; }
+.artikel {display:none; margin:10px 0; padding:10px; background-color:#eee; }
+</style>
+<!--Externes JS Achtung: ggfs. Pfad anpassen!!!-->
+<script type="text/javascript" src="../eigenefunktionen.js"></script>
+
+<script type="text/javascript">
+//Die Funktion bekommet eine Zahl über den Funktionsaufruf mitgegeben, welche für die jeweilige ID steht, die manipuliert werden soll
+
+/*
+Die Klasse 'artikel' wird in unserem Dokument 3x verwendet. 
+Über getElementsByClass("artikel") kann über die Eigenschaft item() auf eine bestimmte Klasse zugregriffen werden. Die gefundenden Aufrufe werden beginned mit dem Index 0 verwaltet.
+Der erste Aufruf: document.getElementsByClass("artikel").item(0);
+Bei den weiteren Aufrufen ändert sich der Index
+*/
+
+function fnEinblenden(id) {
+	var div = document.getElementsByClassName("artikel").item(id);
+	div.style.display = "block";
+}
+
+function fnAusblenden(id) {
+	var div = document.getElementsByClassName("artikel").item(id);
+	div.style.display = "none";
+}
+</script>
+</head>
+<body>
+<div id="wrapper">
+	<h1>News</h1>
+	<h2>JavaScript-Kurs gestartet <a href="javascript:fnEinblenden(0);">[mehr...]</a></h2>
+	<div class="artikel">
+		<p>"Alles prima!" meldet der Kurs zurück :) <a href="javascript:fnAusblenden(0);">[ausblenden...]</a></p>
+	</div>
+
+	<h2>Garantierte Kursstarts <a href="javascript:fnEinblenden(1);">[mehr...]</a></h2>
+	<div class="artikel">
+		<p>"Die nachstehenden Kurse finden garantiert statt:</p>
+		<ul>
+			<li>Adobe Dreamweaver</li>
+			<li>TYPO3</li>
+			<li>PHP</li>
+			<li>JQuery</li>
+		</ul>
+		<a href="javascript:fnAusblenden(1);">[ausblenden...]</a>
+	</div>
+
+	<h2>Erfolgsquote bei 120 Prozent <a href="javascript:fnEinblenden(2);">[mehr...]</a></h2>
+	<div class="artikel">
+		<p>Die neuesten Zahlen belegen das kaum Glaubhafte. 120 Prozent bedeuten Platz EINS aller Institute. Ein "Sehr gut" für unser Institut. <a href="javascript:fnAusblenden(2);">[ausblenden]</a></p>
+	</div>
+</div>
+
+</body>
+</html>

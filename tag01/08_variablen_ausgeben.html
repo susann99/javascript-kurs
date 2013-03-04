@@ -1,0 +1,29 @@
+﻿<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Tag 01 - Variablen ausgeben</title>
+<script type="text/javascript" src="../lib/source.js"></script>
+<script type="text/javascript">
+// Variablen deklariert
+	var a = "blau";
+	var b = "grün";
+	var ergebnis = '<td>'+a+'</td><td>'+b+'</td>';
+</script>
+</head>
+<body>
+<button id="btn" onClick="getQuelltext()">SOURCE</button>
+<XMP id="source"></XMP>
+<h1>Variablen Tabelle</h1>
+<table border="1" cellspacing="" cellpadding="10">
+<tr>
+	<td>Farbe 1</td>
+	<td>Farbe 2</td>
+</tr>
+<tr>
+<script type="text/javascript">
+	document.write(ergebnis);
+</script>
+</tr></table>
+</body>
+</html>

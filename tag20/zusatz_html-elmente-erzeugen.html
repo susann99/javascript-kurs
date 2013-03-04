@@ -1,0 +1,50 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Tag 08 - Übung verschachtelte for-Schleife</title>
+<!--Externes JS Achtung: ggfs. Pfad anpassen!!!-->
+<script type="text/javascript" src="../eigenefunktionen.js"></script>
+
+
+</head>
+<body>
+<div id="ueberschrift">&nbsp;</div>
+<div id="icons"><img src='icons/bild_45.png'></div> <!--Halber Stern -->
+<script type="text/javascript">
+
+var element = document.createElement("h1"); //h1 erzeugen
+
+var text = document.createTextNode("Ausgabe in vier Zeilen und fünf Spalten");
+element.appendChild(text); //Hinzufügen des Textes in die <h1>
+var bereich = document.getElementById("ueberschrift");
+bereich.appendChild(element); //Hinzufügen der <h1> in das <div id='ueberschrift'>
+
+element = document.createElement("h2"); //h2 erzeugen
+text = document.createTextNode("Die Tabelle ist rahmenlos");
+element.appendChild(text); //Hinzufügen des Textes in die <h2>
+var bereich = document.getElementById("ueberschrift");
+bereich.appendChild(element); //Hinzufügen der <h2> in das <div id='ueberschrift'>
+
+var ausgabe = document.getElementById("icons"); 
+var tabelle = document.createElement("table"); //Tabelle erzeugen
+
+ausgabe.appendChild(tabelle);
+for(var x = 1; x<=4;x++) {
+	var zeile = document.createElement("tr"); //Tabellenzeile erzeugen
+	tabelle.appendChild(zeile); //Hinzufügen der <tr> in die <table>
+	
+	for(var y = 0; y <= 5; y++) {
+		var zelle = document.createElement("td"); //Tabellenzelle erzeugen
+		
+		var bild = document.createElement("img"); //Bild erzeugen
+		bild.src = "icons/bild_"+x+y+".png";
+		zelle.appendChild(bild); //Hinzufügen der <img> in die <td>
+		zeile.appendChild(zelle); //Hinzufügen der <td> in die <tr>
+	}
+}
+
+</script>
+
+</body>
+</html>

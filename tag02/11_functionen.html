@@ -1,0 +1,26 @@
+﻿<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>javascript start</title>
+<script type="text/javascript" src="../lib/source.js"></script>
+<script type="text/javascript">
+//Wiederverwendung von Code
+//Function definieren function bezeichner(){}
+function getKlick(sName) {
+ var a = "Hallo Welt "+sName+" "+Date();
+ return a;
+}
+</script>
+</head>
+<body>
+<button id="btn" onClick="getQuelltext()">SOURCE</button>
+<XMP id="source"></XMP>
+<script type="text/javascript">
+//Function aufrufen
+document.write("<h1>Funktionen</h1>");
+var sName = prompt("Name: ");
+document.write(getKlick(sName));
+</script>
+</body>
+</html>

@@ -1,0 +1,42 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Tag 17 - digitale Uhr</title>
+<style type="text/css">
+* {margin:0; padding:0; font:14px Arial,sans-serif; }
+#uhr {margin:20px auto; background-color:#eee; text-align:center; width:300px; height:100px; background-image:-moz-linear-gradient(#ccc,#fff) -moz-transition: all 1s; background-image:-moz-linear-gradient(#ccc,#fff); background-image:-webkit-linear-gradient(#ccc,#fff); box-shadow: 0 1px 2px #333; line-height:100px; font-size:24px; text-shadow: 0 1px 2px #333; }
+</style>
+<!--Externes JS Achtung: ggfs. Pfad anpassen!!!-->
+<script type="text/javascript" src="../eigenefunktionen.js"></script>
+
+<script type="text/javascript">
+
+function fnZeit() {
+	var jetzt = new Date();
+	var stunden = jetzt.getHours();
+	if(stunden < 10) {
+		stunden = "0"+stunden;
+	}
+	var minuten = jetzt.getMinutes();
+	if(minuten < 10) {
+		minuten = "0"+minuten;
+	}
+	var sekunden = jetzt.getSeconds();
+	if(sekunden < 10) {
+		sekunden = "0"+sekunden;
+	}
+	
+	var uhrzeit = stunden+":"+minuten+":"+sekunden;
+	
+	var uhr = document.getElementsByTagName("div")[0];
+	uhr.innerHTML = uhrzeit;
+}
+
+setInterval("fnZeit()",1000);
+</script>
+</head>
+<body>
+<div id="uhr">Hier steht die aktuelle Uhrzeit</div>
+</body>
+</html>

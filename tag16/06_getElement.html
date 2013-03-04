@@ -1,0 +1,38 @@
+﻿<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Tag 16 - Formulare getElemtsByName()</title>
+<style type="text/css">
+</style>
+<!-- Ansprechen von Elements...
+Wie werden folgende Elemente angesprochen:
+- Die ID "wrapper"
+	-> documnet.getElementById("wrapper")
+- Der Link zur Seite Kontakt
+	-> documnet.getElementsByTag("a")[5]
+- dritte Überschrift zweiter Ordnung
+	-> documnet.getElementsByTag("h2")[2]
+Der letzte Artikel (artikle)
+	-> documnet.getElementsByClassName("article")[2]
+- Die erste Klasse "aktuell"
+	-> documnet.getElementsByClassName("article")[0]
+-->
+<script type="text/javascript">
+function getWechsel(){
+	var eingabe = document.getElementsByName("eingabe");
+	var text = eingabe[0].value;//Zugriff über den Schlüssel 0
+	var ausgabe = document.getElementsByName("ausgabe");
+	ausgabe[0].value = text;
+}
+</script>
+</head>
+<body>
+<form name="formular">
+ <input type = "text" name="eingabe" value="Hamburg">
+ <input type = "button" value="übertragen" onClick="getWechsel();">
+ <input type = "text" name="ausgabe" value="Hamburg">
+</form>
+
+</body>
+</html>

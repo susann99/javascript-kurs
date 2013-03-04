@@ -1,0 +1,26 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Tag 15 - Akkordeon</title>
+<style type="text/css">
+* {margin:0; padding:0; font:14px Verdana,Arial,sans-serif; }
+a {color:grey; }
+#wrapper {width:400px; height:auto; margin:20px auto; background-color:#eee;}
+
+</style>
+<!--Externes JS Achtung: ggfs. Pfad anpassen!!!-->
+<script type="text/javascript" src="../eigenefunktionen.js"></script>
+
+
+</head>
+<body>
+	<div id="wrapper">Dies ist der Wrapper<br>über zwei Zeilen</div>
+<script type="text/javascript">
+docw("Bildschirmauflösung: "+screen.width+ " X " +screen.height); //Bildschirmauflösung
+var wrapper = document.getElementById("wrapper");
+var hoehe = wrapper.offsetHeight; //Höhe des Containers (in CSS-> height:auto)
+docw("Die aktuelle Höhe des &lt;div&gt;-Containers ist "+hoehe);
+</script>	
+</body>
+</html>

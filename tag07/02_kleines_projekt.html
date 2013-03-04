@@ -1,0 +1,44 @@
+<!doctype html>
+<html>
+<head>
+<title>Tag07 kleines Projekt in Function</title>
+<style type="text/css"> 
+* {margin:0;padding:0;;font:14px Verdana,Arial,san-serif;}
+#btn {position:fixed; top:30px;left:340px;}
+#header {margin:auto;margin-top:20px;width:800px;height:120px;line-height:120px;text-align:center;background-color:#c8c8c8;}
+#content {margin:auto;width:798px;height:400px;line-height:400px;text-align:center;background-color:#f8f8f8;border: 1px solid #cccccc;}
+#footer {margin:auto;width:800px;height:80px;line-height:80px;text-align:center;background-color:darkred;color:yellow;}
+
+#header, #content, #footer
+{
+-moz-box-shadow: 4px 4px 4px #888888; /* Old Firefox */
+box-shadow: 4px 4px 4px #888888;
+}
+</style>
+<script src="../lib/schoenefunction.js" type="text/javascript"></script>
+<script type="text/javascript">
+function getText(){
+	document.getElementById("header").innerHTML = "Geänderter Text Header";
+	document.getElementById("content").innerHTML = "Ge&auml;nderter Text Content";
+	document.getElementById("footer").innerHTML = "Ge&auml;nderter Text Footer";
+}
+</script>
+
+</head>
+<body>
+<div id="header">
+Header
+</div>
+<div id="content">
+Content
+</div>
+<div id="footer">
+Footer
+</div>
+<button id="btn" onClick="getText();">Text tauschen</button>
+
+<script type="text/javascript">
+
+</script>
+</body>
+</html>

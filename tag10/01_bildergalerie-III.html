@@ -1,0 +1,47 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Tag 10 - Bildergalerie :)</title>
+<style type="text/css">
+* {margin:0; padding:0; font:14px Verdana,Arial,sans-serif; }
+#gross img {border-radius:20px; border:thin solid black; }
+#klein img {cursor:pointer; }
+#gross {position:relative; margin:20px auto; width:600px; height:400px; }
+#klein {margin:0 auto; width:600px; height:60px; text-align:center;  background-color:#ddd; }
+#info {position:absolute; bottom:5px; right:5px; padding:10px; color:red; background-color:#eee; width:auto; height:auto; text-align:right; opacity:0.5; /*für IE<9*/filter(alpha=50%); }
+</style>
+<!--Externes JS Achtung: ggfs. Pfad anpassen!!!-->
+
+<script type="text/javascript">
+function fnGross(pfad) {
+	
+	document.getElementById("gross").innerHTML = "<img onClick='fnInfo(this);' src='../bilder/landschaft/gross/"+pfad+".jpg' alt='Bild 1'>";
+}
+
+function fnInfo(bild) {
+	document.getElementById("info").innerHTML = "Breite: "+bild.width+"<br>Höhe: "+bild.height+"<br>Pfad: "+bild.src;
+	
+}
+</script>
+<script type="text/javascript" src="../lib/source.js"></script>
+</head>
+<body>
+<button id="btn" onClick="getQuelltext()">SOURCE</button>
+<XMP id="source"></XMP>
+	<div id="gross">
+		<div id="info">Hallo</div>
+	</div>
+	<div id='info'></div>
+	
+	<div id="klein">
+		<img onClick="fnGross(1);"src="../bilder/landschaft/gross/1.jpg" alt="Bild 1" width="90" height="60">
+		<img onClick="fnGross(2);"src="../bilder/landschaft/gross/2.jpg" alt="Bild 2" width="90" height="60">
+		<img onClick="fnGross(3);"src="../bilder/landschaft/gross/3.jpg" alt="Bild 3" width="90" height="60">
+		<img onClick="fnGross(4);"src="../bilder/landschaft/gross/4.jpg" alt="Bild 4" width="90" height="60">
+		<img onClick="fnGross(5);"src="../bilder/landschaft/gross/5.jpg" alt="Bild 5" width="90" height="60">
+		<img onClick="fnGross(6);"src="../bilder/landschaft/gross/6.jpg" alt="Bild 6" width="90" height="60">
+	</div>
+	
+</body>
+</html>

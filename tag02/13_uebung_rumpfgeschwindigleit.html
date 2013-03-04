@@ -1,0 +1,40 @@
+﻿<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+
+<script type = "text/javascript">
+//v = 4.5*laenge hoch 1/2, Math.sqrt(Test.Ein.value)
+var v;
+var bootslaenge = 5;
+
+bootslaenge = prompt("Länge des Bootes eingeben:");
+
+v = Math.sqrt(bootslaenge);
+v *=4.5;
+v = Math.sqrt(bootslaenge);
+var kv =v*2.43;
+
+var geschwindigkeit = prompt("Geschwindigkeit eingeben:")*1;
+
+var kn = 1.852*geschwindigkeit;
+var kh = geschwindigkeit/1.852;
+</script>
+<title>Rumpfgeschwindigkeit:</title>
+<script type="text/javascript" src="../lib/source.js"></script>
+</head>
+<body>
+<button id="btn" onClick="getQuelltext()">SOURCE</button>
+<XMP id="source"></XMP>
+<h1>Rumpfgeschwindigkeit:</h1>
+Die Rumpfgeschwindigkeit ist ein theoretischer Maximalwert für die bei Verdrängerfahrt mögliche Höchstgeschwindigkeit eines Schiffes. Mehr dazu <a href="http://de.wikipedia.org/wiki/Rumpfgeschwindigkeit">bei Wikipedia</a>.
+<p>
+<script type = "text/javascript">
+document.write(v.toFixed(1)+" km/h <br>");
+document.write(kv.toFixed(1)+" kn <br>Geschwindigkeitsumrechnung<br>");
+document.write(geschwindigkeit.toFixed(1)+" km/h sind "+kn.toFixed(1)+" kn<br>");
+document.write(geschwindigkeit.toFixed(1)+" kn sind "+kh.toFixed(1)+" km/h");
+</script>
+</p>
+</body>
+</html>

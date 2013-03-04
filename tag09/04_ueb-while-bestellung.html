@@ -1,0 +1,32 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Tag 09 - Übung while- Bestellung aufnehmen</title>
+<!--Externes JS Achtung: ggfs. Pfad anpassen!!!-->
+<script type="text/javascript" src="../eigenefunktionen.js"></script>
+
+<script type="text/javascript">
+/*
+	Ein Anwender kann Bestellungen für ein Mittagsmenü eingeben. Dazu wird er nach einer Speise gefragt ("Bitte geben Sie eine Speise ein!"). Diese Frage wird solange gestellt, bis der Anwender "fertig" eingibt.
+	Das Menü soll per alert() oder document.write() ausgegeben werden
+*/
+var menu = "";
+var eingabe = "";
+/*
+Bedingung: Solange, bis Anwender "fertig" eingibt
+*/
+
+while(eingabe != "fertig") {
+	eingabe = prompt("Bitte geben Sie eine Speise ein");
+	if(eingabe != "fertig") {
+		menu += eingabe+" "; //Zeichenkette wird erweitert für Variable menu
+	}
+}
+docw ("Ihre Bestellung: "+menu);
+</script>
+</head>
+<body>
+
+</body>
+</html>

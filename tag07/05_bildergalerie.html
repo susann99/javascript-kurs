@@ -1,0 +1,28 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Tag 07 - Bildergalerie :)</title>
+<style type="text/css">
+* {margin:0; padding:0; font:14px Verdana,Arial,sans-serif; }
+#gross img {border-radius:20px; }
+#klein img {cursor:pointer; }
+#gross {margin:20px auto; width:600px; height:400px; background-color:#eee; }
+#klein {margin:0 auto; width:600px; height:60px; background-color:#ddd; }
+</style>
+<!--Externes JS Achtung: ggfs. Pfad anpassen!!!-->
+<script type="text/javascript" src="../lib/schoenefunction.js"></script>
+
+<script type="text/javascript">
+function fnGross() {
+	//alert("klappt");
+	libiH("<img src='../bilder/landschaft/gross/1.jpg' alt='Bild 1'>","gross");
+}
+</script>
+</head>
+<body>
+	<div id="gross"></div>
+	<div id="klein"><img onClick="fnGross();" src="../bilder/landschaft/klein/1.jpg" alt="Bild 1"></div>
+	
+</body>
+</html>

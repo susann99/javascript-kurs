@@ -1,0 +1,51 @@
+﻿<!doctype html>
+<html>
+<head>
+
+<meta charset="utf-8">
+<title>Tag 09 - while-Schleife </title>
+<script type="text/javascript" src="../js/eigenefunktion.js"></script>
+<script type="text/javascript">
+
+/* 
+Syntax:
+while(Bedingung==true)
+{
+//Anweisungen
+}
+Eine while-Schleife läuft solange, wie die Bedingung im Schleifenkopf wahr ist
+*/
+var eingabe = true;
+var i;
+while(eingabe !=false)
+{
+	eingabe = confirm("ich bin nervig");
+	i++
+	if(i<10)exit;
+}
+
+/* Folgende Schleife lässt sich nicht verlassen, da die Bedingung immer erfüllt ist:
+var zahl = 0;
+while(zahl <=42) 
+{
+alert(zahl);
+//zahl++;
+}
+
+Verlassen des Browsers mit alt+F4
+*/
+
+</script>
+<script type="text/javascript" src="../lib/source.js"></script>
+</head>
+<body>
+<button id="btn" onClick="getQuelltext()">SOURCE</button>
+<XMP id="source"></XMP>
+
+
+</body>
+</html>
+
+
+
+

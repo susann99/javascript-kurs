@@ -1,0 +1,70 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Tag 15 - Akkordeon</title>
+<style type="text/css">
+* {margin:0; padding:0; font:14px Verdana,Arial,sans-serif; }
+a {color:grey; }
+#wrapper {width:400px; height:auto; margin:20px auto; }
+.artikel {display:none; margin:10px 0; padding:10px; background-color:#eee; }
+</style>
+<!--Externes JS Achtung: ggfs. Pfad anpassen!!!-->
+<script type="text/javascript" src="../eigenefunktionen.js"></script>
+
+<script type="text/javascript">
+var interval;
+function fnInterval(id) {
+	interval = setTimeout("fnEinblenden('"+id+"')",2000); //('"+variable+"')
+}
+
+function fnInterval2(id) {
+	interval = setTimeout("fnAusblenden('"+id+"')",2000);
+}
+function fnEinblenden(id) {
+	//der IE kennt den Wert des Item bei Übergabe aus einer Funktion nicht mehr.
+	//Abhilfe: Die gefundenen item werden über ein Array verwaltet. Dieses wird unten nach Erstellung des Inhalts erzeugt.
+	//var div = document.getElementsByClassName("artikel").item(id);
+	var div = arr[id];
+	div.style.display = "block";
+}
+
+function fnAusblenden(id) {
+	var div = arr[id];
+	div.style.display = "none";
+}
+</script>
+</head>
+<body>
+<div id="wrapper">
+	<h1>News</h1>
+	<h2>JavaScript-Kurs gestartet <a href="javascript:fnInterval(0);">[mehr...]</a></h2>
+	<div class="artikel">
+		<p>"Alles prima!" meldet der Kurs zurück :) <a href="javascript:fnInterval2(0);">[ausblenden...]</a></p>
+	</div>
+
+	<h2>Garantierte Kursstarts <a href="javascript:fnInterval(1);">[mehr...]</a></h2>
+	<div class="artikel">
+		<p>"Die nachstehenden Kurse finden garantiert statt:</p>
+		<ul>
+			<li>Adobe Dreamweaver</li>
+			<li>TYPO3</li>
+			<li>PHP</li>
+			<li>JQuery</li>
+		</ul>
+		<a href="javascript:fnInterval2(1);">[ausblenden...]</a>
+	</div>
+
+	<h2>Erfolgsquote bei 120 Prozent <a href="javascript:fnInterval(2);">[mehr...]</a></h2>
+	<div class="artikel">
+		<p>Die neuesten Zahlen belegen das kaum Glaubhafte. 120 Prozent bedeuten Platz EINS aller Institute. Ein "Sehr gut" für unser Institut. <a href="javascript:fnInterval2(2);">[ausblenden]</a></p>
+	</div>
+</div>
+<script type="text/javascript">
+var arr = new Array();
+for(var i=0;i<document.getElementsByClassName("artikel").length;i++) {
+	arr[i] = document.getElementsByClassName("artikel").item(i);
+}
+</script>
+</body>
+</html>

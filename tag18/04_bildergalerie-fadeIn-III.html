@@ -1,0 +1,89 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Tag 17 - Bildergalerie :)</title>
+<style type="text/css">
+* {margin:0; padding:0; font:14px Verdana,Arial,sans-serif; }
+#gross img {border-radius:20px; border:thin solid black; }
+#klein img {cursor:pointer; }
+#gross {position:relative; margin:20px auto; width:600px; height:400px; text-align:center; }
+#klein {margin:0 auto; width:600px; min-height:100px; text-align:center;  background-color:#ddd; }
+#info {position:absolute; top:5px; right:5px; padding:10px; color:red; background-color:#eee; width:auto; height:auto; text-align:right; opacity:0.5;  }
+</style>
+<!--Externes JS Achtung: ggfs. Pfad anpassen!!!-->
+<script type="text/javascript" src="../eigenefunktionen.js"></script>
+
+<script type="text/javascript">
+var interval;
+var opacity = 0;
+var bilder 	= new Array();
+
+function fnBilderLaden() {
+	for(var i=0; i< arguments.length;i++) {
+		bilder[i] 		= new Image(); //neues Objekt Bild erzeugen <img>
+		bilder[i].src 	= arguments[i]; //Pfad über die Argumentenliste des Funktionsaufrufs
+		var suchwort 	= "/";
+		var position 	= arguments[i].lastIndexOf(suchwort);
+		var laenge 		= arguments[i].length;
+		bilder[i].title	= arguments[i].slice(position+1,laenge);
+		bilder[i].alt  	= arguments[i].slice(position+1,laenge);
+		 
+	}
+	return bilder; 
+}
+
+function fnGross(pfad) {
+	
+	var bild = document.getElementById("gross");
+	bild.innerHTML = "<img onMouseOver='fnInfo(this);' onMouseOut='fnInfoAus();' src='"+bilder[pfad].src+"' alt='"+bilder[pfad].alt+"' title='"+bilder[pfad].title+"'><div id='info'></div>";
+	bild.style.opacity = opacity;
+	opacity += 0.05;
+	if(opacity > 1) {
+		opacity = 0;
+		clearInterval(interval);
+		interval = null;
+	}
+}
+
+function fnInfo(bild) {
+	document.getElementById("info").innerHTML = "Breite: "+bild.width+"<br>Höhe: "+bild.height+"<br>Pfad: "+bild.src;
+	
+}
+
+function fnInfoAus() {
+	document.getElementById("info").innerHTML = "";
+}
+
+function fnInterval(bild) {
+	if(interval == null) {
+		interval = setInterval("fnGross('"+bild+"')",50) //Übergabe des Parameters bild als Zeichenkette
+	}
+}
+</script>
+</head>
+<body>
+	<div id="gross">
+		<div id="info"></div>
+	</div>
+	
+	
+	<div id="klein">
+		
+	</div>
+	
+<script type="text/javascript">
+	bilder =fnBilderLaden("landschaft/gross/1.jpg","landschaft/gross/2.jpg","landschaft/gross/3.jpg","landschaft/gross/4.jpg","landschaft/gross/5.jpg","landschaft/gross/6.jpg","whilebilder/while_1.jpg","whilebilder/while_2.jpg","whilebilder/while_3.jpg","whilebilder/while_4.jpg","whilebilder/while_5.jpg","whilebilder/while_6.jpg"); //die Bilder werden der Funktion als Parameter übergeben
+	
+	for(i=0;i<bilder.length;i++) {
+		var klein = document.getElementById("klein");
+		klein.innerHTML += "<img onClick='fnInterval("+i+");' src='"+bilder[i].src+"' width='90' height='60'>";
+	}
+</script>
+	
+</body>
+</html>
+
+
+
+

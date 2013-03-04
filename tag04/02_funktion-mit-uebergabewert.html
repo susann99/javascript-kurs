@@ -1,0 +1,30 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Tag 04 - Funktionen (WDH)</title>
+<script type="text/javascript">
+//Funktionsdefinition mit Übergabewert
+//Mit dem Parameter kann ich in der Funktion arbeiten
+function fnBrutto(nettowert) {
+	var bruttowert = nettowert*1.19;
+	document.write("<p>Der Nettobetrag ist "+nettowert+", der Brutobetrag ist "+bruttowert+"</p>");
+}
+var eingabe = prompt("Bitte geben Sie einen Nettobetrag ein!","0");
+</script>
+<script type="text/javascript" src="../lib/source.js"></script>
+</head>
+<body>
+<button id="btn" onClick="getQuelltext()">SOURCE</button>
+<XMP id="source"></XMP>
+<script type="text/javascript">
+//Funktionsaufruf
+fnBrutto(eingabe);
+</script>
+
+<!--
+1. Schreiben Sie eine Funktion Brutto(parameter) mit Übergabewert, die eine Berechnung durchführen soll. Dazu soll ein Anwender (außerhalb der Funktion) in eine Dialogbox eine Zahl (Nettowert) eingeben können. In der Funktion findet die Berechnung statt (netto * 1.19). Eine Variable nimmt das Ergebnis der Berechnung auf und gibt dies per document.write() in einem Absatz aus,  bspw. Der Nettobetrag ist: 100 Euro, der Bruttobetrag ist: 119 Euro. Lassen Sie nur zwei Nachkommastellen zu.
+2. Rufen Sie die Funktion im <body> des HTML-Grundgerüsts auf.
+-->
+</body>
+</html>

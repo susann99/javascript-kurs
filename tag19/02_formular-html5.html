@@ -1,0 +1,76 @@
+﻿<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Tag 09 - Formulare</title>
+<style type="text/css">
+	* {margin:0; padding:0; font:14px Verdana, sans-serif;}
+	label{padding:20px;}
+	h1 {font-size:18px;}
+	.fehler{visibility:hidden;}
+	#wrapper {width:500px; padding:20px; margin:20px auto; background-color:#eee;}
+</style>
+</head>
+<body>
+	<div id="wrapper">
+		<form action="formular-danke.html" method="post" name="support">
+			<div>
+				<h1>Supportformular</h1>
+			</div>
+			<div>
+				<h2>Name und E-mail</h2>
+			</div>
+			<div>
+				<label>
+					Name:<input type="text" name="name" required>
+				</label>
+			</div>
+			<div class="fehler">Fehlermeldung</div>
+			<div>
+				<label>
+					E-Mail:<input type="email" name= "E-Email" required>
+				</label>
+			</div>
+			<div class="fehler">Fehlermeldung</div>
+			<div>
+				<h1>Bitte wählen:</h1>
+			</div>
+			<div>
+				<label>
+					<input type="radio" name="Kategorie" value="Allgemeines" required>Allgemeines (Kontrollstrukturen, Funktion)
+				</label>
+			</div>
+			<div class="fehler">Fehlermeldung</div>
+			<div>
+				<label>
+					<input type="radio" name="Kategorie" value="Spezielles" required>Spezielles (OOP, DOM)
+				</label>
+			</div>
+			<div class="fehler">Fehlermeldung</div>
+			<div>
+				<label>
+					<input type="radio" name="Kategorie" value="Sonstiges" required>Spezielles (JSON, PHP)
+				</label>
+			</div>
+			<div class="fehler">Fehlermeldung</div>
+			<div>
+				<h2>Biete beschreiben Sie Ihr Problem</h2>
+			</div>
+			<div>
+				<label>
+					<textarea col="50" rows="10" name="problem" required>BlaBal</textarea>
+				</label>
+			</div>
+			<div class="fehler">Fehlermeldung</div>
+			<div>
+				<label>
+					<input type="submit" value=" Absenden ">
+					<input type="reset" value=" Abbrechen">
+				</label>
+			</div>
+		</form>
+	</div>
+</body>
+</html>
+
+

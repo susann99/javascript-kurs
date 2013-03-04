@@ -1,0 +1,41 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Tag 05 - docw() erweitern</title>
+<script type="text/javascript">
+function docw(text,tags) {
+	if(tags=="h1" || tags=="h2" || tags =="h3" ) {
+		document.write("<"+tags+">"+text+"</"+tags+">");
+	}
+	
+	else {
+	document.write("<p>"+text+"</p>");	
+	}
+}
+
+
+var textA = "Heute ist ein schöner Tag";
+var textB = "Morgen ist auch ein schöner Tag";
+docw("Hallo Welt","h1");
+docw("Gleich ist Mittag");
+
+</script>
+<script type="text/javascript" src="../lib/source.js"></script>
+</head>
+<body>
+<button id="btn" onClick="getQuelltext()">SOURCE</button>
+<XMP id="source"></XMP>
+<!--
+Die Funktion docw() soll erweitert werden.
+Es soll die Möglichkeit geboten werden, neben der Formatierung in einem Absatz, weitere Möglichkeiten zur Formatierung zu bieten.
+h1
+h2
+h3
+
+Aufruf der Funktion: docw(text,h1);
+Gibt der Benutzer keinen zweiten Parameter an, soll ein Absatz verwendet werden
+Hinweis: Vorgabewerte für Parameter
+-->
+</body>
+</html>

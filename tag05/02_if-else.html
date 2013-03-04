@@ -1,0 +1,54 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Tag 05 - if-else</title>
+<!--Externes JS Achtung: ggfs. Pfad anpassen!!!-->
+<script type="text/javascript" src="../eigenefunktionen.js"></script>
+
+<script type="text/javascript">
+var zahl = prompt("Bitte geben Sie eine Zahl ein!","0");
+//Bedingung
+if(zahl == 42) {
+	docw("Richtig geraten!");
+}
+//Alternative wird automatisch durchgeführt, wenn die Bedingung false wird
+else {
+	docw("Leider falsch, bitte probiere es noch einmal!");
+	//zahl = prompt("Bitte geben Sie eine Zahl ein!","0");
+}
+
+var wuerfel = 3;
+if(wuerfel == 1) {
+	docw("Die Zahl ist 1");
+}
+if(wuerfel == 2) {
+	docw("Die Zahl ist 2");
+}
+
+if(wuerfel == 3) {
+	docw("Die Zahl ist 3");
+}
+if(wuerfel == 4) {
+	docw("Die Zahl ist 4");
+}
+
+if(wuerfel == 5) {
+	docw("Die Zahl ist 5");
+}
+/*else { //else bezieht sich nur auf die davorliegende if-Anweisung!
+	docw("Die Zahl ist 6");
+}*/
+if(wuerfel == 6) {
+	docw("Die Zahl ist 6");
+}
+
+</script>
+<script type="text/javascript" src="../lib/source.js"></script>
+</head>
+<body>
+<button id="btn" onClick="getQuelltext()">SOURCE</button>
+<XMP id="source"></XMP>
+
+</body>
+</html>

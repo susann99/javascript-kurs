@@ -1,0 +1,39 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Tag 03 - implementierte JavaScript-Funktionen</title>
+<script type="text/javascript">
+//#######Fertige Funktionen, die in JavaScript schon vorhanden sind
+//parseInt();
+//parseFloat();
+//isNaN();
+//encodeURI();
+//decodeURI();
+
+var wert = "12.63 EUR";
+//Funktionsaufrufe
+wert = parseFloat(wert); //Die Konvertierung in eine Ganzzahl wird der Variablen 'wert' zugewiesen
+alert(wert);
+wert = parseInt(wert);
+alert(wert);
+
+//#######Funtionen, die in JavaScript existieren und einen Punkt im Namen haben
+//lange Schreibweise
+//Funktionen, die einen Wert brauchen, aber keinen Rückgabewert liefern
+window.document.write(wert);
+window.alert(wert);
+
+//Funktionen, die keinen Wert brauchen, aber einen Rückgabewert liefern
+var zufall = Math.random(); //Zieht eine Zufallszahl zwischen 0 und 1
+alert(zufall);
+
+</script>
+<script type="text/javascript" src="../lib/source.js"></script>
+</head>
+<body>
+<button id="btn" onClick="getQuelltext()">SOURCE</button>
+<XMP id="source"></XMP>
+
+</body>
+</html>

@@ -1,0 +1,81 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Tag 13 - Taschenrechner</title>
+
+<style type="text/css">
+* {margin:0; padding:0; font:14px Verdana,Arial,sans-serif;}
+button {width:40px; height:40px; margin:2px; border-radius:10px;background-image:-moz-linear-gradient(#eee,#fff);}
+#wrapper {
+	position:absolute; left:50%; top:50%; 
+	margin-left:-100px; margin-top:-150px;
+	width:200px; height:320px; 
+	padding-top:20px;
+	text-align:center; line-height:350;
+	border-radius:10px;
+	background-image:-moz-linear-gradient(#eee,#fff); box-shadow:0 1px 4px #333;}
+#isgleich {width:185px;font-size:20px}
+#feld {text-align:right;width:185px;height:40px;font-size:20px}
+</style>
+<!--Externes JS Achtung: ggfs. Pfad anpassen!!!-->
+<script src="../lib/schoenefunction.js" type="text/javascript"></script>
+<script type="text/javascript">
+function setEinfuegen(w){
+	var feld = document.getElementById("feld");
+	if(feld.value==0){
+		feld.value = "";
+	}
+	feld.value += w;
+}
+function getErgebnis(){
+	var feld = document.getElementById("feld");
+	feld.value = eval(feld.value);
+}
+function getCE(){
+	var feld = document.getElementById("feld");
+	feld.value = '';
+}
+</script>
+</head>
+<body>
+<div id="wrapper">
+	<p>
+		<input id="feld" value="" type="text">
+	</p>
+	<p>
+		<button onClick="setEinfuegen(7);" id="z7">7</button>
+		<button onClick="setEinfuegen(8);" id="z8">8</button>
+		<button onClick="setEinfuegen(9);" id="z9">9</button>
+		<button onClick="setEinfuegen('+');" id="plus">+</button>
+	</p>
+		<p>
+		<button onClick="setEinfuegen(4);" id="z4">4</button>
+		<button onClick="setEinfuegen(5);" id="z5">5</button>
+		<button onClick="setEinfuegen(6);" id="z6">6</button>
+		<button onClick="setEinfuegen('-');" id="minus">-</button>
+	</p>
+	<p>
+		<button onClick="setEinfuegen(1);" id="z1">1</button>
+		<button onClick="setEinfuegen(2);" id="z2">2</button>
+		<button onClick="setEinfuegen(3);" id="z3">3</button>
+		<button onClick="setEinfuegen('*');"id="mal">*</button>
+	</p>
+	<p>
+		<button onClick="setEinfuegen(0);" id="z0">0</button>
+		<button onClick="setEinfuegen('.');" id="punkt">.</button>
+		<button onClick="setEinfuegen('/');" id="teilen">/</button>
+		<button onClick="getCE();" id="loeschen">CE</button>
+	</p>
+	<p>
+		<button onClick="getBMI();" id="bmi">BMI</button>
+		<button onClick="getRumpf();" id="rumpf">RU</button>
+		<button onClick="getMeilen();" id="meilen">Knt</button>
+		<button onClick="getLotto();" id="meilen">LOT</button>
+	</p>
+	<p>
+		<button onClick="getErgebnis();" id="isgleich">=</button>
+	</p>
+</div>
+</body>
+</html>

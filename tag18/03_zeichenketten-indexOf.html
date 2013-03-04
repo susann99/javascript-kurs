@@ -1,0 +1,36 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Tag 18 - Zeichenketten</title>
+<!--Externes JS Achtung: ggfs. Pfad anpassen!!!-->
+<script type="text/javascript" src="../eigenefunktionen.js"></script>
+
+<script type="text/javascript">
+/*var datum = fnDatum();
+var teile = datum.split(' ');
+alert(teile); */
+
+var datum = "08.02.2013";
+var suchwort = "."
+var pos1 = datum.indexOf(suchwort);
+docw("Erstes Vorkommen an Pos. "+pos1);
+
+var pos2 = datum.lastIndexOf(suchwort);
+docw("Letztes Vorkommen an Pos. "+pos2);
+
+var pfad = "landschaft/gross/schweizer-alpen.jpg";
+//Dateinnamen extrahieren in eine Variable 'dateiname'
+suchwort = "/";
+var position = pfad.lastIndexOf(suchwort); //Position letztes Auftreten /
+var laenge = pfad.length; //Länge des Dateipfades
+//pfad.slice(Position ab der extrahiert werden soll,Position bis zu der extrahiert werden soll)
+var dateiname = pfad.slice(position+1,laenge);
+docw("Der Dateiname lautet: "+dateiname);
+
+</script>
+</head>
+<body>
+
+</body>
+</html>

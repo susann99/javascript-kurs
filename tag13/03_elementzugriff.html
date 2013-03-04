@@ -1,0 +1,69 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Tag 12 - Elementzugriff</title>
+<!--Externes JS Achtung: ggfs. Pfad anpassen!!!-->
+<script type="text/javascript" src="../eigenefunktionen.js"></script>
+
+<script type="text/javascript">
+function fnUeberschrift(ausrichtung) {
+	var h1 = document.getElementById("ueberschrift");
+	h1.align = ausrichtung; //veraltet
+	/*Weitere Möglichkeiten
+	h1.innerHTML = "JavaScript - Zugriff auf HTML-Elemente";
+	h1.title = "Hier steht eine Überschrift";
+	h1.style.color = "red"; */
+}
+
+function fnInhalt(farbe,hintergrundfarbe,schriftart) {
+	var p = document.getElementById("absatz");
+	var h1= document.getElementById("ueberschrift");
+	if(farbe != "") {
+		p.style.color = farbe;
+	}
+	if(hintergrundfarbe != "") {
+		p.style.backgroundColor = hintergrundfarbe;
+	}
+	if(schriftart != "") {
+		p.style.fontFamily = schriftart;
+		h1.style.fontFamily= schriftart;
+	}
+}
+var bildnummer = 1;
+function fnBildAustausch() {
+	var img = document.getElementById("bild1");
+	bildnummer++;
+	img.src = "landschaft/gross/"+bildnummer+".jpg";
+	img.width = 300;
+	img.border = 1;
+	//img.style.cursor = "pointer";
+	img.alt = "Bild "+bildnummer;
+	img.title = "Bild "+bildnummer;
+	if(bildnummer > 9) {
+		bildnummer = 0;
+	}
+}
+</script>
+</head>
+<body>
+	<h1 id="ueberschrift">Javascript Elementzugriff</h1>
+	<p id="absatz">Weit hinten, hinter den Wortbergen, fern der Länder Vokalien und Konsonantien leben die Blindtexte. Abgeschieden wohnen Sie in Buchstabhausen an der Küste des Semantik, eines großen Sprachozeans. Ein kleines Bächlein namens Duden fließt durch ihren Ort und versorgt sie mit den nötigen Regelialien. Es ist ein paradiesmatisches Land, in dem einem gebratene Satzteile in den Mund fliegen…</p>
+	<p>
+		<img id="bild1" style="cursor:pointer;" onClick="fnBildAustausch();" src="landschaft/gross/1.jpg" width="300" height="200">
+		<img src="landschaft/gross/2.jpg" width="300" height="200">
+	</p>
+	<p>
+		<button onClick="fnUeberschrift('left')">Überschrift nach Links</button>
+		<button onClick="fnUeberschrift('right')">Überschrift nach Rechts</button>
+	</p>
+	<p>
+		<button onClick="fnInhalt('red','grey','')">Absatz in Rot mit Hellgrau-Hintergrund</button>
+		<button onClick="fnInhalt('','','Arial,sans-serif')">Schriftart 'Arial'</button>
+		<button onClick="fnInhalt('black','white','\'Times New Roman\'');">Standardwerte</button>
+	</p>
+	<p>
+		<button onClick="fnBildAustausch();">Bild austauschen</button>
+	</p>
+</body>
+</html>

@@ -1,0 +1,24 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Tag 01 - Fehler gefunden</title>
+<script type="text/javascript" src="../lib/source.js"></script>
+<style type="text/css">
+* {margin:0; padding:0; font:14px Verdana, Arial, sans-serif; }
+</style>
+
+<script type="text/javascript">
+var a = "Eine Variable ist über das gesamte Dokument gültig";
+var b = "Erst die Variable initialisieren, danach kann mit ihr gearbeitet werden";
+</script>
+</head>
+<body>
+<button id="btn" onClick="getQuelltext()">SOURCE</button>
+<XMP id="source"></XMP>
+<h1>In diesem Dokument verstecken sich mehrere JavaScript-Fehler</h1>
+<script type="text/javascript">
+	document.write("<table border=\"1\"><tr><th colspan=\"2\">Variablen</th></tr><tr><td>"+a+"</td><td>"+b+"</td></tr></table>");
+</script>
+</body>
+</html>

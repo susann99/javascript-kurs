@@ -1,0 +1,36 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Tag 03 - Funktion mit Übergabewert</title>
+<script type="text/javascript">
+/*
+Schreibt eine Funktion, die 3 Parameter erfordert
+-Vorname, -Name, -Wohnort
+Die Ausgabe soll bspw. lauten:
+Name: Hans Meier, Wohnort: Dortmund
+*/
+function Adresse(Vorname,Name,Wohnort) {
+	document.write("Name: "+Vorname+" "+Name+" Wohnort: "+Wohnort+"<br>");
+	//document.write('Name: '+Vorname+' '+Name+' Wohnort: '+Wohnort+'<br>'); //Alternative
+}
+
+Adresse("Hans","Meier","Dortmund");
+Adresse("Erika","Mustermann","Musterstadt");
+
+/*
+Es sollen 3 Eingabe-Dialogboxen erzeugt werden (prompt()), die den Vornamen, den Nachnamen und den Wohnort aufnehmen. Diese sollen über den Aufruf der Funktion Adresse!! übergeben werden.
+*/
+var a = prompt("Bitte geben Sie Ihren Vornamen ein!","Vorname");
+var b = prompt("Bitte geben Sie Ihren Nachname ein!","Nachname");
+var c = prompt("Bitte geben Sie Ihren Wohnort ein!","Ort");
+Adresse(a,b,c);
+</script>
+<script type="text/javascript" src="../lib/source.js"></script>
+</head>
+<body>
+<button id="btn" onClick="getQuelltext()">SOURCE</button>
+<XMP id="source"></XMP>
+
+</body>
+</html>

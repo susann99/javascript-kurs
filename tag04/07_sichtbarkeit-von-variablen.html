@@ -1,0 +1,43 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Tag 04 - Sichtbarkeit von Variablen</title>
+<script type="text/javascript">
+//Variablen, die außerhalb von Funktionen deklariert werden, werden 'Globale Variablen' genannt
+var text = "Heute ist ein schöner Tag";
+var neu = 0;
+
+function fnZeigeVariable() {
+	//Variablen, die innerhalb von Funktionen deklariert werden, heißen 'Lokale Variablen'. Auf diese kann außerhalb der Funktion nicht zugegriffen werden
+	var zahl = 42;
+	neu = 42;
+	document.write("Ausgabe der Variablen 'zahl' in der Funktion: "+zahl+"<br>"); //klappt
+	document.write("Ausgabe der Variablen 'text' in der Funktion: "+text+"<br>"); //klappt
+	document.write("Ausgabe der Variablen 'neu' in der Funktion: "+neu+"<br>"); //hat in der Funktion den Wert 42
+	//document.write(datum+"<br>"); //klappt nicht
+}
+
+function fnZeigeWeitereVariable() {
+	var datum = "21.01.2013";
+}
+
+
+//Ausgaben
+document.write("Ausgabe der Variablen 'zahl' außerhalb der Funktion: "+text+"<br>"); //klappt
+//document.write(zahl+"<br>"); //klappt nicht
+//document.write(datum+"<br>"); //klappt nicht
+document.write("Ausgabe der Variablen 'neu' außerhalb der Funktion: "+neu+"<br>"); //hat außerhalb der Funktion den Wert 0
+
+fnZeigeVariable();
+fnZeigeWeitereVariable();
+
+</script>
+<script type="text/javascript" src="../lib/source.js"></script>
+</head>
+<body>
+<button id="btn" onClick="getQuelltext()">SOURCE</button>
+<XMP id="source"></XMP>
+
+</body>
+</html>
