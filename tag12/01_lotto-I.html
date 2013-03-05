@@ -51,7 +51,7 @@ for(var i=0;i<=5;i++) {
 }
 
 document.write("<hr>");
-//6 zufällige Kugeln in Array legen
+//6 zufï¿½llige Kugeln in Array legen
 var ziehung = new Array();
 for(var i=0;i<=5;i++) {
 	kugel = getZufall(1,49);
@@ -65,14 +65,14 @@ for(var i=0;i<=5;i++) {
 }
 
 document.write("<hr>");
-//6 zufällige Zahlen in Array legen und sortiert ausgeben
-//6 zufällige Kugeln in Array legen
+//6 zufï¿½llige Zahlen in Array legen und sortiert ausgeben
+//6 zufï¿½llige Kugeln in Array legen
 var ziehung = new Array();
 for(var i=0;i<=5;i++) {
 	kugel = getZufall(1,49);
 	
 	if(kugel < 10) {
-		//führende 0 für sortierte Ausgabe bei einstelligen Zahlen
+		//fÃ¼hrende 0 fÃ¼r sortierte Ausgabe bei einstelligen Zahlen
 		ziehung.push("0"+kugel);
 	}
 	if(kugel >=10) {
@@ -80,15 +80,18 @@ for(var i=0;i<=5;i++) {
 	}
 }
 //alert(ziehung);
-ziehung.sort(); //alphabetische Sortierung (ohne führende 0): 12,39,4,43,8,99
+ziehung.sort(); //alphabetische Sortierung (ohne fï¿½hrende 0): 12,39,4,43,8,99
 //alert(ziehung);
-//Ausgabe über for-Schleife
+//Ausgabe ï¿½ber for-Schleife
 for(var i=0;i<=ziehung.length;i++) {
 	document.write("<img src='../bilder/lotto/70_"+ziehung[i]+".png'>");
 }
 </script>
+<script type="text/javascript" src="../lib/source.js"></script>
 </head>
 <body>
-
+<button id="btn" onClick="getQuelltext()">SOURCE</button>
+<XMP id="source"></XMP>
+Hallo
 </body>
 </html>

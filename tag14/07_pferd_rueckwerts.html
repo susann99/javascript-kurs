@@ -32,9 +32,11 @@ function getAnimation(p) {
 	bild.src = "../bilder/pferd/pferd_"+i+".jpg";
 }
 </script>
+<script type="text/javascript" src="../lib/source.js"></script>
 </head>
-
 <body>
+<button id="btn" onClick="getQuelltext()">SOURCE</button>
+<XMP id="source"></XMP>
 <div id="box"><img src="../bilder/pferd/pferd_0.jpg" id="pferd"></div>
 <p>
 	<button onClick="getInterval('start')">start</button>

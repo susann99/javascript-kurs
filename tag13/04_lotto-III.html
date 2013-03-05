@@ -14,16 +14,16 @@ button {color:white; background-color:#aaa; cursor:pointer; }
 <script type="text/javascript" src="../eigenefunktionen.js"></script>
 
 <script type="text/javascript">
-//6 zufällige Kugeln in Array legen
+//6 zufï¿½llige Kugeln in Array legen
 var ziehung = new Array();
 function fnZiehung() {
-	document.getElementById("ausgabe").innerHTML = ""; //Leeren des <div> für jede Ziehung
+	document.getElementById("ausgabe").innerHTML = ""; //Leeren des <div> fï¿½r jede Ziehung
 	ziehung = [];
 	for(var i=0;i<=5;i++) {
 		kugel = getZufall(1,49);
 		
 		if(kugel < 10) {
-			//führende 0 für sortierte Ausgabe bei einstelligen Zahlen
+			//fï¿½hrende 0 fï¿½r sortierte Ausgabe bei einstelligen Zahlen
 			ziehung[i] = ("0"+kugel);
 		}
 		if(kugel >=10) {
@@ -31,7 +31,7 @@ function fnZiehung() {
 		}
 		
 		for(var j=0;j<i;j++) { //innere Schleife wird duchlaufen 0x bei Ziehung Zahl1, 1x bei Ziehung Zahl2,...
-			if(ziehung[j] == ziehung[i]) { //Sind die Indizes von 0-5 = gleich der zuletzt gezogenen Zahl wird der Wert für i runtergesetzt
+			if(ziehung[j] == ziehung[i]) { //Sind die Indizes von 0-5 = gleich der zuletzt gezogenen Zahl wird der Wert fï¿½r i runtergesetzt
 				i--;
 				break;
 			}
@@ -39,17 +39,20 @@ function fnZiehung() {
 		
 	}
 										//Index[0][1][2][3][4][5]
-	//Beispielhaft enthält das Array die Werte (05,23,08,47,26,47)
+	//Beispielhaft enthï¿½lt das Array die Werte (05,23,08,47,26,47)
 
 	ziehung.sort(); //Array hat folgende Reihenfolge (05,08,23,26,47,47)
-	//Ausgabe über for-Schleife
+	//Ausgabe ï¿½ber for-Schleife
 	for(var i=0;i<ziehung.length;i++) {
 		document.getElementById("ausgabe").innerHTML += "<img src='../bilder/lotto/70_"+ziehung[i]+".png'>";
 	}
 }
 </script>
+<script type="text/javascript" src="../lib/source.js"></script>
 </head>
 <body>
+<button id="btn" onClick="getQuelltext()">SOURCE</button>
+<XMP id="source"></XMP>
 	<div id="ausgabe"></div>
 	<div id="button">
 		<button onClick="fnZiehung();">Lottozahlen ziehen</button>

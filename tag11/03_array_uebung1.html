@@ -12,8 +12,11 @@ function setEinkaufen(){
 	liste.innerHTML = arrEinkaufen;
 }
 </script>
+<script type="text/javascript" src="../lib/source.js"></script>
 </head>
 <body>
+<button id="btn" onClick="getQuelltext()">SOURCE</button>
+<XMP id="source"></XMP>
 <h1>Einkaufsliste</h1>
 <div id="liste">Leere Liste</div>
 <button onClick="setEinkaufen();">neues Element</button>

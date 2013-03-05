@@ -22,8 +22,11 @@ while(eingabe != "ende") {
 var ausgabe = liste.join(", ");
 getText("Sie haben folgende Einkaufsliste eingegeben: "+ausgabe);
 </script>
+<script type="text/javascript" src="../lib/source.js"></script>
 </head>
 <body>
+<button id="btn" onClick="getQuelltext()">SOURCE</button>
+<XMP id="source"></XMP>
 <!--
 Eine Einkaufsliste soll geschrieben werden.
 Über ein prompt wird der Anwender nach Lebensmitteln gefragt, die in einem Array gespeichert werden sollen. Gibt der Benutzer "ende" ein, wird die Liste ausgegeben

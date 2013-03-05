@@ -99,8 +99,11 @@ function fnAugen() {
 	document.getElementById("anzeige").innerHTML = "Anzahl der Pasch: <span>"+pasch+"</span><br>Versuche gesamt: <span>"+versuche+"</span><br>Punkte gesamt: <span>"+punkte+"</span>";
 }
 </script>
+<script type="text/javascript" src="../lib/source.js"></script>
 </head>
 <body>
+<button id="btn" onClick="getQuelltext()">SOURCE</button>
+<XMP id="source"></XMP>
 <div id="wrapper">
 	<div id="wuerfel">
 		<img id="w1" src="../bilder/wuerfel1.jpg">
