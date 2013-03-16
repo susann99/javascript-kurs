@@ -1,869 +1,987 @@
 var jsObjInhalt = {
-"tage":
-	[
-	{
-		"titel":"Tag01",
-		"dir":"../tag01/",
-		"metatitel":"Einführung",
-		"datei":
-		[
-			{
-				"name":"01_hallowelt.html",
-				"titel":"Hallo Welt",
-				"inhalt":"javascript in eine HTML-Datei einbinden, Hallo Welt mit alert ausgeben",
-				"index":["hallo welt","alert","javascript"]
-			},
-			{
-				"name":"02_ausgabe.html",
-				"titel":"Ausgabe mit document.write()",
-				"inhalt":"Ausgabe von HTML+Text per Javascript im header und Body",
-				"index":["Zeichenkette","\"","Sonderzeichen","Anführungsstriche"]
-			}
-			,
-			{
-				"name":"03_zeichenketten.html",
-				"titel":"Ausgabe mit Anführungszeichen",
-				"inhalt":"Darstellen von Zeichenketten und Maskieren von Sonderzeichen wie Anführungsstriche",
-				"index":["Text","document.write","Sonderzeichen"]
-			}
-			,
-			{
-				"name":"04_ueb-zeichenketten.html",
-				"titel":"Übung Zeichenketten",
-				"inhalt":"Spitze Klammern per Sonderzeichen von HTML darstellen usw.",
-				"index":["Zeichenkette","Spitze Klammern","Sonderzeichen","Übung Tag 1"]
-			}
-			,
-			{
-				"name":"05_noscript.html",
-				"titel":"noscript-Bereich",
-				"inhalt":"Wenn der Browser kein javascript kann",
-				"index":["noscript"]
-			}
-			,
-			{
-				"name":"06_variablen.html",
-				"titel":"Variablen",
-				"inhalt":"Variable a wird deklariert und Schlüsselwort var + Bezeichner (a-z,A-Z,1-0,_) der Variable",
-				"index":["Wertzuweisung", "deklarieren", "Schlüsselwort", "var", "Variable", "Bezeichner","Datentyp"]
-			}
-			,
-			{
-				"name":"07_variablen_verkettung.html",
-				"titel":"Text verketten",
-				"inhalt":"Zeichenketten und Variablen mit + verketten",
-				"index":["Zeichenkette","Berechnung","verketten","+"]
-			}
-			,
-			{
-				"name":"08_variablen_ausgeben.html",
-				"titel":"Variablen ausgeben",
-				"inhalt":"Übung zu Variablen und Zeichenketten",
-				"index":["Übung","Variablen","verketten","+","Zeichenkette"]
-			}
-			,
-			{
-				"name":"09_fehler-finden.html",
-				"titel":"Fehler finden",
-				"inhalt":"Berechnungen mit Javascript durchführen",
-				"index":["Übung","Variablen","verketten","+","Zeichenkette"]
-			}
-			,
-			{
-				"name":"10_mathematische-operatoren.html",
-				"titel":"Mathematische Operatoren",
-				"inhalt":"Übung zu Variablen und Zeichenketten",
-				"index":["Mathematische Operatoren","Modulo"]
-			}
-		],
-	},
-
-	{
-		"titel":"Tag02",
-		"dir":"../tag02/",
-		"metatitel":"Variablen, Datentypen, Operatoren, Konstanten",
-		"datei":
-		[
-			{
-				"name":"01_kommentare.html",
-				"titel":"Kommentierungen",
-				"inhalt":"HTML-Kommentar und Javascriptkommentar, Kommentar über mehrere Zeilen",
-				"index":["Kommentar"]
-			},
-			{
-				"name":"02_konstanten.html",
-				"titel":"Konstanten",
-				"inhalt":"Konstanten kann der IE nicht, adher werden diese kaum benutzt",
-				"index":["const"]
-			},
-			{
-				"name":"03_datentypen.html",
-				"titel":"Datentypen",
-				"inhalt":"Einfache und Komplexe Datentypen",
-				"index":["typeof","Number","String","Array","Objekt","Boolean","true","false","date"]
-			},
-			{
-				"name":"04_typenkonvertierung.html",
-				"titel":"Typkonvertierung",
-				"inhalt":"Von String zu Number und zurück, sowei Not a Number",
-				"index":["Typkonvertierung","NaN",]
-			},
-			{
-				"name":"05_prompt_ausgabe.html",
-				"titel":"Prompt Eingabe, alert, confirm",
-				"inhalt":"Ausgabeboxen mit Variablenübergabe",
-				"index":["alert","prompt","confirm"]
-			},
-			{
-				"name":"06_ausgabe_uebung.html",
-				"titel":"Übung Variable übergeben",
-				"inhalt":"Es soll ein Eingabefeld erzeugt werden, in welches der Name eingetragen werden soll.Der eingegebene Name soll anschließend über alert(Sie haben eingegeben: +...) wieder ausgegeben werden",
-				"index":["prompt","Eingabefeld","var"]
-			},
-			{
-				"name":"07_functionen_button_uebung.html",
-				"titel":"Übung BMI berechnen",
-				"inhalt":"Der Body-Maß-Index soll berechnet werden. In zwei Eingabeboxen sollen Gewicht (in KG) und Größe (in M) eingegeben werden können. Per alert() soll der BMI ausgegeben werden.Mit toFixed(2) auf zwei Nachkommastellen begrenzen",
-				"index":["toFixed","prompt","bmi","rechnen"]
-			},			,
-			{
-				"name":"08_operatoren.html",
-				"titel":"Operatoren",
-				"inhalt":"Alle Operatoren in einer Tabellen",
-				"index":["Operatoren","Inkrement","Dekrement","Zuweisung"]
-			},
-			{
-				"name":"09_variablen-erweitern.html",
-				"titel":"Variable erweitern",
-				"inhalt":"Stringvariablen durch Operatoren wie += in Schleifen erweitern",
-				"index":["Operatoren","erweitern",]
-			},
-			{
-				"name":"10_uebung-grad-umrechnung.html",
-				"titel":"Übung Grad umrechnen",
-				"inhalt":"Umrechnung von Grad in Fahrenheit. Eingabe mit Prompt",
-				"index":["prompt","Berechnungen","var","Fahrenheit"]
-			},
-			{
-				"name":"11_funktionen.html",
-				"titel":"einfache Funktion",
-				"inhalt":"Funktionen dienen dazu, dem Programmierer das Leben einfacher zu machen. Immer wieder verwendete Funktionalitäten werden in eine Funktion gestellt und können an verschiedenen Stellen aufgerufen werden.Funktion definieren,Schlüsselwort function + Bezeichner(),Anweisungen,Funktion aufrufen",
-				"index":["Funktionen","Bezeichner","function","Anweisung","Functions Aufruf"]
-			},			,
-			{
-				"name":"12_functionen_button_uebungbmi.html",
-				"titel":"BMI Übung - einfache Funktion",
-				"inhalt":"Einfache Funktion mit BMI-Berechnung",
-				"index":["function","BMI","toFixed","Eventhändler","OnClick"]
-			}
-			,			,
-			{
-				"name":"13_uebung_rumpfgeschwindigleit.html",
-				"titel":"Berechnung der Rumpfgeschwindigkeit",
-				"inhalt":"Die Rumpfgeschwindigkeit ist ein theoretischer Maximalwert für die bei Verdrängerfahrt mögliche Höchstgeschwindigkeit eines Schiffes.",
-				"index":["Math.sqrt","Berechnungen","toFixed"]
-			}
-		],
-	},
-
-	{
-		"titel":"Tag03",
-		"dir":"../tag03/",
-		"metatitel":"Functionen",
-		"datei":
-		[
-			{
-				"name":"01_eigene-funktionen-definieren.html",
-				"titel":"Eigene Funktionen",
-				"inhalt":"Funktionsdefinition, Funktionskopf mit Funktionsnamen und runden Klammern, Funktionskörper mit Funktionsanweisungen, Funktionsaufruf",
-				"index":["function","Funktion","Funktionsaufruf"]
-			},
-			{
-				"name":"02_reihenfolge-von-funktionen.html",
-				"titel":"Reihenfolge von Funktionen",
-				"inhalt":"Bei Funktionsaufrufen ist die Reihenfolge der Aufrufe wichtig, nicht die Reihenfolge der Funktionsdefinition",
-				"index":["function","Funktion","Funktionsaufruf","Reihenfolge"]
-			},
-			{
-				"name":"03_implementierte-js-funktionen.html",
-				"titel":"Implementierte JavaScript-Funktionen",
-				"inhalt":"Fertige Funktionen, die in JavaScript schon vorhanden sind.Funtionen, die in JavaScript existieren und einen Punkt im Namen haben = lange Schreibweise. Funktionen, die einen Wert brauchen, aber keinen Rückgabewert liefern. Funktionen, die keinen Wert brauchen, aber einen Rückgabewert liefern.",
-				"index":["parseInt()","parseFloat()","isNaN()","encodeURI()","decodeURI()","Math.random()"]
-			},			
-			{
-				"name":"04_funktion-mit-uebergabewert.html",
-				"titel":"Funktion mit Übergabewert",
-				"inhalt":"Variablen in den runden Klammern der Funktionsdefinition werden nicht deklariert (var zahl;). Die einzelnen Variablen in den runden Klammern werden durch Komma getrennt (Argumente bzw. Parameter). Die Argumente / Parameter können Vorgabewerte besitzen, die beim Aufruf überschrieben werden",
-				"index":["function","Übergabewert","Argumente","Parameter"]
-			},
-			{
-				"name":"05_ueb-uebergabewert.html",
-				"titel":"Übung Funktion mit Übergabewert",
-				"inhalt":"Schreibt eine Funktion, die 3 Parameter erfordert-Vorname, -Name, Wohnort. Die Ausgabe soll bspw. lauten: Name: Hans Meier, Wohnort: Dortmund. Adresse(a,b,c).",
-				"index":["function","Übung","Parameter"]
-			},
-			{
-				"name":"06_ueb-document.write.html",
-				"titel":"Übung document.write()",
-				"inhalt":"Cato<br>Wissen ist Macht soll über document.write ausgegeben werden",
-				"index":["document.write()","Übung","verketten","+","Zeichenkette"]
-			},
-			{
-				"name":"07_grafiken-mit-javascript-anzeigen.html",
-				"titel":"Grafiken mit Javascript",
-				"inhalt":"Mit document.write.",
-				"index":["document.write()","Bilder"]
-			},
-			{
-				"name":"07_kleine_Galerie.html",
-				"titel":"Kleine Galerie",
-				"inhalt":"document.getElementById('thumb1').src=bild1",
-				"index":["document.getElementById","bild.src"]
-			},
-			{
-				"name":"08_funktion-grafiken-mit-javascript-anzeigen.html",
-				"titel":"Grafiken mit Javascript",
-				"inhalt":"Mit document.write",
-				"index":["document.write","grafik"]
-			}
-		],
-	},
-	{
-		"titel":"Tag04",
-		"dir":"../tag04/",
-		"metatitel":"Wiederholung, Globale Variablen, Funktionen mit Rückgabewert",
-		"datei":
-		[
-			{
-				"name":"01_wiederholung.html",
-				"titel":"Widerholung Tag 1 bis 4",
-				"inhalt":" Schreiben Sie eine Funktion Brutto(parameter) mit Übergabewert, die eine Berechnung durchführen soll. Dazu soll ein Anwender (außerhalb der Funktion) in eine Dialogbox eine Zahl (Nettowert) eingeben können.",
-				"index":["Brutto","prompt","function"]
-			},
-			{
-				"name":"02_funktion-mit-uebergabewert.html",
-				"titel":"Wiederholung - Funktion mit Übergabewert",
-				"inhalt":"Schreiben Sie eine Funktion Brutto(parameter) mit Übergabewert, die eine Berechnung durchführen soll.",
-				"index":["function","brutto"]
-			},
-			{
-				"name":"03_funktion-ohne-uebergabewert.html",
-				"titel":"Wiederholung - Funktion ohne Übergabewert",
-				"inhalt":"Schreiben Sie eine Funktion Brutto() ohne Übergabewert, die eine Berechnung durchführen soll.",
-				"index":["function","brutto"]
-			}
-			,
-			{
-				"name":"04_funktion-grafiken-mit-javascript-anzeigen.html",
-				"titel":"Grafiken mit Javascript",
-				"inhalt":"Weiter mit Grafiken",
-				"index":["Grafik","Bilder"]
-			}
-			,
-			{
-				"name":"05_kleine_Galerie_uebung.html",
-				"titel":"Übung Bildaufruf",
-				"inhalt":"Auf Klick auf einen der vier Buttons wird das entsprechende Bild im Unterordner bilder angezeigt. Eine (1) Funktion soll im <head>-Bereich definiert werden und über den Button als Methode onClick='' aufgerufen werden.",
-				"index":["button","onClick","history.back()"]
-			}
-			,
-			{
-				"name":"06_funktionen-mit-rueckgabewert.html",
-				"titel":"Funktionen mit Rückgabewert",
-				"inhalt":"Der Wert hinter dem return wird an den Funktionsaufruf zurückgegeben, nach return wird die Funktion verlassen",
-				"index":["return"]
-			}
-			,
-						{
-				"name":"06_kleine_Galerie.html",
-				"titel":"Kleine Galerie",
-				"inhalt":"Nettes kleines Galeriescript mit Bilderwechsel.",
-				"index":["onLoad","document.getElementById(bild).src=bild","Galerie"]
-			}
-			,
-			{
-				"name":"07_sichtbarkeit-von-variablen.html",
-				"titel":"Sichtbarkeit von Variablen",
-				"inhalt":"ariablen, die außerhalb von Funktionen deklariert werden, werden 'Globale Variablen' genannt",
-				"index":["Globale Variablen"]
-			}
-			,
-			{
-				"name":"08_externe_js.html",
-				"titel":"getText() und externe js",
-				"inhalt":"document.write",
-				"index":["docw()","getText()","document.write"]
-			}
-			,
-			{
-				"name":"09_if.html",
-				"titel":"Ifund externe JavaScripte einbinden",
-				"inhalt":"Externes JS und Kontrollstrukturen",
-				"index":["if","Kontrollstrukturen","else"]
-			}
-		],
-	},
-	{
-		"titel":"Tag05",
-		"dir":"../tag05/",
-		"metatitel":"Kontrollstrukturen mit if, else, switch",
-		"datei":
-		[
-			{
-				"name":"01_kontrollstrukturen_if.html",
-				"titel":"Kontrollstrukturen - if",
-				"inhalt":"Wenn Bedingung a eintritt dann mach etwas ansonsten mach was anderes.",
-				"index":["if","else","Kontrollstrukturen"]
-			},
-			{
-				"name":"02_wuerfel_if.html",
-				"titel":"Kontrollstrukturen - if else wuerfel",
-				"inhalt":"Mehrere If Anweisungen und exit, Vorbeireitung auf den Würfel.",
-				"index":["if","else","exit","wuerfel"]
-			}
-			,
-			{
-				"name":"03_uebungl_if_schachtel.html",
-				"titel":"Kontrollstrukturen - if else verschachtelt Gewicht",
-				"inhalt":"Verschachtelte if-Anweisnungen",
-				"index":["if","else","verschachtelt"]
-			}
-			,
-			{
-				"name":"04_uebungl_if.html",
-				"titel":"Kontrollstrukturen - Übung mit Schriftart if else",
-				"inhalt":"Übungsaufgabe mit Schriftartwechsel",
-				"index":["if","else","location.reload();"]
-			}
-			,
-			{
-				"name":"05_mit function_parameterauswertung_if.html",
-				"titel":"Kontrollstrukturen - if else parameterabfrage in Function flexible",
-				"inhalt":"Beispiele für Funktionen mit Prameterübergabe, getText",
-				"index":["Funktionen","Parameter","getText"]
-			}
-			,
-			{
-				"name":"06_switch.html",
-				"titel":"Kontrollstrukturen - switch",
-				"inhalt":"Eine switch vergleicht den Inhalt einer Variable (name) mit vorgesehenen Fällen (case). Entspricht der Inhalt der Variablen einem Fall, wird alles ab dem nachstehenden Doppelpunkt ausgeführt, d.h. auch alle nachfolgenden Fälle. Durch ein break; kann eine switch abgebrochen werden. Der default ist der Vorgabewert. Dieser wird genommen, wenn die Fälle nicht zutreffen.",
-				"index":["switch","case","break"]
-			}
-			,
-			{
-				"name":"06_switch_uebung_wuerfel.html",
-				"titel":"switch und Würfel",
-				"inhalt":"Es werden Würfelseiten angezeigt.",
-				"index":["switch","case","break","würfel"]
-			}
-			,
-			{
-				"name":"07_ueberpruefung-auf-number.html",
-				"titel":"Überprüfung auf number mit isNaN()",
-				"inhalt":"isNaN() gibt true zurück, wenn es keine Zahl ist, isNaN() gibt false zurück, wenn es eine Zahl ist,isNaN(zahl) würde zurückgeben: false, isNaN(text) würde zurückgeben: true",
-				"index":["isNaN(text)","true","false"]
-			}
-		],
-	},
-	{
-		"titel":"Tag06",
-		"dir":"../tag06/",
-		"metatitel":"Kleine Galerie, Text in DIV ändern.",
-		"datei":
-		[
-			{
-				"name":"01_kleine_Galerie_uebung.html",
-				"titel":"Kleine Galerie verfeinert.",
-				"inhalt":"Eigenschaften von Images über das Document-Objekt ansprechen: document.getElementById(bild).src=bild",
-				"index":["alt","title","src","array","images","galerie"]
-			},
-			{
-				"name":"02_get-element-by-id.html",
-				"titel":"getElementById()",
-				"inhalt":"Zugriff mit document.getElementById(),in die Methodenklammer kommt die Id (hier ausgabe),die Eigenschaft innerHTML setzt einen Inhalt in das entsprchende HTML-Element",
-				"index":["document.getElementById()","innerHTML"]
-			},
-			{
-				"name":"03_getElementById.html",
-				"titel":"getElementById() Teil 2",
-				"inhalt":"Ausgabe von Hallo Welt in deutsch oder englisch. Anwenden der onclick Methode und anonyme Funktion",
-				"index":["document.getElementById()","innerHTML",".onclick","function(){ "]
-			},
-			{
-				"name":"04_getElementById_brutto.html",
-				"titel":"Brutto - Netto - Rechner",
-				"inhalt":"brutto = geld*1.19, netto = Math.ceil(geld/1.19)",
-				"index":["Math.ceil","getElementById","location.reload()","brutto"]
-			}
-			,
-			{
-				"name":"05_clicks.html",
-				"titel":"Variable erhöhen",
-				"inhalt":"n++ zählt Klicks",
-				"index":["Dekrement","n++","n--","Inkrement","Arithmetischen Operatoren"]
-			}
-		],
-	},
-	{
-		"titel":"Tag07",
-		"dir":"../tag07/",
-		"metatitel":"kleines Projekt,Würfel und andere Beispiele+Wiederholung von getElementById",
-		"datei":
-		[
-			{
-				"name":"01_kleines_projekt_wuerfel.html",
-				"titel":"Würfelspiel",
-				"inhalt":"Zwei Würfel, Pasch, Augen und Straße",
-				"index":["border-radius","getElementById","Würfel"]
-			},
-			{
-				"name":"04_ueb-ihk-notenschluessel.html",
-				"titel":"IHK - Notenschlüssel mit IF",
-				"inhalt":"Es gibt einen Button -Note eintragen- auf Klick öffnet sich ein prompt zur Noteneingabe.Die Ausgabe soll per document.getElementById() erfolgen. Ausgegeben werden sollen die Anzahl der Eingaben sowie die Menge an -Bestanden- (Eine genaue Trennung in Sehr gut  -gut- befriedigend etc. ist auch möglich).Tipp: Die Menge an -Bestanden- kommt in eine Variable.",
-				"index":["IF","Vergleichsoperatoren"]
-			}
-			,
-			{
-				"name":"06_bildergalerie-II.html",
-				"titel":"Bildergalerie mit Vorschau",
-				"inhalt":"Fortführung der Bildergalerie",
-				"index":["img {cursor:pointer; }","img {border-radius:20px; border:thin solid black; }"]
-			}
-		],
-	},
-	{
-		"titel":"Tag08",
-		"dir":"../tag08/",
-		"metatitel":"Würfel Projekt, Schleifen mit for und while",
-		"datei":
-		[
-			{
-				"name":"01_kleines_projekt_3wuerfel.html",
-				"titel":"Weiterführung Würfelprojekt",
-				"inhalt":"jetzt mit 3 Würfel und viel CSS",
-				"index":["CSS","Würfel","If","function"]
-			},
-			{
-				"name":"02_schleifenl.html",
-				"titel":"for - Schleife",
-				"inhalt":"for (var i=10;i<30;i++)",
-				"index":["for","Schleife"]
-			}
-			,
-			{
-				"name":"03_schleifen_uebung.html",
-				"titel":"Übung Adtventkalender",
-				"inhalt":"Schleife in Schleife",
-				"index":["for","Schleife"]
-			}
-			,
-			{
-				"name":"04_schleifen_uebung_ikons.html",
-				"titel":"nochmal Bilder anzeigen",
-				"inhalt":"Schleife in Schleife",
-				"index":["for","Schleife","icon"]
-			}
-		],
-	},
-	{
-		"titel":"Tag09",
-		"dir":"../tag09/",
-		"metatitel":"Schleifen mit do und while, do-while",
-		"datei":
-		[
-			{
-				"name":"01_while.html",
-				"titel":"While-Schleife",
-				"inhalt":"Syntax:while(Bedingung==true)Anweisungen. Eine while-Schleife läuft solange, wie die Bedingung im Schleifenkopf wahr ist",
-				"index":["while","schleife","Schleifenkopf"]
-			},
-			{
-				"name":"02_do-schleife.html",
-				"titel":"do-while-Schleife",
-				"inhalt":"Bei do-while-Schleife wird erst am Ende des Schleifendurchlaufs geprüft, ob ein weiterer Schleifendurchlauf stattfinden soll, dass heisst sie wird immer mindestens einmal durchlaufen.",
-				"index":["do-while","schleife"]
-			}
-			,
-			{
-				"name":"03_ueb_while-bestellung.html",
-				"titel":"do-while-Schleife",
-				"inhalt":"Der Anwender kann Bestellungen für ein Mittagsmenü eingeben. Dazu wird er nach einer Speise gefragt (Bitte geben Sie eine Speise ein!). Diese Frage soll so lange gestellt werden bis der ANwender fertig eingibt.Das Menü soll per alert() oder document.write()ausgegeben werden.",
-				"index":["do-while","schleife","while"]
-			}
-			,
-			{
-				"name":"05_ueb_1-50.html",
-				"titel":"Übung 1-50",
-				"inhalt":"2. Aufgabe: jede 10 Zahl fett oder h1.Funktioniert aber auch mit for schleife und do while schleife. da die Anzahl der Wiederholungen fest steht würde man zu einer for-schleife greifen",
-				"index":["do-while","schleife","while","for"]
-			}
-			,
-			{
-				"name":"06_modulo_operator.html",
-				"titel":"Modulo Operator",
-				"inhalt":"% 2 gibt entweder 0 oder 1 zurück:0 geben die Zahlen 2,4,6,8 usw. zurück; % 3 gibt entweder 0, 1 oder 2 zurück; % 5 gibt entweder 0,1,2,3 oder 4 zurück",
-				"index":["Modulo","%"]
-			}
-			,
-			{
-				"name":"07_ueb_pizza_bestellen.html",
-				"titel":"Übung Pizza bestellen",
-				"inhalt":"Ein Anwender kann Zutaten für eine Pizza eingeben. Dazu wird er nach einer Zutat gefragt",
-				"index":["while","break","+="]
-			}
-			,
-			{
-				"name":"08_this-verwenden.html",
-				"titel":"this()-Bezug aus sich selbst",
-				"inhalt":"z.B. zum holen einer URL aus dem a-Tag",
-				"index":["this()"]
-			}
-			,
-			{
-				"name":"09_bildergalerie-III.html",
-				"titel":"this()-Übung-Bildergalerie",
-				"inhalt":"fnInfo(this)",
-				"index":["this()","galerie","border-radius"]
-			}
-		],
-	},
-	{
-		"titel":"Tag10",
-		"dir":"../tag10/",
-		"metatitel":"Licht, Arrys aus und Timer",
-		"datei":
-		[
-			{
-				"name":"01_array.html",
-				"titel":"In Arrays navigieren",
-				"inhalt":"Wiederholung zu Arrays",
-				"index":[".length","Array"]
-			},
-			{
-				"name":"01_lichtanaus.html",
-				"titel":"Licht aus",
-				"inhalt":"Licht an und aus",
-				"index":["Lichtschalter","opacity:0.2;","Parameter","Function"]
-			},
-			{
-				"name":"02_ueb-licht.html",
-				"titel":"Übung Lichtschalter",
-				"inhalt":"Zu sehen ist das Bild -Licht_aus- aus dem Unterordner -licht-.Des Weiteren zwei Buttons mit Namen -Licht an!- sowie -Licht aus!-.Ein Klick auf den jeweiligen Button zeigt das entsprechende Bild an. Die Ausgabe erfolgt mittels document.getElementById()",
-				"index":["Lichtschalter","opacity:0.2;","Parameter","Function"]
-			},
-			{
-				"name":"03_setTimeout.html",
-				"titel":"window.setTimeout",
-				"inhalt":"window.setTimeout(text.innerHTML=Wunder,2000) nach 2 Sek erscheint ein Wunder.",
-				"index":["setTimeout","timer"]
-			},
-			{
-				"name":"04_ueb-licht-verzoegert.html",
-				"titel":"Lichtschalter verzögert",
-				"inhalt":"wie Übung Lichtschalter nur die Ausgabe erfolgt zeitverzögert mittels setTimeout().",
-				"index":["setTimeout","timer","Lichtschalter"]
-			},
-			{
-				"name":"04_ueb-licht-verzoegert.html",
-				"titel":"Lichtschalter verzögert",
-				"inhalt":"wie Übung Lichtschalter nur die Ausgabe erfolgt zeitverzögert mittels setTimeout().",
-				"index":["setTimeout","timer","Lichtschalter"]
-			}
-			,
-			{
-				"name":"09_bildergalerie-III.html",
-				"titel":"Galerie mit Infofeld",
-				"inhalt":"Infofeld rechts unten",
-				"index":["this()","opacity","position:relative"]
-			}
-		],
-	},
-	{
-		"titel":"Tag11",
-		"dir":"../tag11/",
-		"metatitel":"Array-Funktionen und Zufallszahlen",
-		"datei":
-		[
-			{
-				"name":"04_ueb-array-einkaufsliste.html",
-				"titel":"Übung Array",
-				"inhalt":"Eine Einkaufsliste soll geschrieben werden. Über ein prompt wird der Anwender nach Lebensmitteln gefragt, die in einem Array gespeichert werden sollen. Gibt der Benutzer -ende- ein, wird die Liste ausgegeben. Array erweitern mit push und zusammenfügen mit join.",
-				"index":["liste.push","liste.join","array"]
-			},
-			{
-				"name":"01_array_uebung.html",
-				"titel":"Übung mit Ländern und Hauptstädten",
-				"inhalt":"Ausgabe von HTML+Text per Javascript im header und Body",
-				"index":["Arrays"]
-			}
-			,
-			{
-				"name":"03_array.html",
-				"titel":"json und weitere Arrayfunktionen",
-				"inhalt":"tage.unshift: davor Einfügen, tage.push: danach Einfügen, tage.pop(): letztes Element rausnehmen, JSON.parse",
-				"index":["Arrays","unshift","push","pop()","JSON"]
-			},
-			{
-				"name":"03_array_uebung1.html",
-				"titel":"Einkaufsliste",
-				"inhalt":"Arrayelemnt per Knopfdruck einfügen.",
-				"index":["Arrays","push"]
-			},
-			{
-				"name":"03_array_uebung2.html",
-				"titel":"Einkaufsliste",
-				"inhalt":"Arrayelemnt per Knopfdruck einfügen. Leere Eingabe = Ende.",
-				"index":["Arrays","push"]
-			},
-			{
-				"name":"03_array_uebung3.html",
-				"titel":"Bunte Seite",
-				"inhalt":"Array mit Webfarben auslesen und im Style einsetzen.",
-				"index":["Arrays","split"]
-			},
-			{
-				"name":"04_lotto.html",
-				"titel":"Zufallszahl",
-				"inhalt":"6 aus 49 und eine Zufallszahl. Math.random",
-				"index":["Math.random","Math.floor"]
-			}
-		],
-	},
-	{
-		"titel":"Tag12",
-		"dir":"../tag12/",
-		"metatitel":"Array-Funktionen und Zufallszahlen",
-		"datei":
-		[
-			{
-				"name":"01_lotto-I.html",
-				"titel":"Array-Funktionen",
-				"inhalt":"6 zufällige Zahlen in Array legen und sortiert ausgeben: ziehung.sort()",
-				"index":["ziehung.sort()","Array","Lotto"]
-			},
-			{
-				"name":"03_elementzugriff.html",
-				"titel":"Javascript Elementzugriff.",
-				"inhalt":"h1.innerHTML, h1.title, h1.style.color, h1.style.backgroundColor usw.",
-				"index":["h1.style","h1.style.backgroundColor"]
-			}
-			,
-			{
-				"name":"04_cc-text-einblenden.html",
-				"titel":"DIV ein und ausblenden.",
-				"inhalt":"Zugriff auf HTML Objekte mit anzeige.style.display = block",
-				"index":["anzeige.style.display","DOM"]
-			}
-			,
-			{
-				"name":"04_cc-text-einblenden.html",
-				"titel":"DIV ein und ausblenden.",
-				"inhalt":"Zugriff auf HTML Objekte mit anzeige.style.display = block",
-				"index":["anzeige.style.display","DOM"]
-			}
-		],
-	},
-	{
-		"titel":"Tag13",
-		"dir":"../tag13/",
-		"metatitel":"DOM-Objekte, Arkordeon, eval, zentriert",
-		"datei":
-		[
-			{
-				"name":"01_getElementById.html",
-				"titel":"getElementById",
-				"inhalt":"DIVs klappen ein und aus",
-				"index":["getElementById","display:none"]
-			},
-			{
-				"name":"02_getElementsByClassName.html",
-				"titel":"getElementsByClassName",
-				"inhalt":"Die Klasse -artikel- wird in unserem Dokument 3x verwendet. Über getElementsByClass(artikel) kann über die Eigenschaft item() auf eine bestimmte Klasse zugregriffen werden. Die gefundenden Aufrufe werden beginned mit dem Index 0 verwaltet. Der erste Aufruf: document.getElementsByClass(artikel).item[0];Bei den weiteren Aufrufen ändert sich der Index",
-				"index":["document.getElementsByClass","item[0]"]
-			},
-			{
-				"name":"02_test.html",
-				"titel":"getElementById",
-				"inhalt":"DIVs klappen ein und aus",
-				"index":["getElementById","display:none"]
-			},
-			{
-				"name":"03_taschenrechner-II.html",
-				"titel":"Taschenrechner.",
-				"inhalt":"Rechnen mit eval und auslesen von einem Feld. docw(3*4+12)keine Berechnung docw (eval(3*4+12))Berechnung",
-				"index":["eval","feld.value"]
-			},
-			{
-				"name":"04_lotto-III.html",
-				"titel":"Lottozahlen 6 aus 49.",
-				"inhalt":"Lottozahlen fertig.",
-				"index":["Lotto","Zufall"]
-			},
-			{
-				"name":"exkurs-elemente-zentrieren.html",
-				"titel":"CSS Element Zentrieren.",
-				"inhalt":"CSS Element Zentrieren.",
-				"index":["CSS","zentriert"]
-			}
-		],
-	},
-	{
-		"titel":"Tag14",
-		"dir":"../tag14/",
-		"metatitel":"Animationen mit setInterval.",
-		"datei":
-		[
-			{
-				"name":"03_setInterval.html",
-				"titel":"setInterval()",
-				"inhalt":"Bild einblenden mit setInterval und box.style.opacity",
-				"index":["setInterval","opacity","clearInterval"]
-			},
-			{
-				"name":"06_schuh-animieren.html",
-				"titel":"Daumenkino mit Schuh",
-				"inhalt":"Schuh dreht sich durch Bilderwechsel und setInterval",
-				"index":["setInterval","Animation"]
-			}
-			,
-			{
-				"name":"07_pferd.html",
-				"titel":"Daumenkino mit Pferd",
-				"inhalt":"Galloppierendes Pferd",
-				"index":["setInterval","Animation"]
-			}
-		],
-	},
-	{
-		"titel":"Tag15",
-		"dir":"../tag15/",
-		"metatitel":"Animationen mit setInterval.",
-		"datei":
-		[
-			{
-				"name":"04_arkodeon.html",
-				"titel":"Arkordeon mit Ein- uns Ausblenden",
-				"inhalt":"Mit setInterval und Opacity.",
-				"index":["setInterval"]
-			},
-			{
-				"name":"02_mousedown.html",
-				"titel":"Würfelei mit Mousedown",
-				"inhalt":"/setInterval(Code,Aufruf alle ms)",
-				"index":["setInterval","Mousedown"]
-			}
-			,
-			{
-				"name":"03_wuerfelspiel.html",
-				"titel":"Würfelspiel",
-				"inhalt":"Kniffel mit 3 Würfel und Animation",
-				"index":["setInterval","Mousedown"]
-			}
-			,
-			{
-				"name":"05-eigene-objekte.html",
-				"titel":"Eigene Objekte",
-				"inhalt":"var person = new Object()",
-				"index":["Object()","person.name"]
-			}
-			,
-			{
-				"name":"zusatz_wuerfelspiel-funktionen.html",
-				"titel":"Hübsches Würfelspiel",
-				"inhalt":"Pasch mit verschiedenen Punktezahl, Animation",
-				"index":["setInterval","Mousedown","Würfel"]
-			}
-		],
-	},
-	{
-		"titel":"Tag16",
-		"datei":
-		[
-			{
-				"name":"01_hallo-welt.html",
-				"titel":"Hallo Welt",
-				"inhalt":"javascript in eine HTML-Datei einbinden, Hallo Welt mit alert",
-				"index":["hallo welt","alert","javascript"]
-			},
-			{
-				"name":"02_ausgabe.html",
-				"titel":"Ausgabe mit document.write()",
-				"inhalt":"Ausgabe von HTML+Text per Javascript im header und Body",
-				"index":["Zeichenkette","\"","Sonderzeichen","Anführungsstriche"]
-			}
-		],
-	},
-	{
-		"titel":"Tag17",
-		"datei":
-		[
-			{
-				"name":"01_hallo-welt.html",
-				"titel":"Hallo Welt",
-				"inhalt":"javascript in eine HTML-Datei einbinden, Hallo Welt mit alert",
-				"index":["hallo welt","alert","javascript"]
-			},
-			{
-				"name":"02_ausgabe.html",
-				"titel":"Ausgabe mit document.write()",
-				"inhalt":"Ausgabe von HTML+Text per Javascript im header und Body",
-				"index":["Zeichenkette","\"","Sonderzeichen","Anführungsstriche"]
-			}
-		],
-	},
-	{
-		"titel":"Tag18",
-		"datei":
-		[
-			{
-				"name":"01_hallo-welt.html",
-				"titel":"Hallo Welt",
-				"inhalt":"javascript in eine HTML-Datei einbinden, Hallo Welt mit alert",
-				"index":["hallo welt","alert","javascript"]
-			},
-			{
-				"name":"02_ausgabe.html",
-				"titel":"Ausgabe mit document.write()",
-				"inhalt":"Ausgabe von HTML+Text per Javascript im header und Body",
-				"index":["Zeichenkette","\"","Sonderzeichen","Anführungsstriche"]
-			}
-		],
-	},
-	{
-		"titel":"Tag19",
-		"datei":
-		[
-			{
-				"name":"01_hallo-welt.html",
-				"titel":"Hallo Welt",
-				"inhalt":"javascript in eine HTML-Datei einbinden, Hallo Welt mit alert",
-				"index":["hallo welt","alert","javascript"]
-			},
-			{
-				"name":"02_ausgabe.html",
-				"titel":"Ausgabe mit document.write()",
-				"inhalt":"Ausgabe von HTML+Text per Javascript im header und Body",
-				"index":["Zeichenkette","\"","Sonderzeichen","Anführungsstriche"]
-			}
-		],
-	},
-	{
-		"titel":"Tag20",
-		"datei":
-		[
-			{
-				"name":"01_hallo-welt.html",
-				"titel":"Hallo Welt",
-				"inhalt":"javascript in eine HTML-Datei einbinden, Hallo Welt mit alert",
-				"index":["hallo welt","alert","javascript"]
-			},
-			{
-				"name":"02_ausgabe.html",
-				"titel":"Ausgabe mit document.write()",
-				"inhalt":"Ausgabe von HTML+Text per Javascript im header und Body",
-				"index":["Zeichenkette","\"","Sonderzeichen","Anführungsstriche"]
-			}
-		],
-	},
-]
-}; 
+    "tage":
+	    [
+		{
+		    "titel": "Tag01",
+		    "dir": "../tag01/",
+		    "metatitel": "Einführung",
+		    "datei":
+			    [
+				{
+				    "name": "01_hallowelt.html",
+				    "titel": "Hallo Welt",
+				    "inhalt": "javascript in eine HTML-Datei einbinden, Hallo Welt mit alert ausgeben",
+				    "index": ["hallo welt", "alert", "javascript"]
+				},
+				{
+				    "name": "02_ausgabe.html",
+				    "titel": "Ausgabe mit document.write()",
+				    "inhalt": "Ausgabe von HTML+Text per Javascript im header und Body",
+				    "index": ["Zeichenkette", "\"", "Sonderzeichen", "Anführungsstriche"]
+				}
+				,
+				{
+				    "name": "03_zeichenketten.html",
+				    "titel": "Ausgabe mit Anführungszeichen",
+				    "inhalt": "Darstellen von Zeichenketten und Maskieren von Sonderzeichen wie Anführungsstriche",
+				    "index": ["Text", "document.write", "Sonderzeichen"]
+				}
+				,
+				{
+				    "name": "04_ueb-zeichenketten.html",
+				    "titel": "Übung Zeichenketten",
+				    "inhalt": "Spitze Klammern per Sonderzeichen von HTML darstellen usw.",
+				    "index": ["Zeichenkette", "Spitze Klammern", "Sonderzeichen", "Übung Tag 1"]
+				}
+				,
+				{
+				    "name": "05_noscript.html",
+				    "titel": "noscript-Bereich",
+				    "inhalt": "Wenn der Browser kein javascript kann",
+				    "index": ["noscript"]
+				}
+				,
+				{
+				    "name": "06_variablen.html",
+				    "titel": "Variablen",
+				    "inhalt": "Variable a wird deklariert und Schlüsselwort var + Bezeichner (a-z,A-Z,1-0,_) der Variable",
+				    "index": ["Wertzuweisung", "deklarieren", "Schlüsselwort", "var", "Variable", "Bezeichner", "Datentyp"]
+				}
+				,
+				{
+				    "name": "07_variablen_verkettung.html",
+				    "titel": "Text verketten",
+				    "inhalt": "Zeichenketten und Variablen mit + verketten",
+				    "index": ["Zeichenkette", "Berechnung", "verketten", "+"]
+				}
+				,
+				{
+				    "name": "08_variablen_ausgeben.html",
+				    "titel": "Variablen ausgeben",
+				    "inhalt": "Übung zu Variablen und Zeichenketten",
+				    "index": ["Übung", "Variablen", "verketten", "+", "Zeichenkette"]
+				}
+				,
+				{
+				    "name": "09_fehler-finden.html",
+				    "titel": "Fehler finden",
+				    "inhalt": "Berechnungen mit Javascript durchführen",
+				    "index": ["Übung", "Variablen", "verketten", "+", "Zeichenkette"]
+				}
+				,
+				{
+				    "name": "10_mathematische-operatoren.html",
+				    "titel": "Mathematische Operatoren",
+				    "inhalt": "Übung zu Variablen und Zeichenketten",
+				    "index": ["Mathematische Operatoren", "Modulo"]
+				}
+			    ],
+		},
+		{
+		    "titel": "Tag02",
+		    "dir": "../tag02/",
+		    "metatitel": "Variablen, Datentypen, Operatoren, Konstanten",
+		    "datei":
+			    [
+				{
+				    "name": "01_kommentare.html",
+				    "titel": "Kommentierungen",
+				    "inhalt": "HTML-Kommentar und Javascriptkommentar, Kommentar über mehrere Zeilen",
+				    "index": ["Kommentar"]
+				},
+				{
+				    "name": "02_konstanten.html",
+				    "titel": "Konstanten",
+				    "inhalt": "Konstanten kann der IE nicht, adher werden diese kaum benutzt",
+				    "index": ["const"]
+				},
+				{
+				    "name": "03_datentypen.html",
+				    "titel": "Datentypen",
+				    "inhalt": "Einfache und Komplexe Datentypen",
+				    "index": ["typeof", "Number", "String", "Array", "Objekt", "Boolean", "true", "false", "date"]
+				},
+				{
+				    "name": "04_typenkonvertierung.html",
+				    "titel": "Typkonvertierung",
+				    "inhalt": "Von String zu Number und zurück, sowei Not a Number",
+				    "index": ["Typkonvertierung", "NaN", ]
+				},
+				{
+				    "name": "05_prompt_ausgabe.html",
+				    "titel": "Prompt Eingabe, alert, confirm",
+				    "inhalt": "Ausgabeboxen mit Variablenübergabe",
+				    "index": ["alert", "prompt", "confirm"]
+				},
+				{
+				    "name": "06_ausgabe_uebung.html",
+				    "titel": "Übung Variable übergeben",
+				    "inhalt": "Es soll ein Eingabefeld erzeugt werden, in welches der Name eingetragen werden soll.Der eingegebene Name soll anschließend über alert(Sie haben eingegeben: +...) wieder ausgegeben werden",
+				    "index": ["prompt", "Eingabefeld", "var"]
+				},
+				{
+				    "name": "07_functionen_button_uebung.html",
+				    "titel": "Übung BMI berechnen",
+				    "inhalt": "Der Body-Maß-Index soll berechnet werden. In zwei Eingabeboxen sollen Gewicht (in KG) und Größe (in M) eingegeben werden können. Per alert() soll der BMI ausgegeben werden.Mit toFixed(2) auf zwei Nachkommastellen begrenzen",
+				    "index": ["toFixed", "prompt", "bmi", "rechnen"]
+				}, ,
+					{
+					    "name": "08_operatoren.html",
+					    "titel": "Operatoren",
+					    "inhalt": "Alle Operatoren in einer Tabellen",
+					    "index": ["Operatoren", "Inkrement", "Dekrement", "Zuweisung"]
+					},
+				{
+				    "name": "09_variablen-erweitern.html",
+				    "titel": "Variable erweitern",
+				    "inhalt": "Stringvariablen durch Operatoren wie += in Schleifen erweitern",
+				    "index": ["Operatoren", "erweitern", ]
+				},
+				{
+				    "name": "10_uebung-grad-umrechnung.html",
+				    "titel": "Übung Grad umrechnen",
+				    "inhalt": "Umrechnung von Grad in Fahrenheit. Eingabe mit Prompt",
+				    "index": ["prompt", "Berechnungen", "var", "Fahrenheit"]
+				},
+				{
+				    "name": "11_funktionen.html",
+				    "titel": "einfache Funktion",
+				    "inhalt": "Funktionen dienen dazu, dem Programmierer das Leben einfacher zu machen. Immer wieder verwendete Funktionalitäten werden in eine Funktion gestellt und können an verschiedenen Stellen aufgerufen werden.Funktion definieren,Schlüsselwort function + Bezeichner(),Anweisungen,Funktion aufrufen",
+				    "index": ["Funktionen", "Bezeichner", "function", "Anweisung", "Functions Aufruf"]
+				}, ,
+					{
+					    "name": "12_functionen_button_uebungbmi.html",
+					    "titel": "BMI Übung - einfache Funktion",
+					    "inhalt": "Einfache Funktion mit BMI-Berechnung",
+					    "index": ["function", "BMI", "toFixed", "Eventhändler", "OnClick"]
+					}
+				, ,
+					{
+					    "name": "13_uebung_rumpfgeschwindigleit.html",
+					    "titel": "Berechnung der Rumpfgeschwindigkeit",
+					    "inhalt": "Die Rumpfgeschwindigkeit ist ein theoretischer Maximalwert für die bei Verdrängerfahrt mögliche Höchstgeschwindigkeit eines Schiffes.",
+					    "index": ["Math.sqrt", "Berechnungen", "toFixed"]
+					}
+			    ],
+		},
+		{
+		    "titel": "Tag03",
+		    "dir": "../tag03/",
+		    "metatitel": "Functionen",
+		    "datei":
+			    [
+				{
+				    "name": "01_eigene-funktionen-definieren.html",
+				    "titel": "Eigene Funktionen",
+				    "inhalt": "Funktionsdefinition, Funktionskopf mit Funktionsnamen und runden Klammern, Funktionskörper mit Funktionsanweisungen, Funktionsaufruf",
+				    "index": ["function", "Funktion", "Funktionsaufruf"]
+				},
+				{
+				    "name": "02_reihenfolge-von-funktionen.html",
+				    "titel": "Reihenfolge von Funktionen",
+				    "inhalt": "Bei Funktionsaufrufen ist die Reihenfolge der Aufrufe wichtig, nicht die Reihenfolge der Funktionsdefinition",
+				    "index": ["function", "Funktion", "Funktionsaufruf", "Reihenfolge"]
+				},
+				{
+				    "name": "03_implementierte-js-funktionen.html",
+				    "titel": "Implementierte JavaScript-Funktionen",
+				    "inhalt": "Fertige Funktionen, die in JavaScript schon vorhanden sind.Funtionen, die in JavaScript existieren und einen Punkt im Namen haben = lange Schreibweise. Funktionen, die einen Wert brauchen, aber keinen Rückgabewert liefern. Funktionen, die keinen Wert brauchen, aber einen Rückgabewert liefern.",
+				    "index": ["parseInt()", "parseFloat()", "isNaN()", "encodeURI()", "decodeURI()", "Math.random()"]
+				},
+				{
+				    "name": "04_funktion-mit-uebergabewert.html",
+				    "titel": "Funktion mit Übergabewert",
+				    "inhalt": "Variablen in den runden Klammern der Funktionsdefinition werden nicht deklariert (var zahl;). Die einzelnen Variablen in den runden Klammern werden durch Komma getrennt (Argumente bzw. Parameter). Die Argumente / Parameter können Vorgabewerte besitzen, die beim Aufruf überschrieben werden",
+				    "index": ["function", "Übergabewert", "Argumente", "Parameter"]
+				},
+				{
+				    "name": "05_ueb-uebergabewert.html",
+				    "titel": "Übung Funktion mit Übergabewert",
+				    "inhalt": "Schreibt eine Funktion, die 3 Parameter erfordert-Vorname, -Name, Wohnort. Die Ausgabe soll bspw. lauten: Name: Hans Meier, Wohnort: Dortmund. Adresse(a,b,c).",
+				    "index": ["function", "Übung", "Parameter"]
+				},
+				{
+				    "name": "06_ueb-document.write.html",
+				    "titel": "Übung document.write()",
+				    "inhalt": "Cato<br>Wissen ist Macht soll über document.write ausgegeben werden",
+				    "index": ["document.write()", "Übung", "verketten", "+", "Zeichenkette"]
+				},
+				{
+				    "name": "07_grafiken-mit-javascript-anzeigen.html",
+				    "titel": "Grafiken mit Javascript",
+				    "inhalt": "Mit document.write.",
+				    "index": ["document.write()", "Bilder"]
+				},
+				{
+				    "name": "07_kleine_Galerie.html",
+				    "titel": "Kleine Galerie",
+				    "inhalt": "document.getElementById('thumb1').src=bild1",
+				    "index": ["document.getElementById", "bild.src"]
+				},
+				{
+				    "name": "08_funktion-grafiken-mit-javascript-anzeigen.html",
+				    "titel": "Grafiken mit Javascript",
+				    "inhalt": "Mit document.write",
+				    "index": ["document.write", "grafik"]
+				}
+			    ],
+		},
+		{
+		    "titel": "Tag04",
+		    "dir": "../tag04/",
+		    "metatitel": "Wiederholung, Globale Variablen, Funktionen mit Rückgabewert",
+		    "datei":
+			    [
+				{
+				    "name": "01_wiederholung.html",
+				    "titel": "Widerholung Tag 1 bis 4",
+				    "inhalt": " Schreiben Sie eine Funktion Brutto(parameter) mit Übergabewert, die eine Berechnung durchführen soll. Dazu soll ein Anwender (außerhalb der Funktion) in eine Dialogbox eine Zahl (Nettowert) eingeben können.",
+				    "index": ["Brutto", "prompt", "function"]
+				},
+				{
+				    "name": "02_funktion-mit-uebergabewert.html",
+				    "titel": "Wiederholung - Funktion mit Übergabewert",
+				    "inhalt": "Schreiben Sie eine Funktion Brutto(parameter) mit Übergabewert, die eine Berechnung durchführen soll.",
+				    "index": ["function", "brutto"]
+				},
+				{
+				    "name": "03_funktion-ohne-uebergabewert.html",
+				    "titel": "Wiederholung - Funktion ohne Übergabewert",
+				    "inhalt": "Schreiben Sie eine Funktion Brutto() ohne Übergabewert, die eine Berechnung durchführen soll.",
+				    "index": ["function", "brutto"]
+				}
+				,
+				{
+				    "name": "04_funktion-grafiken-mit-javascript-anzeigen.html",
+				    "titel": "Grafiken mit Javascript",
+				    "inhalt": "Weiter mit Grafiken",
+				    "index": ["Grafik", "Bilder"]
+				}
+				,
+				{
+				    "name": "05_kleine_Galerie_uebung.html",
+				    "titel": "Übung Bildaufruf",
+				    "inhalt": "Auf Klick auf einen der vier Buttons wird das entsprechende Bild im Unterordner bilder angezeigt. Eine (1) Funktion soll im <head>-Bereich definiert werden und über den Button als Methode onClick='' aufgerufen werden.",
+				    "index": ["button", "onClick", "history.back()"]
+				}
+				,
+				{
+				    "name": "06_funktionen-mit-rueckgabewert.html",
+				    "titel": "Funktionen mit Rückgabewert",
+				    "inhalt": "Der Wert hinter dem return wird an den Funktionsaufruf zurückgegeben, nach return wird die Funktion verlassen",
+				    "index": ["return"]
+				}
+				,
+				{
+				    "name": "06_kleine_Galerie.html",
+				    "titel": "Kleine Galerie",
+				    "inhalt": "Nettes kleines Galeriescript mit Bilderwechsel.",
+				    "index": ["onLoad", "document.getElementById(bild).src=bild", "Galerie"]
+				}
+				,
+				{
+				    "name": "07_sichtbarkeit-von-variablen.html",
+				    "titel": "Sichtbarkeit von Variablen",
+				    "inhalt": "ariablen, die außerhalb von Funktionen deklariert werden, werden 'Globale Variablen' genannt",
+				    "index": ["Globale Variablen"]
+				}
+				,
+				{
+				    "name": "08_externe_js.html",
+				    "titel": "getText() und externe js",
+				    "inhalt": "document.write",
+				    "index": ["docw()", "getText()", "document.write"]
+				}
+				,
+				{
+				    "name": "09_if.html",
+				    "titel": "Ifund externe JavaScripte einbinden",
+				    "inhalt": "Externes JS und Kontrollstrukturen",
+				    "index": ["if", "Kontrollstrukturen", "else"]
+				}
+			    ],
+		},
+		{
+		    "titel": "Tag05",
+		    "dir": "../tag05/",
+		    "metatitel": "Kontrollstrukturen mit if, else, switch",
+		    "datei":
+			    [
+				{
+				    "name": "01_kontrollstrukturen_if.html",
+				    "titel": "Kontrollstrukturen - if",
+				    "inhalt": "Wenn Bedingung a eintritt dann mach etwas ansonsten mach was anderes.",
+				    "index": ["if", "else", "Kontrollstrukturen"]
+				},
+				{
+				    "name": "02_wuerfel_if.html",
+				    "titel": "Kontrollstrukturen - if else wuerfel",
+				    "inhalt": "Mehrere If Anweisungen und exit, Vorbeireitung auf den Würfel.",
+				    "index": ["if", "else", "exit", "wuerfel"]
+				}
+				,
+				{
+				    "name": "03_uebungl_if_schachtel.html",
+				    "titel": "Kontrollstrukturen - if else verschachtelt Gewicht",
+				    "inhalt": "Verschachtelte if-Anweisnungen",
+				    "index": ["if", "else", "verschachtelt"]
+				}
+				,
+				{
+				    "name": "04_uebungl_if.html",
+				    "titel": "Kontrollstrukturen - Übung mit Schriftart if else",
+				    "inhalt": "Übungsaufgabe mit Schriftartwechsel",
+				    "index": ["if", "else", "location.reload();"]
+				}
+				,
+				{
+				    "name": "05_mit function_parameterauswertung_if.html",
+				    "titel": "Kontrollstrukturen - if else parameterabfrage in Function flexible",
+				    "inhalt": "Beispiele für Funktionen mit Prameterübergabe, getText",
+				    "index": ["Funktionen", "Parameter", "getText"]
+				}
+				,
+				{
+				    "name": "06_switch.html",
+				    "titel": "Kontrollstrukturen - switch",
+				    "inhalt": "Eine switch vergleicht den Inhalt einer Variable (name) mit vorgesehenen Fällen (case). Entspricht der Inhalt der Variablen einem Fall, wird alles ab dem nachstehenden Doppelpunkt ausgeführt, d.h. auch alle nachfolgenden Fälle. Durch ein break; kann eine switch abgebrochen werden. Der default ist der Vorgabewert. Dieser wird genommen, wenn die Fälle nicht zutreffen.",
+				    "index": ["switch", "case", "break"]
+				}
+				,
+				{
+				    "name": "06_switch_uebung_wuerfel.html",
+				    "titel": "switch und Würfel",
+				    "inhalt": "Es werden Würfelseiten angezeigt.",
+				    "index": ["switch", "case", "break", "würfel"]
+				}
+				,
+				{
+				    "name": "07_ueberpruefung-auf-number.html",
+				    "titel": "Überprüfung auf number mit isNaN()",
+				    "inhalt": "isNaN() gibt true zurück, wenn es keine Zahl ist, isNaN() gibt false zurück, wenn es eine Zahl ist,isNaN(zahl) würde zurückgeben: false, isNaN(text) würde zurückgeben: true",
+				    "index": ["isNaN(text)", "true", "false"]
+				}
+			    ],
+		},
+		{
+		    "titel": "Tag06",
+		    "dir": "../tag06/",
+		    "metatitel": "Kleine Galerie, Text in DIV ändern.",
+		    "datei":
+			    [
+				{
+				    "name": "01_kleine_Galerie_uebung.html",
+				    "titel": "Kleine Galerie verfeinert.",
+				    "inhalt": "Eigenschaften von Images über das Document-Objekt ansprechen: document.getElementById(bild).src=bild",
+				    "index": ["alt", "title", "src", "array", "images", "galerie"]
+				},
+				{
+				    "name": "02_get-element-by-id.html",
+				    "titel": "getElementById()",
+				    "inhalt": "Zugriff mit document.getElementById(),in die Methodenklammer kommt die Id (hier ausgabe),die Eigenschaft innerHTML setzt einen Inhalt in das entsprchende HTML-Element",
+				    "index": ["document.getElementById()", "innerHTML"]
+				},
+				{
+				    "name": "03_getElementById.html",
+				    "titel": "getElementById() Teil 2",
+				    "inhalt": "Ausgabe von Hallo Welt in deutsch oder englisch. Anwenden der onclick Methode und anonyme Funktion",
+				    "index": ["document.getElementById()", "innerHTML", ".onclick", "function(){ "]
+				},
+				{
+				    "name": "04_getElementById_brutto.html",
+				    "titel": "Brutto - Netto - Rechner",
+				    "inhalt": "brutto = geld*1.19, netto = Math.ceil(geld/1.19)",
+				    "index": ["Math.ceil", "getElementById", "location.reload()", "brutto"]
+				}
+				,
+				{
+				    "name": "05_clicks.html",
+				    "titel": "Variable erhöhen",
+				    "inhalt": "n++ zählt Klicks",
+				    "index": ["Dekrement", "n++", "n--", "Inkrement", "Arithmetischen Operatoren"]
+				}
+			    ],
+		},
+		{
+		    "titel": "Tag07",
+		    "dir": "../tag07/",
+		    "metatitel": "kleines Projekt,Würfel und andere Beispiele+Wiederholung von getElementById",
+		    "datei":
+			    [
+				{
+				    "name": "01_kleines_projekt_wuerfel.html",
+				    "titel": "Würfelspiel",
+				    "inhalt": "Zwei Würfel, Pasch, Augen und Straße",
+				    "index": ["border-radius", "getElementById", "Würfel"]
+				},
+				{
+				    "name": "04_ueb-ihk-notenschluessel.html",
+				    "titel": "IHK - Notenschlüssel mit IF",
+				    "inhalt": "Es gibt einen Button -Note eintragen- auf Klick öffnet sich ein prompt zur Noteneingabe.Die Ausgabe soll per document.getElementById() erfolgen. Ausgegeben werden sollen die Anzahl der Eingaben sowie die Menge an -Bestanden- (Eine genaue Trennung in Sehr gut  -gut- befriedigend etc. ist auch möglich).Tipp: Die Menge an -Bestanden- kommt in eine Variable.",
+				    "index": ["IF", "Vergleichsoperatoren"]
+				}
+				,
+				{
+				    "name": "06_bildergalerie-II.html",
+				    "titel": "Bildergalerie mit Vorschau",
+				    "inhalt": "Fortführung der Bildergalerie",
+				    "index": ["img {cursor:pointer; }", "img {border-radius:20px; border:thin solid black; }"]
+				}
+			    ],
+		},
+		{
+		    "titel": "Tag08",
+		    "dir": "../tag08/",
+		    "metatitel": "Würfel Projekt, Schleifen mit for und while",
+		    "datei":
+			    [
+				{
+				    "name": "01_kleines_projekt_3wuerfel.html",
+				    "titel": "Weiterführung Würfelprojekt",
+				    "inhalt": "jetzt mit 3 Würfel und viel CSS",
+				    "index": ["CSS", "Würfel", "If", "function"]
+				},
+				{
+				    "name": "02_schleifenl.html",
+				    "titel": "for - Schleife",
+				    "inhalt": "for (var i=10;i<30;i++)",
+				    "index": ["for", "Schleife"]
+				}
+				,
+				{
+				    "name": "03_schleifen_uebung.html",
+				    "titel": "Übung Adtventkalender",
+				    "inhalt": "Schleife in Schleife",
+				    "index": ["for", "Schleife"]
+				}
+				,
+				{
+				    "name": "04_schleifen_uebung_ikons.html",
+				    "titel": "nochmal Bilder anzeigen",
+				    "inhalt": "Schleife in Schleife",
+				    "index": ["for", "Schleife", "icon"]
+				}
+			    ],
+		},
+		{
+		    "titel": "Tag09",
+		    "dir": "../tag09/",
+		    "metatitel": "Schleifen mit do und while, do-while",
+		    "datei":
+			    [
+				{
+				    "name": "01_while.html",
+				    "titel": "While-Schleife",
+				    "inhalt": "Syntax:while(Bedingung==true)Anweisungen. Eine while-Schleife läuft solange, wie die Bedingung im Schleifenkopf wahr ist",
+				    "index": ["while", "schleife", "Schleifenkopf"]
+				},
+				{
+				    "name": "02_do-schleife.html",
+				    "titel": "do-while-Schleife",
+				    "inhalt": "Bei do-while-Schleife wird erst am Ende des Schleifendurchlaufs geprüft, ob ein weiterer Schleifendurchlauf stattfinden soll, dass heisst sie wird immer mindestens einmal durchlaufen.",
+				    "index": ["do-while", "schleife"]
+				}
+				,
+				{
+				    "name": "03_ueb_while-bestellung.html",
+				    "titel": "do-while-Schleife",
+				    "inhalt": "Der Anwender kann Bestellungen für ein Mittagsmenü eingeben. Dazu wird er nach einer Speise gefragt (Bitte geben Sie eine Speise ein!). Diese Frage soll so lange gestellt werden bis der ANwender fertig eingibt.Das Menü soll per alert() oder document.write()ausgegeben werden.",
+				    "index": ["do-while", "schleife", "while"]
+				}
+				,
+				{
+				    "name": "05_ueb_1-50.html",
+				    "titel": "Übung 1-50",
+				    "inhalt": "2. Aufgabe: jede 10 Zahl fett oder h1.Funktioniert aber auch mit for schleife und do while schleife. da die Anzahl der Wiederholungen fest steht würde man zu einer for-schleife greifen",
+				    "index": ["do-while", "schleife", "while", "for"]
+				}
+				,
+				{
+				    "name": "06_modulo_operator.html",
+				    "titel": "Modulo Operator",
+				    "inhalt": "% 2 gibt entweder 0 oder 1 zurück:0 geben die Zahlen 2,4,6,8 usw. zurück; % 3 gibt entweder 0, 1 oder 2 zurück; % 5 gibt entweder 0,1,2,3 oder 4 zurück",
+				    "index": ["Modulo", "%"]
+				}
+				,
+				{
+				    "name": "07_ueb_pizza_bestellen.html",
+				    "titel": "Übung Pizza bestellen",
+				    "inhalt": "Ein Anwender kann Zutaten für eine Pizza eingeben. Dazu wird er nach einer Zutat gefragt",
+				    "index": ["while", "break", "+="]
+				}
+				,
+				{
+				    "name": "08_this-verwenden.html",
+				    "titel": "this()-Bezug aus sich selbst",
+				    "inhalt": "z.B. zum holen einer URL aus dem a-Tag",
+				    "index": ["this()"]
+				}
+				,
+				{
+				    "name": "09_bildergalerie-III.html",
+				    "titel": "this()-Übung-Bildergalerie",
+				    "inhalt": "fnInfo(this)",
+				    "index": ["this()", "galerie", "border-radius"]
+				}
+			    ],
+		},
+		{
+		    "titel": "Tag10",
+		    "dir": "../tag10/",
+		    "metatitel": "Licht, Arrys aus und Timer",
+		    "datei":
+			    [
+				{
+				    "name": "01_array.html",
+				    "titel": "In Arrays navigieren",
+				    "inhalt": "Wiederholung zu Arrays",
+				    "index": [".length", "Array"]
+				},
+				{
+				    "name": "01_lichtanaus.html",
+				    "titel": "Licht aus",
+				    "inhalt": "Licht an und aus",
+				    "index": ["Lichtschalter", "opacity:0.2;", "Parameter", "Function"]
+				},
+				{
+				    "name": "02_ueb-licht.html",
+				    "titel": "Übung Lichtschalter",
+				    "inhalt": "Zu sehen ist das Bild -Licht_aus- aus dem Unterordner -licht-.Des Weiteren zwei Buttons mit Namen -Licht an!- sowie -Licht aus!-.Ein Klick auf den jeweiligen Button zeigt das entsprechende Bild an. Die Ausgabe erfolgt mittels document.getElementById()",
+				    "index": ["Lichtschalter", "opacity:0.2;", "Parameter", "Function"]
+				},
+				{
+				    "name": "03_setTimeout.html",
+				    "titel": "window.setTimeout",
+				    "inhalt": "window.setTimeout(text.innerHTML=Wunder,2000) nach 2 Sek erscheint ein Wunder.",
+				    "index": ["setTimeout", "timer"]
+				},
+				{
+				    "name": "04_ueb-licht-verzoegert.html",
+				    "titel": "Lichtschalter verzögert",
+				    "inhalt": "wie Übung Lichtschalter nur die Ausgabe erfolgt zeitverzögert mittels setTimeout().",
+				    "index": ["setTimeout", "timer", "Lichtschalter"]
+				},
+				{
+				    "name": "04_ueb-licht-verzoegert.html",
+				    "titel": "Lichtschalter verzögert",
+				    "inhalt": "wie Übung Lichtschalter nur die Ausgabe erfolgt zeitverzögert mittels setTimeout().",
+				    "index": ["setTimeout", "timer", "Lichtschalter"]
+				}
+				,
+				{
+				    "name": "09_bildergalerie-III.html",
+				    "titel": "Galerie mit Infofeld",
+				    "inhalt": "Infofeld rechts unten",
+				    "index": ["this()", "opacity", "position:relative"]
+				}
+			    ],
+		},
+		{
+		    "titel": "Tag11",
+		    "dir": "../tag11/",
+		    "metatitel": "Array-Funktionen und Zufallszahlen",
+		    "datei":
+			    [
+				{
+				    "name": "04_ueb-array-einkaufsliste.html",
+				    "titel": "Übung Array",
+				    "inhalt": "Eine Einkaufsliste soll geschrieben werden. Über ein prompt wird der Anwender nach Lebensmitteln gefragt, die in einem Array gespeichert werden sollen. Gibt der Benutzer -ende- ein, wird die Liste ausgegeben. Array erweitern mit push und zusammenfügen mit join.",
+				    "index": ["liste.push", "liste.join", "array"]
+				},
+				{
+				    "name": "01_array_uebung.html",
+				    "titel": "Übung mit Ländern und Hauptstädten",
+				    "inhalt": "Ausgabe von HTML+Text per Javascript im header und Body",
+				    "index": ["Arrays"]
+				}
+				,
+				{
+				    "name": "03_array.html",
+				    "titel": "json und weitere Arrayfunktionen",
+				    "inhalt": "tage.unshift: davor Einfügen, tage.push: danach Einfügen, tage.pop(): letztes Element rausnehmen, JSON.parse",
+				    "index": ["Arrays", "unshift", "push", "pop()", "JSON"]
+				},
+				{
+				    "name": "03_array_uebung1.html",
+				    "titel": "Einkaufsliste",
+				    "inhalt": "Arrayelemnt per Knopfdruck einfügen.",
+				    "index": ["Arrays", "push"]
+				},
+				{
+				    "name": "03_array_uebung2.html",
+				    "titel": "Einkaufsliste",
+				    "inhalt": "Arrayelemnt per Knopfdruck einfügen. Leere Eingabe = Ende.",
+				    "index": ["Arrays", "push"]
+				},
+				{
+				    "name": "03_array_uebung3.html",
+				    "titel": "Bunte Seite",
+				    "inhalt": "Array mit Webfarben auslesen und im Style einsetzen.",
+				    "index": ["Arrays", "split"]
+				},
+				{
+				    "name": "04_lotto.html",
+				    "titel": "Zufallszahl",
+				    "inhalt": "6 aus 49 und eine Zufallszahl. Math.random",
+				    "index": ["Math.random", "Math.floor"]
+				}
+			    ],
+		},
+		{
+		    "titel": "Tag12",
+		    "dir": "../tag12/",
+		    "metatitel": "Array-Funktionen und Zufallszahlen",
+		    "datei":
+			    [
+				{
+				    "name": "01_lotto-I.html",
+				    "titel": "Array-Funktionen",
+				    "inhalt": "6 zufällige Zahlen in Array legen und sortiert ausgeben: ziehung.sort()",
+				    "index": ["ziehung.sort()", "Array", "Lotto"]
+				},
+				{
+				    "name": "03_elementzugriff.html",
+				    "titel": "Javascript Elementzugriff.",
+				    "inhalt": "h1.innerHTML, h1.title, h1.style.color, h1.style.backgroundColor usw.",
+				    "index": ["h1.style", "h1.style.backgroundColor"]
+				}
+				,
+				{
+				    "name": "04_cc-text-einblenden.html",
+				    "titel": "DIV ein und ausblenden.",
+				    "inhalt": "Zugriff auf HTML Objekte mit anzeige.style.display = block",
+				    "index": ["anzeige.style.display", "DOM"]
+				}
+				,
+				{
+				    "name": "04_cc-text-einblenden.html",
+				    "titel": "DIV ein und ausblenden.",
+				    "inhalt": "Zugriff auf HTML Objekte mit anzeige.style.display = block",
+				    "index": ["anzeige.style.display", "DOM"]
+				}
+			    ],
+		},
+		{
+		    "titel": "Tag13",
+		    "dir": "../tag13/",
+		    "metatitel": "DOM-Objekte, Arkordeon, eval, zentriert",
+		    "datei":
+			    [
+				{
+				    "name": "01_getElementById.html",
+				    "titel": "getElementById",
+				    "inhalt": "DIVs klappen ein und aus",
+				    "index": ["getElementById", "display:none"]
+				},
+				{
+				    "name": "02_getElementsByClassName.html",
+				    "titel": "getElementsByClassName",
+				    "inhalt": "Die Klasse -artikel- wird in unserem Dokument 3x verwendet. Über getElementsByClass(artikel) kann über die Eigenschaft item() auf eine bestimmte Klasse zugregriffen werden. Die gefundenden Aufrufe werden beginned mit dem Index 0 verwaltet. Der erste Aufruf: document.getElementsByClass(artikel).item[0];Bei den weiteren Aufrufen ändert sich der Index",
+				    "index": ["document.getElementsByClass", "item[0]"]
+				},
+				{
+				    "name": "02_test.html",
+				    "titel": "getElementById",
+				    "inhalt": "DIVs klappen ein und aus",
+				    "index": ["getElementById", "display:none"]
+				},
+				{
+				    "name": "03_taschenrechner-II.html",
+				    "titel": "Taschenrechner.",
+				    "inhalt": "Rechnen mit eval und auslesen von einem Feld. docw(3*4+12)keine Berechnung docw (eval(3*4+12))Berechnung",
+				    "index": ["eval", "feld.value"]
+				},
+				{
+				    "name": "04_lotto-III.html",
+				    "titel": "Lottozahlen 6 aus 49.",
+				    "inhalt": "Lottozahlen fertig.",
+				    "index": ["Lotto", "Zufall"]
+				},
+				{
+				    "name": "exkurs-elemente-zentrieren.html",
+				    "titel": "CSS Element Zentrieren.",
+				    "inhalt": "CSS Element Zentrieren.",
+				    "index": ["CSS", "zentriert"]
+				}
+			    ],
+		},
+		{
+		    "titel": "Tag14",
+		    "dir": "../tag14/",
+		    "metatitel": "Animationen mit setInterval.",
+		    "datei":
+			    [
+				{
+				    "name": "03_setInterval.html",
+				    "titel": "setInterval()",
+				    "inhalt": "Bild einblenden mit setInterval und box.style.opacity",
+				    "index": ["setInterval", "opacity", "clearInterval"]
+				},
+				{
+				    "name": "06_schuh-animieren.html",
+				    "titel": "Daumenkino mit Schuh",
+				    "inhalt": "Schuh dreht sich durch Bilderwechsel und setInterval",
+				    "index": ["setInterval", "Animation"]
+				}
+				,
+				{
+				    "name": "07_pferd.html",
+				    "titel": "Daumenkino mit Pferd",
+				    "inhalt": "Galloppierendes Pferd",
+				    "index": ["setInterval", "Animation"]
+				}
+			    ],
+		},
+		{
+		    "titel": "Tag15",
+		    "dir": "../tag15/",
+		    "metatitel": "Animationen mit setInterval.",
+		    "datei":
+			    [
+				{
+				    "name": "04_arkodeon.html",
+				    "titel": "Arkordeon mit Ein- uns Ausblenden",
+				    "inhalt": "Mit setInterval und Opacity.",
+				    "index": ["setInterval"]
+				},
+				{
+				    "name": "02_mousedown.html",
+				    "titel": "Würfelei mit Mousedown",
+				    "inhalt": "/setInterval(Code,Aufruf alle ms)",
+				    "index": ["setInterval", "Mousedown"]
+				}
+				,
+				{
+				    "name": "03_wuerfelspiel.html",
+				    "titel": "Würfelspiel",
+				    "inhalt": "Kniffel mit 3 Würfel und Animation",
+				    "index": ["setInterval", "Mousedown"]
+				}
+				,
+				{
+				    "name": "05-eigene-objekte.html",
+				    "titel": "Eigene Objekte",
+				    "inhalt": "var person = new Object()",
+				    "index": ["Object()", "person.name"]
+				}
+				,
+				{
+				    "name": "zusatz_wuerfelspiel-funktionen.html",
+				    "titel": "Hübsches Würfelspiel",
+				    "inhalt": "Pasch mit verschiedenen Punktezahl, Animation",
+				    "index": ["setInterval", "Mousedown", "Würfel"]
+				}
+			    ],
+		},
+		{
+		    "titel": "Tag16",
+		    "dir": "../tag16/",
+		    "metatitel": "Akkordeon, DOM, Datum",
+		    "datei":
+			    [
+				{
+				    "name": "01_arkodeon.html",
+				    "titel": "Text austauschen",
+				    "inhalt": "getElemtsByClassName()",
+				    "index": ["getElemtsByClassName()", "innerHTML", "DOM"]
+				},
+				{
+				    "name": "03_getElementsByName.html",
+				    "titel": "getElementsByName()",
+				    "inhalt": "getElementsByName",
+				    "index": ["getElementsByName", "DOM", "innerHTML"]
+				},
+				{
+				    "name": "04_getElementsByTagName.html",
+				    "titel": "getElementsByTagName()",
+				    "inhalt": "getElementsByTagName",
+				    "index": ["getElementsByTagName", "DOM", "innerHTML"]
+				},
+				{
+				    "name": "06_form-getElementsByName.html",
+				    "titel": "Formular",
+				    "inhalt": "Text von Feld zu Feld übertragen, Zugriff über den Schlüssel 0 -> erstes Auftreten des Attr. 'eingabe'",
+				    "index": ["getElementsByName", "DOM"]
+				}
+				,
+				{
+				    "name": "09_form-ueberpruefung-II.html",
+				    "titel": "Formular Überprüfung",
+				    "inhalt": "Ein Benutzer kann in ein Eingabefeld eine Zahl eingeben. Bei korrekter Eingabe wird die Quadratzahl ausgegeben. Bei falscher Eingabe wird der Benutzer darauf hingewiesen, dass er/sie keine Zahl eingegeben hat.",
+				    "index": ["Formular"]
+				},
+				{
+				    "name": "10_dynamische-Auswahlbox.html",
+				    "titel": "Dynamisches Menu",
+				    "inhalt": "Per Inputfeld einenen neuen Auswahlpunkt eingeben.",
+				    "index": ["style.backgroundColor", "select", "option", "datum"]
+				},
+				{
+				    "name": "12_datum-II.html",
+				    "titel": "Datum",
+				    "inhalt": "aktuelles Datum erzeugen, Uhrzeit in Variablen legen",
+				    "index": ["getHours()", "new Date()", "getDate()", "getFullYear()"]
+				}
+			    ],
+		},
+		{
+		    "titel": "Tag17",
+		    "dir": "../tag17/",
+		    "metatitel": "Datum, Uhr, Popup",
+		    "datei":
+			    [
+				{
+				    "name": "01-uhr.html",
+				    "titel": "Aus Pferd mach Uhr",
+				    "inhalt": "Mit setInterval pro Sek eine neue Zeit generieren.",
+				    "index": ["setInterval", "getMinutes()", "new Date()"]
+				},
+				{
+				    "name": "01_digitale-uhr.html",
+				    "titel": "Digitaluhr",
+				    "inhalt": "Hübsche Digitaluhr",
+				    "index": ["setInterval", "getMinutes()", "new Date()"]
+				},
+				{
+				    "name": "03-analog-uhr-kalender.html",
+				    "titel": "Analoge Uhr mit Kalender",
+				    "inhalt": "Analoge Uhr mit Zeigeranimation über CSS3, läuft nur im Mozilla und IE",
+				    "index": ["setInterval", "getMinutes()", "zsek.style.transform = rotate+deg)"]
+				}
+				, {
+				    "name": "05_window-open.html",
+				    "titel": "Neues Fenster öffnen",
+				    "inhalt": "Mit window.open ein neues Fenster öffnen",
+				    "index": ["window.open"]
+				}
+			    ],
+		}, 
+		{
+		    "titel": "Tag18",
+		    "dir": "../tag18/",
+		    "metatitel": "Datum, Uhr, Popup",
+		    "datei":
+			    [
+				{
+				    "name": "01-uhr.html",
+				    "titel": "Aus Pferd mach Uhr",
+				    "inhalt": "Mit setInterval pro Sek eine neue Zeit generieren.",
+				    "index": ["setInterval", "getMinutes()", "new Date()"]
+				},
+				{
+				    "name": "01_digitale-uhr.html",
+				    "titel": "Digitaluhr",
+				    "inhalt": "Hübsche Digitaluhr",
+				    "index": ["setInterval", "getMinutes()", "new Date()"]
+				},
+				{
+				    "name": "03-analog-uhr-kalender.html",
+				    "titel": "Analoge Uhr mit Kalender",
+				    "inhalt": "Analoge Uhr mit Zeigeranimation über CSS3, läuft nur im Mozilla und IE",
+				    "index": ["setInterval", "getMinutes()", "zsek.style.transform = rotate+deg)"]
+				}
+				, {
+				    "name": "05_window-open.html",
+				    "titel": "Neues Fenster öffnen",
+				    "inhalt": "Mit window.open ein neues Fenster öffnen",
+				    "index": ["window.open"]
+				}
+			    ],
+		},
+		{
+		    "titel": "Tag19",
+		    "dir": "../tag19/",
+		    "metatitel": "Datum, Uhr, Popup",
+		    "datei":
+			    [
+				{
+				    "name": "01-uhr.html",
+				    "titel": "Aus Pferd mach Uhr",
+				    "inhalt": "Mit setInterval pro Sek eine neue Zeit generieren.",
+				    "index": ["setInterval", "getMinutes()", "new Date()"]
+				},
+				{
+				    "name": "01_digitale-uhr.html",
+				    "titel": "Digitaluhr",
+				    "inhalt": "Hübsche Digitaluhr",
+				    "index": ["setInterval", "getMinutes()", "new Date()"]
+				},
+				{
+				    "name": "03-analog-uhr-kalender.html",
+				    "titel": "Analoge Uhr mit Kalender",
+				    "inhalt": "Analoge Uhr mit Zeigeranimation über CSS3, läuft nur im Mozilla und IE",
+				    "index": ["setInterval", "getMinutes()", "zsek.style.transform = rotate+deg)"]
+				}
+				, {
+				    "name": "05_window-open.html",
+				    "titel": "Neues Fenster öffnen",
+				    "inhalt": "Mit window.open ein neues Fenster öffnen",
+				    "index": ["window.open"]
+				}
+			    ],
+		},
+		{
+		    "titel": "Tag20",
+		    "dir": "../tag20/",
+		    "metatitel": "Datum, Uhr, Popup",
+		    "datei":
+			    [
+				{
+				    "name": "01-uhr.html",
+				    "titel": "Aus Pferd mach Uhr",
+				    "inhalt": "Mit setInterval pro Sek eine neue Zeit generieren.",
+				    "index": ["setInterval", "getMinutes()", "new Date()"]
+				},
+				{
+				    "name": "01_digitale-uhr.html",
+				    "titel": "Digitaluhr",
+				    "inhalt": "Hübsche Digitaluhr",
+				    "index": ["setInterval", "getMinutes()", "new Date()"]
+				},
+				{
+				    "name": "03-analog-uhr-kalender.html",
+				    "titel": "Analoge Uhr mit Kalender",
+				    "inhalt": "Analoge Uhr mit Zeigeranimation über CSS3, läuft nur im Mozilla und IE",
+				    "index": ["setInterval", "getMinutes()", "zsek.style.transform = rotate+deg)"]
+				}
+				, {
+				    "name": "05_window-open.html",
+				    "titel": "Neues Fenster öffnen",
+				    "inhalt": "Mit window.open ein neues Fenster öffnen",
+				    "index": ["window.open"]
+				}
+			    ],
+		},{
+		    "titel": "Tag21",
+		    "dir": "../tag21/",
+		    "metatitel": "Datum, Uhr, Popup",
+		    "datei":
+			    [
+				{
+				    "name": "01-uhr.html",
+				    "titel": "Aus Pferd mach Uhr",
+				    "inhalt": "Mit setInterval pro Sek eine neue Zeit generieren.",
+				    "index": ["setInterval", "getMinutes()", "new Date()"]
+				},
+				{
+				    "name": "01_digitale-uhr.html",
+				    "titel": "Digitaluhr",
+				    "inhalt": "Hübsche Digitaluhr",
+				    "index": ["setInterval", "getMinutes()", "new Date()"]
+				},
+				{
+				    "name": "03-analog-uhr-kalender.html",
+				    "titel": "Analoge Uhr mit Kalender",
+				    "inhalt": "Analoge Uhr mit Zeigeranimation über CSS3, läuft nur im Mozilla und IE",
+				    "index": ["setInterval", "getMinutes()", "zsek.style.transform = rotate+deg)"]
+				}
+				, {
+				    "name": "05_window-open.html",
+				    "titel": "Neues Fenster öffnen",
+				    "inhalt": "Mit window.open ein neues Fenster öffnen",
+				    "index": ["window.open"]
+				}
+			    ],
+		},
+	    ]
+};
